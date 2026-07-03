@@ -14,9 +14,9 @@ brand
 
 ## Product Purpose
 
-Velora Labs es una agencia de branding, growth y automatización fundada por Jalil (técnico, producto, ventas) con su hermana en Alemania (marketing). Opera cross-border MX + DE, sirve LATAM y Europa.
+Velkin Data Studios es una agencia de branding, growth y automatización fundada por Jalil (técnico, producto, ventas) con su hermana en Alemania (marketing). Opera cross-border MX + DE, sirve LATAM y Europa.
 
-Entrega sistemas de crecimiento conectados (marca + captación + automatización) a través de dos rutas: Velora Start (micro/pequeñas empresas) y Velora Build (SMBs/startups). El diferenciador real: tecnología y automatización permiten entregar calidad premium a precios accesibles — lo que antes era solo para empresas grandes.
+Entrega sistemas de crecimiento conectados (marca + captación + automatización) a través de dos rutas: Velkin Start (micro/pequeñas empresas) y Velkin Build (SMBs/startups). El diferenciador real: tecnología y automatización permiten entregar calidad premium a precios accesibles — lo que antes era solo para empresas grandes.
 
 El sitio web es la primera impresión de la agencia. Si no impresiona, nadie contrata.
 
@@ -32,15 +32,15 @@ El sitio web es la primera impresión de la agencia. Si no impresiona, nadie con
 
 - **Agencias mexicanas genéricas** — fondos degradados morado-azul, íconos de rocket y engranajes, "Potenciamos tu marca", copy motivacional sin sustancia.
 - **SaaS template dark mode** — hero centrado con métrica gigante + "Join 10,000+ companies" + grid de cards idénticas con ícono + título + texto.
-- **Editorial-magazine** — display serif italic + drop caps + broadsheet columns + monochromatic restraint. Es el lane más saturado de 2025-2026 y NO es el registro de Velora.
+- **Editorial-magazine** — display serif italic + drop caps + broadsheet columns + monochromatic restraint. Es el lane más saturado de 2025-2026 y NO es el registro de Velkin.
 - **Cyberpunk / neon** — verde neón, glitch, scanlines. No es la energía.
 - **Klaviyo / HubSpot vibes** — demasiado enterprise, frío, corporativo.
 
 ## Design Principles
 
-1. **El sistema es el argumento** — el diseño debe demostrar capacidad de sistema, no solo declararlo. Orden, jerarquía y precisión en cada decisión visual son la prueba de que Velora construye bien.
+1. **El sistema es el argumento** — el diseño debe demostrar capacidad de sistema, no solo declararlo. Orden, jerarquía y precisión en cada decisión visual son la prueba de que Velkin construye bien.
 2. **Claridad sobre creatividad** — si hay que elegir entre un efecto visual interesante y una sección que convierte, gana la conversión. Los efectos son permitidos solo si refuerzan el mensaje.
-3. **Color con intención, no decoración** — el violeta es la firma de la marca. Debe aparecer en momentos de énfasis real, no como fondo de cada card. Cuando aparece en drench (superficie completa), debe sorprender.
+3. **Color con intención, no decoración** — el verde pino es la firma de la marca. Debe aparecer en momentos de énfasis real, no como fondo de cada card. Cuando aparece en drench (superficie completa), debe sorprender.
 4. **La tipografía carga el peso** — el sitio no tiene fotografía de producto ni ilustraciones. El tipo ES el visual. Debe ser suficientemente valiente para funcionar solo.
 5. **Shipped beats perfect** — el sitio debe sentirse como obra de alguien que ejecuta, no de alguien que estudia tendencias. Directo, concreto, sin decoración superflua.
 

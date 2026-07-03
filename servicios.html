@@ -3,30 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Servicios — Velora Labs</title>
+<title>Servicios — Velkin Data Studios</title>
 <meta name="description" content="Cuatro servicios diseñados para sumarse: Audit, Start, Scale y Grow. Desde el diagnóstico hasta el sistema completo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
 /* ─── TOKENS ──────────────────────────────────────────── */
 :root {
-  --ink:       #080709;
-  --ink-2:     #0E0D12;
-  --ink-3:     #141318;
-  --rule:      #1E1C28;
-  --rule-2:    #262432;
-  --violet:    #5B5FE8;
-  --violet-lt: #818CF8;
-  --cyan:      #22D3EE;
-  --green:     #10B981;
+  --ink:       #0A0E13;
+  --ink-2:     #10151C;
+  --ink-3:     #161C24;
+  --rule:      #232B34;
+  --rule-2:    #303B47;
+  --pine:    #3E9B82;
+  --pine-lt: #7FD1B8;
+  --rust:      #D2532F;
+  --green:     #2E9E6B;
   --amber:     #F59E0B;
-  --snow:      #E8EAF4;
-  --mist:      #9698B8;
-  --dim:       #4E5075;
-  --jk: "Plus Jakarta Sans", "Helvetica Neue", sans-serif;
-  --it: "Inter", "Helvetica Neue", sans-serif;
+  --snow:      #E7E6DD;
+  --mist:      #9A9A8E;
+  --dim:       #5C5B50;
+  --jk: "Archivo", "Helvetica Neue", sans-serif;
+  --it: "Archivo", "Helvetica Neue", sans-serif;
   --mo: "JetBrains Mono", "Fira Code", monospace;
   --expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -63,7 +63,7 @@ body::after {
 #nav {
   position: fixed; top:0; left:0; right:0; z-index:100;
   height: 68px; display:flex; align-items:center;
-  background: rgba(8,7,9,.85);
+  background: rgba(10,14,19,.85);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(30,28,40,.8);
   transition: background .3s;
@@ -80,11 +80,11 @@ body::after {
 .nav-links a.active { color:var(--snow); }
 .nav-btn {
   padding:9px 20px; border-radius:7px;
-  background:var(--violet); color:#fff;
+  background:var(--pine); color:#fff;
   font-size:14px; font-weight:600;
   transition:background .2s, transform .15s; flex-shrink:0; white-space:nowrap;
 }
-.nav-btn:hover { background:var(--violet-lt); transform:translateY(-1px); }
+.nav-btn:hover { background:var(--pine-lt); transform:translateY(-1px); }
 @media (max-width:860px) { .nav-links { display:none; } }
 
 /* ─── PAGE HERO ───────────────────────────────────────── */
@@ -112,12 +112,12 @@ body::after {
 }
 .hero-orb-1 {
   width: 55vw; height: 55vw; top: -20%; right: -5%;
-  background: radial-gradient(circle, rgba(91,95,232,.17) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.17) 0%, transparent 65%);
   animation: orb-a 20s ease-in-out infinite alternate;
 }
 .hero-orb-2 {
   width: 40vw; height: 40vw; bottom: -5%; left: -8%;
-  background: radial-gradient(circle, rgba(34,211,238,.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(210,83,47,.08) 0%, transparent 60%);
   animation: orb-b 26s ease-in-out infinite alternate;
 }
 .hero-vignette {
@@ -126,7 +126,7 @@ body::after {
 }
 .hero-glow {
   position: absolute; inset:0; pointer-events:none;
-  background: radial-gradient(ellipse 50% 60% at 72% 50%, rgba(91,95,232,.09) 0%, transparent 65%);
+  background: radial-gradient(ellipse 50% 60% at 72% 50%, rgba(62,155,130,.09) 0%, transparent 65%);
 }
 .hero-grid {
   position: absolute; inset:0; pointer-events:none;
@@ -153,17 +153,17 @@ body::after {
 .ambient-1 {
   width: 50vw; height: 50vw;
   top: 20vh; right: -15vw;
-  background: radial-gradient(circle, rgba(91,95,232,.055) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.055) 0%, transparent 65%);
 }
 .ambient-2 {
   width: 40vw; height: 40vw;
   top: 60vh; left: -10vw;
-  background: radial-gradient(circle, rgba(34,211,238,.035) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(210,83,47,.035) 0%, transparent 65%);
 }
 .ambient-3 {
   width: 35vw; height: 35vw;
   bottom: 10vh; right: 5vw;
-  background: radial-gradient(circle, rgba(91,95,232,.04) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.04) 0%, transparent 65%);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -172,7 +172,7 @@ body::after {
 .hero-content { position:relative; z-index:2; }
 .hero-eyebrow {
   font-family:var(--mo); font-size:11px; letter-spacing:3px;
-  text-transform:uppercase; color:var(--cyan); opacity:.85;
+  text-transform:uppercase; color:var(--rust); opacity:.85;
   display:block; margin-bottom:20px;
 }
 .hero-title {
@@ -235,9 +235,9 @@ body::after {
   opacity: 0; transition: opacity .35s;
 }
 .svc-panel:hover::before { opacity: 1; }
-.panel-cyan::before   { background: var(--cyan); }
+.panel-cyan::before   { background: var(--rust); }
 .panel-green::before  { background: var(--green); }
-.panel-violet::before { background: var(--violet-lt); }
+.panel-violet::before { background: var(--pine-lt); }
 .panel-amber::before  { background: var(--amber); }
 
 /* Panel header (always visible) */
@@ -255,9 +255,9 @@ body::after {
   letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
   flex-shrink: 0;
 }
-.pb-cyan   { background:rgba(34,211,238,.10); color:var(--cyan); }
-.pb-green  { background:rgba(16,185,129,.10); color:var(--green); }
-.pb-violet { background:rgba(91,95,232,.12);  color:var(--violet-lt); }
+.pb-cyan   { background:rgba(210,83,47,.10); color:var(--rust); }
+.pb-green  { background:rgba(46,158,107,.10); color:var(--green); }
+.pb-violet { background:rgba(62,155,130,.12);  color:var(--pine-lt); }
 .pb-amber  { background:rgba(245,158,11,.10); color:var(--amber); }
 
 .panel-hdr-title {
@@ -273,9 +273,9 @@ body::after {
   font-family: var(--mo); font-size: clamp(15px,1.8vw,20px);
   font-weight: 500; letter-spacing: -.5px;
 }
-.price-cyan   { color: var(--cyan); }
+.price-cyan   { color: var(--rust); }
 .price-green  { color: var(--green); }
-.price-violet { color: var(--violet-lt); }
+.price-violet { color: var(--pine-lt); }
 .price-amber  { color: var(--amber); }
 .panel-price-note { font-size: 11px; color: var(--mist); opacity: .6; font-family: var(--mo); }
 
@@ -346,9 +346,9 @@ body::after {
   transition: gap .18s var(--expo);
 }
 .panel-cta:hover { gap: 12px; }
-.cta-cyan   { color: var(--cyan); }
+.cta-cyan   { color: var(--rust); }
 .cta-green  { color: var(--green); }
-.cta-violet { color: var(--violet-lt); }
+.cta-violet { color: var(--pine-lt); }
 .cta-amber  { color: var(--amber); }
 
 /* Hidden body (collapsed) */
@@ -408,7 +408,7 @@ body::after {
 .addon-cell:hover { background: #08070b; }
 .addon-cell::before {
   content: ''; position: absolute; top:0; left:0; right:0; height:1px;
-  background: linear-gradient(90deg, transparent, var(--violet-lt), transparent);
+  background: linear-gradient(90deg, transparent, var(--pine-lt), transparent);
   opacity: 0; transition: opacity .3s;
 }
 .addon-cell:hover::before { opacity: 1; }
@@ -416,7 +416,7 @@ body::after {
   font-family: var(--jk); font-size: 16px;
   font-weight: 700; letter-spacing: -.02em; color: var(--snow);
 }
-.addon-price { font-family: var(--mo); font-size: 13px; color: var(--cyan); }
+.addon-price { font-family: var(--mo); font-size: 13px; color: var(--rust); }
 .addon-desc { font-size: 13px; font-weight: 300; color: var(--mist); line-height: 1.65; flex: 1; }
 .addon-note { font-family: var(--mo); font-size: 10px; color: var(--mist); opacity: .6; letter-spacing: .5px; }
 @media (max-width: 900px) { .addons-grid { grid-template-columns: repeat(2,1fr); } }
@@ -435,7 +435,7 @@ body::after {
   left: 58%; top: 50%;
   transform: translate(-50%, -50%);
   width: 40vw; height: 80%;
-  background: radial-gradient(ellipse, rgba(91,95,232,.09) 0%, transparent 65%);
+  background: radial-gradient(ellipse, rgba(62,155,130,.09) 0%, transparent 65%);
   pointer-events: none; z-index: 0;
 }
 /* Neural canvas for this section */
@@ -464,7 +464,7 @@ body::after {
 .cmp-check { color: var(--green); }
 .cmp-part  { color: var(--mist); font-size: 11px; }
 .cmp-dash  { color: var(--mist); opacity: .35; }
-.cmp-hl    { background: rgba(91,95,232,.06); }
+.cmp-hl    { background: rgba(62,155,130,.06); }
 
 /* ═══════════════════════════════════════════════════════
    FAQ
@@ -477,14 +477,14 @@ body::after {
   font-family: var(--jk); font-size: 15px; font-weight: 600; color: var(--snow);
   transition: color .2s;
 }
-.faq-q:hover { color: var(--violet-lt); }
+.faq-q:hover { color: var(--pine-lt); }
 .faq-q::marker, .faq-q::-webkit-details-marker { display: none; }
 .faq-icon {
   width: 18px; height: 18px; flex-shrink: 0; color: var(--dim);
   transition: transform .3s var(--expo), color .2s;
 }
-details[open] .faq-q { color: var(--violet-lt); }
-details[open] .faq-icon { transform: rotate(45deg); color: var(--violet-lt); }
+details[open] .faq-q { color: var(--pine-lt); }
+details[open] .faq-icon { transform: rotate(45deg); color: var(--pine-lt); }
 .faq-a {
   font-size: 13.5px; font-weight: 300; color: var(--mist);
   line-height: 1.75; padding-bottom: 20px; max-width: 700px;
@@ -493,7 +493,7 @@ details[open] .faq-icon { transform: rotate(45deg); color: var(--violet-lt); }
 /* ═══════════════════════════════════════════════════════
    CTA FINAL
 ═══════════════════════════════════════════════════════ */
-.cta-sect { background: var(--violet); padding: clamp(72px,10vw,140px) 0; }
+.cta-sect { background: var(--pine); padding: clamp(72px,10vw,140px) 0; }
 .cta-inner { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
 .cta-eyebrow {
   font-family: var(--mo); font-size: 14px;
@@ -515,7 +515,7 @@ details[open] .faq-icon { transform: rotate(45deg); color: var(--violet-lt); }
 .cta-input:focus { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.18); }
 .cta-btn {
   padding: 13px 22px; border-radius: 7px;
-  background: #fff; color: var(--violet);
+  background: #fff; color: var(--pine);
   font-size: 13px; font-weight: 700; white-space: nowrap;
   transition: background .2s, transform .15s, box-shadow .2s; cursor: pointer;
 }
@@ -545,8 +545,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-wrap">
-    <a href="index.html" class="nav-logo" aria-label="Velora Labs — inicio">
-      <img src="logo.svg" alt="Velora Labs" height="44" style="display:block;">
+    <a href="index.html" class="nav-logo" aria-label="Velkin Data Studios — inicio">
+      <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;">
     </a>
     <ul class="nav-links">
       <li><a href="index.html#portafolio">Portafolio</a></li>
@@ -588,7 +588,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <div class="svc-panel panel-cyan rv" id="panel-audit">
         <div class="panel-hdr">
           <div class="panel-hdr-left">
-            <span class="panel-badge pb-cyan">Velora Audit</span>
+            <span class="panel-badge pb-cyan">Velkin Audit</span>
             <div>
               <div class="panel-hdr-title">El punto de entrada. Siempre.</div>
               <div class="panel-hdr-sub">Diagnóstico completo antes de invertir en cualquier otra cosa.</div>
@@ -602,16 +602,16 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div class="panel-body panel-body-wide">
           <div class="body-col">
             <span class="body-label">Para quién</span>
-            <p class="body-text">Cualquier negocio que quiera saber exactamente qué mover primero, con o sin contratar Velora después. El diagnóstico es tuyo independientemente.</p>
+            <p class="body-text">Cualquier negocio que quiera saber exactamente qué mover primero, con o sin contratar Velkin después. El diagnóstico es tuyo independientemente.</p>
           </div>
           <div class="body-col">
             <span class="body-label">Incluye</span>
             <div class="inc-list">
-              <div class="inc-item"><span class="inc-dot" style="background:var(--cyan)"></span>Análisis de marca e identidad visual</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--cyan)"></span>Auditoría de presencia digital (web, redes, Google)</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--cyan)"></span>Diagnóstico de canales y gaps de captación</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--cyan)"></span>Mapa de oportunidades de automatización</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--cyan)"></span>Documento de diagnóstico + sesión de revisión (60 min)</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Análisis de marca e identidad visual</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Auditoría de presencia digital (web, redes, Google)</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Diagnóstico de canales y gaps de captación</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Mapa de oportunidades de automatización</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Documento de diagnóstico + sesión de revisión (60 min)</div>
             </div>
           </div>
           <div class="body-col">
@@ -631,24 +631,24 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <!-- ── CONNECTOR 1: Audit → Start + Build ─────────── -->
       <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
         <path d="M500,0 L500,36 L262,88"
-              stroke="rgba(91,95,232,0.35)" stroke-width="1"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
         <path d="M500,36 L738,88"
-              stroke="rgba(91,95,232,0.35)" stroke-width="1"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <circle cx="500" cy="4"  r="5" fill="rgba(34,211,238,0.6)"/>
-        <circle cx="262" cy="84" r="5" fill="rgba(16,185,129,0.6)"/>
-        <circle cx="738" cy="84" r="5" fill="rgba(129,140,248,0.6)"/>
+        <circle cx="500" cy="4"  r="5" fill="rgba(210,83,47,0.6)"/>
+        <circle cx="262" cy="84" r="5" fill="rgba(46,158,107,0.6)"/>
+        <circle cx="738" cy="84" r="5" fill="rgba(127,209,184,0.6)"/>
       </svg>
 
       <!-- ── START + BUILD (expandibles) ───────────────── -->
       <div class="tree-split">
 
-        <!-- Velora Start -->
+        <!-- Velkin Start -->
         <div class="svc-panel panel-green panel-collapsible panel-expanded" id="panel-start">
           <div class="panel-hdr">
             <div class="panel-hdr-left">
-              <span class="panel-badge pb-green">Velora Start</span>
+              <span class="panel-badge pb-green">Velkin Start</span>
               <div>
                 <div class="panel-hdr-title">Presencia + seguimiento</div>
                 <div class="panel-hdr-sub">Para negocios que empiezan en serio.</div>
@@ -697,11 +697,11 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           </div>
         </div>
 
-        <!-- Velora Scale -->
+        <!-- Velkin Scale -->
         <div class="svc-panel panel-violet panel-collapsible panel-expanded" id="panel-build">
           <div class="panel-hdr">
             <div class="panel-hdr-left">
-              <span class="panel-badge pb-violet">Velora Scale</span>
+              <span class="panel-badge pb-violet">Velkin Scale</span>
               <div>
                 <div class="panel-hdr-title">Sistema a medida</div>
                 <div class="panel-hdr-sub">Para operaciones que necesitan más que un sitio.</div>
@@ -734,14 +734,14 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
             <div class="body-col">
               <span class="body-label">Incluye</span>
               <div class="inc-list">
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>Identidad visual si no existe, o se parte de la marca actual</div>
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>Sistema web o app a medida (portal, dashboard, gestión interna)</div>
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>Automatizaciones complejas con n8n o similar</div>
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>Integraciones con terceros — Google Workspace, Resend, Drive API, etc.</div>
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>Panel de administración con roles y permisos</div>
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>Analytics y métricas del sistema</div>
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>Deploy en infraestructura propia (Docker + Nginx + HTTPS)</div>
-                <div class="inc-item"><span class="inc-dot" style="background:var(--violet-lt)"></span>2 semanas de acompañamiento post-lanzamiento</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>Identidad visual si no existe, o se parte de la marca actual</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>Sistema web o app a medida (portal, dashboard, gestión interna)</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>Automatizaciones complejas con n8n o similar</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>Integraciones con terceros — Google Workspace, Resend, Drive API, etc.</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>Panel de administración con roles y permisos</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>Analytics y métricas del sistema</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>Deploy en infraestructura propia (Docker + Nginx + HTTPS)</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine-lt)"></span>2 semanas de acompañamiento post-lanzamiento</div>
               </div>
             </div>
             <div class="panel-footer">
@@ -756,13 +756,13 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <!-- ── CONNECTOR 2: Start + Build → Grow ──────────── -->
       <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
         <path d="M262,0 L262,52 L500,88"
-              stroke="rgba(91,95,232,0.35)" stroke-width="1"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
         <path d="M738,0 L738,52 L500,88"
-              stroke="rgba(91,95,232,0.35)" stroke-width="1"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <circle cx="262" cy="4"  r="5" fill="rgba(16,185,129,0.6)"/>
-        <circle cx="738" cy="4"  r="5" fill="rgba(129,140,248,0.6)"/>
+        <circle cx="262" cy="4"  r="5" fill="rgba(46,158,107,0.6)"/>
+        <circle cx="738" cy="4"  r="5" fill="rgba(127,209,184,0.6)"/>
         <circle cx="500" cy="84" r="5" fill="rgba(245,158,11,0.6)"/>
       </svg>
 
@@ -770,9 +770,9 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <div class="svc-panel panel-amber rv" id="panel-grow">
         <div class="panel-hdr">
           <div class="panel-hdr-left">
-            <span class="panel-badge pb-amber">Velora Grow</span>
+            <span class="panel-badge pb-amber">Velkin Grow</span>
             <div>
-              <div class="panel-hdr-title">Automatización de redes sociales.</div>
+              <div class="panel-hdr-title">Automatización de redes sociales con Velkin Content Hub.</div>
               <div class="panel-hdr-sub">Para negocios que quieren publicar sin depender de tener tiempo.</div>
             </div>
           </div>
@@ -787,24 +787,25 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
             <p class="body-text">Negocios que ya tienen marca y presencia digital pero no publican con consistencia — porque crear contenido toma tiempo y siempre queda para después. El sistema publica en automático: tú solo subes el material a una carpeta.</p>
             <div style="margin-top:16px;">
               <span class="body-label">No incluye</span>
-              <p class="body-text" style="margin-top:4px;font-size:13px;">Creación de contenido (fotos, videos, diseño, copy) · gestión de comentarios o comunidad · TikTok, LinkedIn u otras plataformas</p>
+              <p class="body-text" style="margin-top:4px;font-size:13px;">Creación de contenido (fotos, videos, diseño, copy) · gestión de comentarios o comunidad · LinkedIn u otras plataformas</p>
             </div>
           </div>
           <div class="body-col">
             <span class="body-label">Incluye</span>
             <div class="inc-list">
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Configuración completa del flujo n8n</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Publicación automática en Instagram y Facebook</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Cloudinary como proxy de imágenes (compatible con Meta)</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Carpeta de Drive configurada como bandeja de entrada del flujo</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Autenticación y conexión de ambas cuentas</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Configuración completa en Velkin Content Hub</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Publicación automática en Instagram, Facebook y TikTok</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Captions generados con IA, editables antes de publicar</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Cloudinary como proxy de imágenes y video (compatible con Meta y TikTok)</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Carpeta de Drive configurada como bandeja de entrada</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Autenticación y conexión de las tres cuentas</div>
               <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Guía de uso: formatos, nomenclatura, cómo programar posts</div>
               <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Pruebas en vivo con contenido real antes de entregar</div>
             </div>
           </div>
           <div class="body-col">
             <span class="body-label">Cómo funciona</span>
-            <p class="body-text">Subes la imagen y el caption a una carpeta de Google Drive. El flujo de n8n lo detecta, pasa la imagen por Cloudinary para que Meta la acepte y publica en ambas plataformas automáticamente. Tú nunca abres Instagram ni Facebook.</p>
+            <p class="body-text">Subes la imagen o video y el caption a una carpeta de Google Drive. Velkin Content Hub lo detecta, genera el caption con IA si hace falta, pasa el archivo por Cloudinary para que Meta y TikTok lo acepten, y publica en las tres plataformas automáticamente. Tú nunca abres Instagram, Facebook ni TikTok.</p>
             <div class="panel-footer" style="border:none;padding-top:16px;">
               <div class="panel-timeline">
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2" stroke-linecap="round"/></svg>
@@ -828,14 +829,14 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <div class="addons-grid rv r2">
 
       <div class="addon-cell">
-        <div class="addon-name">Velora Automate</div>
+        <div class="addon-name">Velkin Automate</div>
         <div class="addon-price">MX$5,000 – 15,000</div>
         <p class="addon-desc">Flujo de automatización personalizado vía n8n. Integraciones, workflows, reportes automáticos, CRM, notificaciones.</p>
         <span class="addon-note">Según complejidad del flujo</span>
       </div>
 
       <div class="addon-cell">
-        <div class="addon-name">Velora Founder OS</div>
+        <div class="addon-name">Velkin Founder OS</div>
         <div class="addon-price">MX$20,000 – 28,000</div>
         <p class="addon-desc">Marca personal, sistema de contenido y distribución para founders que quieren ser reconocidos en su vertical.</p>
         <span class="addon-note">Proyecto único · 2–3 semanas</span>
@@ -898,8 +899,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           <tr><td>Sistema web / app a medida</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td></tr>
           <tr><td>Automatizaciones complejas (n8n)</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td></tr>
           <tr><td>Panel admin con roles y permisos</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Publicación automática Instagram + Facebook</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td></tr>
-          <tr><td>Flujo n8n + Cloudinary proxy</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td></tr>
+          <tr><td>Publicación automática Instagram + Facebook + TikTok</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td></tr>
+          <tr><td>Velkin Content Hub + Cloudinary proxy</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td></tr>
           <tr><td>Acreditable a paquete</td><td class="cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td></tr>
         </tbody>
       </table>
@@ -917,7 +918,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <summary class="faq-q">¿Por dónde empiezo si no sé qué necesita mi negocio?
           <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
         </summary>
-        <p class="faq-a">Empieza con el Velora Audit. En 5–7 días hábiles tendrás un diagnóstico completo que te dice exactamente qué mover primero. El costo de MX$3,500 se acredita si luego contratas cualquier paquete.</p>
+        <p class="faq-a">Empieza con el Velkin Audit. En 5–7 días hábiles tendrás un diagnóstico completo que te dice exactamente qué mover primero. El costo de MX$3,500 se acredita si luego contratas cualquier paquete.</p>
       </details>
 
       <details class="faq-item">
@@ -928,10 +929,10 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       </details>
 
       <details class="faq-item">
-        <summary class="faq-q">¿Puedo contratar Velora Grow sin haber pasado por Start o Scale?
+        <summary class="faq-q">¿Puedo contratar Velkin Grow sin haber pasado por Start o Scale?
           <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
         </summary>
-        <p class="faq-a">Sí, siempre y cuando ya tengas cuentas activas en Instagram y Facebook. Grow es un proyecto de configuración técnica — no depende de que hayas trabajado antes con Velora. Si tu presencia en redes está desde cero, conviene arrancar con Start primero.</p>
+        <p class="faq-a">Sí, siempre y cuando ya tengas cuentas activas en Instagram y Facebook. Grow es un proyecto de configuración técnica — no depende de que hayas trabajado antes con Velkin. Si tu presencia en redes está desde cero, conviene arrancar con Start primero.</p>
       </details>
 
       <details class="faq-item">
@@ -949,7 +950,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       </details>
 
       <details class="faq-item">
-        <summary class="faq-q">¿Cuánto tarda la configuración de Velora Grow?
+        <summary class="faq-q">¿Cuánto tarda la configuración de Velkin Grow?
           <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
         </summary>
         <p class="faq-a">El flujo queda configurado y probado en 5–7 días hábiles. Antes de entregar hacemos pruebas en vivo con contenido real para confirmar que Instagram y Facebook lo reciben correctamente. Después tienes 2 semanas de soporte para ajustes.</p>
@@ -983,7 +984,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <div class="foot-inner">
       <div class="foot-brand">
         <div class="foot-logo">
-          <img src="logo.svg" alt="Velora Labs" height="38" style="display:block;opacity:.65;">
+          <img src="logo.svg" alt="Velkin Data Studios" height="38" style="display:block;opacity:.65;">
         </div>
         <span class="foot-tag">Branding · Growth Systems · Automatización</span>
       </div>
@@ -993,14 +994,14 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <a href="servicios.html">Servicios</a>
         <a href="contacto.html">Contacto</a>
       </nav>
-      <p class="foot-copy">© 2026 Velora Labs<br>Built for businesses ready<br>to stop improvising.</p>
+      <p class="foot-copy">© 2026 Velkin Data Studios<br>Built for businesses ready<br>to stop improvising.</p>
     </div>
   </div>
 </footer>
 
 <script>
 makeNeural('neural-canvas', {
-  nodeColor: 'rgba(129,140,248,', lineColor: 'rgba(129,140,248,',
+  nodeColor: 'rgba(127,209,184,', lineColor: 'rgba(127,209,184,',
   maxDist: 200, count: 52, speed: 0.18, radius: 2.5,
   nodeOp: 0.7, lineOp: 0.32,
 });
@@ -1059,7 +1060,7 @@ function makeNeural(canvasId, opts) {
 }
 
 makeNeural('cmp-canvas', {
-  nodeColor: 'rgba(129,140,248,', lineColor: 'rgba(129,140,248,',
+  nodeColor: 'rgba(127,209,184,', lineColor: 'rgba(127,209,184,',
   maxDist: 160, count: 32, speed: 0.14, radius: 2,
   nodeOp: 0.45, lineOp: 0.18,
 });
@@ -1067,7 +1068,7 @@ makeNeural('cmp-canvas', {
 /* Nav scroll */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.style.background = scrollY > 36 ? 'rgba(8,7,9,.97)' : 'rgba(8,7,9,.85)';
+  nav.style.background = scrollY > 36 ? 'rgba(10,14,19,.97)' : 'rgba(10,14,19,.85)';
 }, {passive:true});
 
 /* Reveal */

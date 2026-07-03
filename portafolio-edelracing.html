@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edel Racing Team · Portafolio · Velora Labs</title>
-<meta name="description" content="Sistemas para Edel Racing Team: Performance Lab para análisis de entrenamientos y automatización n8n para publicación en redes sociales.">
+<title>Edel Racing Team · Portafolio · Velkin Data Studios</title>
+<meta name="description" content="Sector, nuestra plataforma propia de análisis de telemetría, rentada por Edel Racing Team, más Velkin Content Hub para publicación automática en redes sociales.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
 /* ─── TOKENS ──────────────────────────────────────────── */
 :root {
-  --ink:       #080709;
-  --ink-2:     #0E0D12;
-  --ink-3:     #141318;
-  --rule:      #1E1C28;
-  --rule-2:    #262432;
-  --violet:    #5B5FE8;
-  --violet-lt: #818CF8;
-  --cyan:      #22D3EE;
-  --green:     #10B981;
-  --snow:      #E8EAF4;
-  --mist:      #9698B8;
-  --dim:       #4E5075;
-  --jk: "Plus Jakarta Sans", "Helvetica Neue", sans-serif;
-  --it: "Inter", "Helvetica Neue", sans-serif;
+  --ink:       #0A0E13;
+  --ink-2:     #10151C;
+  --ink-3:     #161C24;
+  --rule:      #232B34;
+  --rule-2:    #303B47;
+  --pine:    #3E9B82;
+  --pine-lt: #7FD1B8;
+  --rust:      #D2532F;
+  --green:     #2E9E6B;
+  --snow:      #E7E6DD;
+  --mist:      #9A9A8E;
+  --dim:       #5C5B50;
+  --jk: "Archivo", "Helvetica Neue", sans-serif;
+  --it: "Archivo", "Helvetica Neue", sans-serif;
   --mo: "JetBrains Mono", "Fira Code", monospace;
   --expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -63,7 +63,7 @@ body::after {
 }
 .ambient-2 {
   width: 40vw; height: 40vw; top: 60vh; left: -10vw;
-  background: radial-gradient(circle, rgba(91,95,232,.035) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.035) 0%, transparent 65%);
 }
 .ambient-3 {
   width: 35vw; height: 35vw; bottom: 10vh; right: 5vw;
@@ -89,7 +89,7 @@ body::after {
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: 68px; display: flex; align-items: center;
-  background: rgba(8,7,9,.85);
+  background: rgba(10,14,19,.85);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(30,28,40,.8);
   transition: background .3s;
@@ -106,11 +106,11 @@ body::after {
 .nav-links a.active { color: var(--snow); }
 .nav-btn {
   padding: 9px 20px; border-radius: 7px;
-  background: var(--violet); color: #fff;
+  background: var(--pine); color: #fff;
   font-size: 14px; font-weight: 600;
   transition: background .2s, transform .15s; flex-shrink: 0; white-space: nowrap;
 }
-.nav-btn:hover { background: var(--violet-lt); transform: translateY(-1px); }
+.nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
 @media (max-width: 860px) { .nav-links { display: none; } }
 
 /* ─── PROJECT HERO ────────────────────────────────────── */
@@ -298,7 +298,7 @@ body::after {
   border-radius: 10px; padding: 14px 20px; flex-shrink: 0;
 }
 .flow-node.trigger {
-  border-color: rgba(91,95,232,.4); background: rgba(91,95,232,.08);
+  border-color: rgba(62,155,130,.4); background: rgba(62,155,130,.08);
 }
 .flow-node.engine {
   border-color: rgba(245,158,11,.3); background: rgba(245,158,11,.06);
@@ -310,7 +310,7 @@ body::after {
   font-family: var(--mo); font-size: 9px; letter-spacing: 2px;
   text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 4px;
 }
-.flow-node.trigger .fn-label { color: var(--violet-lt); }
+.flow-node.trigger .fn-label { color: var(--pine-lt); }
 .flow-node.engine  .fn-label { color: #F59E0B; }
 .flow-node.source  .fn-label { color: #93C5FD; }
 .fn-name { font-family: var(--jk); font-size: 13px; font-weight: 600; color: var(--snow); }
@@ -327,12 +327,12 @@ body::after {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
   padding-top: 24px; border-top: 1px solid var(--rule);
 }
-.flow-outputs-2 {
+.flow-outputs-2, .flow-outputs {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
   padding-top: 24px; border-top: 1px solid var(--rule);
 }
 @media (max-width: 600px) {
-  .flow-outputs-3, .flow-outputs-2 { grid-template-columns: 1fr; }
+  .flow-outputs-3, .flow-outputs-2, .flow-outputs { grid-template-columns: 1fr; }
 }
 .output-node {
   background: var(--ink-3); border: 1px solid var(--rule-2);
@@ -349,6 +349,22 @@ body::after {
 }
 .out-name { font-size: 13px; font-weight: 500; color: var(--snow); }
 
+/* ─── ROLES GRID ──────────────────────────────────────── */
+.roles-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 8px;
+}
+@media (max-width: 900px) { .roles-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .roles-grid { grid-template-columns: 1fr; } }
+.role-card {
+  background: var(--ink-2); border: 1px solid var(--rule-2);
+  border-radius: 10px; padding: 16px;
+}
+.role-name {
+  display: block; font-family: var(--jk); font-size: 13px; font-weight: 700;
+  color: var(--pine-lt); margin-bottom: 6px;
+}
+.role-card p { font-size: 12.5px; color: var(--mist); line-height: 1.55; }
+
 /* ─── RESULTS ─────────────────────────────────────────── */
 .results-grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 36px;
@@ -361,7 +377,7 @@ body::after {
 }
 .result-icon {
   width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px;
-  background: rgba(16,185,129,.1); border: 1px solid rgba(16,185,129,.2);
+  background: rgba(46,158,107,.1); border: 1px solid rgba(46,158,107,.2);
   display: flex; align-items: center; justify-content: center; color: var(--green);
 }
 .result-item h4 {
@@ -389,11 +405,11 @@ body::after {
 .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-primary {
   padding: 12px 28px; border-radius: 8px;
-  background: var(--violet); color: #fff;
+  background: var(--pine); color: #fff;
   font-family: var(--jk); font-size: 15px; font-weight: 600;
   transition: background .2s, transform .15s;
 }
-.btn-primary:hover { background: var(--violet-lt); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--pine-lt); transform: translateY(-1px); }
 .btn-secondary {
   padding: 12px 28px; border-radius: 8px;
   border: 1px solid var(--rule-2); color: var(--mist);
@@ -418,10 +434,10 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
   .foot-copy { text-align: center; }
 }
 
-/* ─── SECTION LABEL OVERRIDES (VIOLET for sub-sections) ─ */
+/* ─── SECTION LABEL OVERRIDES (PINE for sub-sections) ─ */
 .sub-label {
   font-family: var(--mo); font-size: 10px; letter-spacing: 2.5px;
-  text-transform: uppercase; color: var(--violet-lt);
+  text-transform: uppercase; color: var(--pine-lt);
   margin-bottom: 12px; display: block;
 }
 
@@ -437,8 +453,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-wrap">
-    <a href="index.html" class="nav-logo" aria-label="Velora Labs — inicio">
-      <img src="logo.svg" alt="Velora Labs" height="44" style="display:block;">
+    <a href="index.html" class="nav-logo" aria-label="Velkin Data Studios — inicio">
+      <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;">
     </a>
     <ul class="nav-links">
       <li><a href="index.html#portafolio" class="active">Portafolio</a></li>
@@ -458,15 +474,15 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       Portafolio
     </a>
     <div class="proj-chips fu d1">
-      <span class="chip">Cliente: Edel Racing Team</span>
-      <span class="chip">Motorsport data</span>
+      <span class="chip">Velkin Sector</span>
+      <span class="chip">SaaS · Rentado</span>
       <span class="chip">IA</span>
       <span class="chip">Automatización social</span>
     </div>
     <h1 class="fu d2">Edel Racing Team</h1>
-    <p class="proj-hero-sub fu d3">Estamos construyendo Performance Lab y automatizando la operación de contenido: datos de pista para entrenar mejor, redes sociales sin trabajo repetitivo.</p>
+    <p class="proj-hero-sub fu d3">Rentamos Sector, nuestra plataforma de análisis de telemetría, y automatizamos la operación de contenido: datos de pista para entrenar mejor, redes sociales sin trabajo repetitivo.</p>
     <div class="hero-placeholder">
-      <img src="assets/portfolio/thumb-edelracing.svg" alt="Mock visual del dashboard Performance Lab para Edel Racing Team">
+      <img src="assets/portfolio/thumb-edelracing.svg" alt="Mock visual del dashboard Sector para Edel Racing Team">
     </div>
   </div>
 </section>
@@ -481,7 +497,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       </div>
       <div class="meta-item rv rv1">
         <span class="meta-key">Categoría</span>
-        <span class="meta-val">Motorsport · Producto · Automatización</span>
+        <span class="meta-val">Motorsport · SaaS propio · Automatización</span>
       </div>
       <div class="meta-item rv rv2">
         <span class="meta-key">Año</span>
@@ -489,7 +505,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       </div>
       <div class="meta-item rv rv3">
         <span class="meta-key">Entregables</span>
-        <span class="meta-val">Performance Lab · IA · n8n</span>
+        <span class="meta-val">Sector · IA · Content Hub</span>
       </div>
     </div>
   </div>
@@ -502,12 +518,12 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <div>
         <span class="section-label">El punto de partida</span>
         <h2 class="section-h2">Un equipo real necesitaba menos operación manual y más decisiones accionables.</h2>
-        <p class="section-body">Para Edel Racing Team estamos construyendo dos sistemas conectados a su operación: Performance Lab, un producto interno para ordenar entrenamientos, tandas, telemetría RaceBox y análisis IA; y un flujo automático para publicar contenido en redes desde archivos preparados por el equipo.</p>
+        <p class="section-body">Para Edel Racing Team conectamos dos productos propios a su operación: <strong style="color:var(--snow)">Sector</strong> — nuestra plataforma de análisis de telemetría y gestión de rendimiento, que seguimos desarrollando como producto y que rentamos a su equipo para pilotos y academia — y <strong style="color:var(--snow)">Velkin Content Hub</strong>, nuestro sistema de programación y publicación, que arma el calendario y publica en redes desde archivos preparados por el equipo.</p>
         <p class="section-body" style="margin-top:16px;">La intención es la misma en ambos frentes: que el equipo dedique menos tiempo a tareas repetitivas y más tiempo a pista, coaching, contenido y crecimiento.</p>
       </div>
       <div class="context-callout">
         <blockquote>"El sistema debe quitar carga operativa y mejorar la siguiente decisión."</blockquote>
-        <cite>Principio de producto · Edel Racing Team</cite>
+        <cite>Sector · Rentado por Edel Racing Team</cite>
       </div>
     </div>
   </div>
@@ -521,9 +537,9 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <span class="section-label rv">Lo que construimos</span>
     <h2 class="section-h2 rv">Un laboratorio operativo para entrenar con datos.</h2>
 
-    <!-- 1. Performance Lab dashboard -->
+    <!-- 1. Sector dashboard -->
     <div class="rv rv1">
-      <span class="sub-label">Performance Lab</span>
+      <span class="sub-label">Sector</span>
       <h3 class="section-h3">Una pantalla para decidir la siguiente acción.</h3>
       <p class="section-body">El home del sistema prioriza lo que importa en pista: nuevo entrenamiento, captura de tanda, pilotos activos, tareas pendientes, últimos tiempos y sesiones recientes. La interfaz está pensada para usarse rápido, antes o después de entrar al kart.</p>
 
@@ -531,9 +547,9 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div class="mock-bar">
           <div class="mock-dot" style="background:#EF4444;"></div>
           <div class="mock-dot" style="background:#F59E0B;"></div>
-          <div class="mock-dot" style="background:#10B981;"></div>
+          <div class="mock-dot" style="background:#2E9E6B;"></div>
           <div class="mock-bar-url">
-            <span>edel-racing-team/performance-lab</span>
+            <span>sector.app/edel-racing-team</span>
           </div>
         </div>
         <div class="mock-content">
@@ -549,26 +565,26 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
             <div class="mock-cta-btn ghost"></div>
           </div>
         </div>
-        <div class="mock-footer-bar">Performance Lab · Próxima tanda</div>
+        <div class="mock-footer-bar">Sector · Próxima tanda</div>
       </div>
     </div>
 
     <div class="section-divider"></div>
 
     <!-- 2. Flujo de datos -->
-    <span class="sub-label rv">Flujo de datos</span>
-    <h3 class="section-h3 rv" style="margin-bottom:8px;">De RaceBox a análisis utilizable.</h3>
-    <p class="section-body rv" style="margin-bottom:32px;">Cada tanda puede cargar datos de RaceBox, asociarse a piloto y entrenamiento, persistir puntos GPS y preparar cortes de sector desde KML. El objetivo no es guardar archivos, es construir contexto para comparar vueltas y detectar dónde se gana o se pierde tiempo.</p>
+    <span class="sub-label rv">Telemetría dual</span>
+    <h3 class="section-h3 rv" style="margin-bottom:8px;">De RaceBox y MyChron a análisis por curva.</h3>
+    <p class="section-body rv" style="margin-bottom:32px;">Cada tanda acepta CSV de RaceBox Mini S (GPS, velocidad, fuerzas G) o archivos XRK/XRZ de AiM MyChron 5 (RPM, ángulo de volante, acelerómetro y giroscopio) — con un parser propio que detecta y descarta vueltas fantasma del firmware AiM. Ambas fuentes se resamplean a 25 Hz, se cruzan con el mapa GPS de la pista (overlay KML del trazado oficial) y alimentan un análisis automático por curva: G lateral, velocidad mínima y ángulo de volante por zona.</p>
     <div class="flow-card rv rv1">
       <div class="flow-track">
         <div class="flow-node trigger">
           <span class="fn-label">Entrada</span>
-          <span class="fn-name">CSV + KML RaceBox</span>
+          <span class="fn-name">CSV RaceBox + XRK MyChron</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node engine">
           <span class="fn-label">Procesador</span>
-          <span class="fn-name">Parser de telemetría</span>
+          <span class="fn-name">Parser dual + detección de curvas</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
@@ -587,17 +603,17 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           </div>
         </div>
         <div class="output-node">
-          <div class="out-icon" style="background:rgba(91,95,232,.12);border:1px solid rgba(91,95,232,.2);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <div class="out-icon" style="background:rgba(62,155,130,.12);border:1px solid rgba(62,155,130,.2);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FD1B8" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </div>
           <div>
             <span class="out-label">Mapa</span>
-            <span class="out-name">GPS + sectores</span>
+            <span class="out-name">GPS + curvas</span>
           </div>
         </div>
         <div class="output-node">
-          <div class="out-icon" style="background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.2);">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <div class="out-icon" style="background:rgba(210,83,47,.12);border:1px solid rgba(210,83,47,.2);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D2532F" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
           <div>
             <span class="out-label">Lectura</span>
@@ -611,8 +627,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 
     <!-- 3. Reportes y tareas -->
     <span class="sub-label rv">Reportes y tareas</span>
-    <h3 class="section-h3 rv" style="margin-bottom:8px;">La IA termina en una tarea concreta.</h3>
-    <p class="section-body rv" style="margin-bottom:32px;">El sistema genera análisis por tanda, briefing antes del entrenamiento, reportes PDF y tareas pendientes para el piloto. La salida esperada no es una gráfica bonita, es una instrucción verificable para probar en pista.</p>
+    <h3 class="section-h3 rv" style="margin-bottom:8px;">La IA termina en una tarea concreta, no en una gráfica bonita.</h3>
+    <p class="section-body rv" style="margin-bottom:32px;">Cada análisis se genera en 16 secciones técnicas, filtradas por rol: el piloto ve técnica de conducción y referencias de frenada; el mecánico ve setup, PSI y geometría; dirección ve resumen ejecutivo y tendencias de campeonato. La IA también propone hipótesis de ajuste de chassis — pendiente → validada o rechazada — que se pasan como contexto comprimido a la siguiente sesión en esa misma pista.</p>
     <div class="flow-card rv rv1">
       <div class="flow-track">
         <div class="flow-node source">
@@ -622,12 +638,12 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div class="flow-arrow"></div>
         <div class="flow-node engine">
           <span class="fn-label">Orquestador</span>
-          <span class="fn-name">Motor IA</span>
+          <span class="fn-name">Motor IA · 16 secciones</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
           <span class="fn-label">Documento</span>
-          <span class="fn-name">Reporte PDF</span>
+          <span class="fn-name">Reporte PDF por rol</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
@@ -635,7 +651,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           <span class="fn-name">Siguiente foco</span>
         </div>
       </div>
-      <div class="flow-outputs-2">
+      <div class="flow-outputs-3">
         <div class="output-node">
           <div class="out-icon" style="background:rgba(225,6,0,.12);border:1px solid rgba(225,6,0,.22);">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E10600" stroke-width="2"><path d="M4 15s1.5-2 4-2 4 2 6.5 2 4.5-2 5.5-2V4s-1.5 2-4.5 2S11.5 4 9 4 4 6 4 6v13"/></svg>
@@ -654,6 +670,68 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
             <span class="out-name">Briefing de pista</span>
           </div>
         </div>
+        <div class="output-node">
+          <div class="out-icon" style="background:rgba(62,155,130,.12);border:1px solid rgba(62,155,130,.2);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FD1B8" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <span class="out-label">Mecánica</span>
+            <span class="out-name">Hipótesis validada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 3b. Multi-equipo y roles -->
+    <span class="sub-label rv">Multi-equipo y roles</span>
+    <h3 class="section-h3 rv" style="margin-bottom:8px;">Un producto, varios equipos operando sin verse entre sí.</h3>
+    <p class="section-body rv" style="margin-bottom:32px;">Sector no se construyó pensando en un solo cliente: cada equipo administra sus propios pilotos, staff y datos de forma aislada. Cinco roles controlan qué se ve y qué se edita.</p>
+    <div class="roles-grid rv rv1">
+      <div class="role-card"><span class="role-name">Admin</span><p>Acceso total: todos los equipos, comparativa y panel de administración.</p></div>
+      <div class="role-card"><span class="role-name">Director de equipo</span><p>Crea y edita sesiones, ve la comparativa solo de su propio equipo.</p></div>
+      <div class="role-card"><span class="role-name">Coach</span><p>Crea tandas, sube telemetría y genera análisis IA.</p></div>
+      <div class="role-card"><span class="role-name">Mecánico</span><p>Ve setups y datos de los pilotos que tiene asignados.</p></div>
+      <div class="role-card"><span class="role-name">Piloto</span><p>Ve su propio perfil, historial y tareas pendientes.</p></div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- 3c. Comparativa de pilotos -->
+    <span class="sub-label rv">Comparativa de pilotos</span>
+    <h3 class="section-h3 rv" style="margin-bottom:8px;">Dos formas de ver quién va más rápido, y por qué.</h3>
+    <p class="section-body rv" style="margin-bottom:32px;">Por entrenamiento: mejor vuelta, gap al líder, promedio limpio, consistencia y mejor sector de cada piloto en la sesión. Por pista: ranking histórico de la mejor vuelta jamás registrada, con fecha y número de sesiones rodadas. Visible solo para dirección y coaches — cada director ve únicamente a los pilotos de su equipo.</p>
+    <div class="flow-card rv rv1">
+      <div class="flow-track">
+        <div class="flow-node source">
+          <span class="fn-label">Origen</span>
+          <span class="fn-name">Tandas del equipo</span>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node engine">
+          <span class="fn-label">Motor</span>
+          <span class="fn-name">Ranking + gap al líder</span>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node">
+          <span class="fn-label">Salida</span>
+          <span class="fn-name">Comparativa</span>
+        </div>
+      </div>
+      <div class="flow-outputs">
+        <div class="output-node">
+          <div class="out-icon" style="background:rgba(62,155,130,.12);border:1px solid rgba(62,155,130,.2);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FD1B8" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div><span class="out-label">Vista</span><span class="out-name">Por sesión</span></div>
+        </div>
+        <div class="output-node">
+          <div class="out-icon" style="background:rgba(243,178,60,.12);border:1px solid rgba(243,178,60,.22);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F3B23C" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <div><span class="out-label">Vista</span><span class="out-name">Por pista (histórico)</span></div>
+        </div>
       </div>
     </div>
 
@@ -662,7 +740,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <!-- 4. Automatización de redes sociales -->
     <span class="sub-label rv">Automatización de redes sociales</span>
     <h3 class="section-h3 rv" style="margin-bottom:8px;">Publicación automática desde Drive hacia Meta.</h3>
-    <p class="section-body rv" style="margin-bottom:32px;">Además de Performance Lab, Edel Racing Team cuenta con un flujo en n8n para reducir la operación manual de contenido. El equipo sube imágenes a Google Drive; el workflow detecta el archivo, lo pasa por Cloudinary como proxy de entrega y publica en Instagram y Facebook.</p>
+    <p class="section-body rv" style="margin-bottom:32px;">Además de Sector, Edel Racing Team cuenta con Velkin Content Hub para reducir la operación manual de contenido. El equipo sube imágenes a Google Drive; Content Hub arma el calendario, genera el caption con IA, lo pasa por Cloudinary como proxy de entrega y publica en Instagram y Facebook.</p>
     <div class="flow-card rv rv1">
       <div class="flow-track">
         <div class="flow-node source">
@@ -671,8 +749,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node engine">
-          <span class="fn-label">Orquestador</span>
-          <span class="fn-name">n8n Workflow</span>
+          <span class="fn-label">Programación</span>
+          <span class="fn-name">Velkin Content Hub</span>
         </div>
         <div class="flow-arrow"></div>
         <div class="flow-node">
@@ -720,11 +798,11 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <div class="results-grid rv rv1">
       <div class="result-item">
         <div class="result-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <div>
-          <h4>Entrenamientos y tandas centralizados</h4>
-          <p>Sesiones, pilotos, stints y objetivos diarios quedan en una misma estructura operativa.</p>
+          <h4>Multi-equipo con datos aislados</h4>
+          <p>Cinco roles y equipos sin visibilidad cruzada — el mismo producto opera para varios clientes a la vez.</p>
         </div>
       </div>
       <div class="result-item">
@@ -732,8 +810,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
         <div>
-          <h4>Telemetría RaceBox integrada</h4>
-          <p>CSV, puntos GPS y líneas de sector preparan el mapa de pista y la lectura por segmentos.</p>
+          <h4>Telemetría RaceBox + MyChron</h4>
+          <p>GPS y fuerzas G de RaceBox, más RPM y volante de MyChron — con detección automática de vueltas fantasma.</p>
         </div>
       </div>
       <div class="result-item">
@@ -741,8 +819,26 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </div>
         <div>
-          <h4>Análisis IA por contexto</h4>
-          <p>El sistema cruza objetivos, resultados de tanda y observaciones para producir recomendaciones.</p>
+          <h4>Reportes IA de 16 secciones por rol</h4>
+          <p>Piloto, coach, mecánico y dirección reciben exactamente la información que les toca decidir.</p>
+        </div>
+      </div>
+      <div class="result-item">
+        <div class="result-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <h4>Hipótesis de setup con validación</h4>
+          <p>Cada ajuste propuesto por la IA se valida o rechaza, y ese historial informa la siguiente sesión.</p>
+        </div>
+      </div>
+      <div class="result-item">
+        <div class="result-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div>
+          <h4>Comparativa por sesión y por pista</h4>
+          <p>Ranking en vivo del día y ranking histórico de mejor vuelta por pista, con gap al líder y consistencia.</p>
         </div>
       </div>
       <div class="result-item">
@@ -751,7 +847,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         </div>
         <div>
           <h4>Automatización social activa</h4>
-          <p>Drive, n8n, Cloudinary y Meta conectados para publicar contenido sin repetir operación manual.</p>
+          <p>Drive, Velkin Content Hub, Cloudinary y Meta conectados para publicar contenido sin repetir operación manual.</p>
         </div>
       </div>
     </div>
@@ -777,7 +873,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <div class="foot-inner">
       <div class="foot-brand">
         <div class="foot-logo">
-          <img src="logo.svg" alt="Velora Labs" height="38" style="display:block;opacity:.65;">
+          <img src="logo.svg" alt="Velkin Data Studios" height="38" style="display:block;opacity:.65;">
         </div>
         <span class="foot-tag">Branding · Growth Systems · Automatización</span>
       </div>
@@ -787,7 +883,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <a href="servicios.html">Servicios</a>
         <a href="contacto.html">Contacto</a>
       </nav>
-      <p class="foot-copy">© 2026 Velora Labs<br>Built for businesses ready<br>to stop improvising.</p>
+      <p class="foot-copy">© 2026 Velkin Data Studios<br>Built for businesses ready<br>to stop improvising.</p>
     </div>
   </div>
 </footer>

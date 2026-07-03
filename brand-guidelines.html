@@ -3,36 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velora Labs — Brand Identity System</title>
+<title>Velkin Data Studios — Brand Identity System</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ── TOKENS ──────────────────────────────────────────────── */
 :root {
-  --black:       #06070D;
-  --surface:     #0D0E1A;
-  --surface-2:   #131528;
-  --surface-3:   #1A1C35;
-  --border:      #1E2040;
-  --border-2:    #252848;
+  --black:       #0A0E13;
+  --surface:     #10151C;
+  --surface-2:   #161C24;
+  --surface-3:   #1C232C;
+  --border:      #232B34;
+  --border-2:    #303B47;
 
-  --primary:     #5B5FE8;
-  --primary-lt:  #818CF8;
-  --primary-glow:rgba(91,95,232,.14);
+  --primary:     #3E9B82;
+  --primary-lt:  #7FD1B8;
+  --primary-glow:rgba(62,155,130,.14);
 
-  --cyan:        #22D3EE;
-  --cyan-dim:    rgba(34,211,238,.12);
+  --rust:        #D2532F;
+  --rust-dim:    rgba(210,83,47,.12);
   --amber:       #F59E0B;
   --amber-dim:   rgba(245,158,11,.10);
-  --green:       #10B981;
+  --green:       #2E9E6B;
 
   --white:       #FFFFFF;
-  --text-1:      #E8EAF4;
-  --text-2:      #9698B8;
-  --text-3:      #4E5075;
+  --text-1:      #E7E6DD;
+  --text-2:      #9A9A8E;
+  --text-3:      #5C5B50;
 
-  --font-display:"Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-body:   "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body:   "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-mono:   "JetBrains Mono", "Fira Code", monospace;
 
   --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 24px;
@@ -49,7 +49,7 @@ img,svg{display:block;max-width:100%}
 
 /* ── NAV ─────────────────────────────────────────────────── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(6,7,13,.85);backdrop-filter:blur(16px);
+    background:rgba(10,14,19,.85);backdrop-filter:blur(16px);
     border-bottom:1px solid var(--border);
     display:flex;align-items:center;justify-content:space-between;
     padding:0 40px;height:60px}
@@ -80,15 +80,15 @@ section+section{border-top:1px solid var(--border)}
        position:relative;overflow:hidden}
 .cover-bg{position:absolute;inset:0;
           background:radial-gradient(ellipse 80% 60% at 65% 40%,
-            rgba(91,95,232,.12) 0%,transparent 65%),
+            rgba(62,155,130,.12) 0%,transparent 65%),
             radial-gradient(ellipse 50% 40% at 80% 70%,
-            rgba(34,211,238,.06) 0%,transparent 55%)}
+            rgba(210,83,47,.06) 0%,transparent 55%)}
 .cover-grid{position:absolute;inset:0;
   background-image:linear-gradient(var(--border) 1px,transparent 1px),
                    linear-gradient(90deg,var(--border) 1px,transparent 1px);
   background-size:80px 80px;opacity:.3}
 .cover-content{position:relative;z-index:1}
-.cover-eyebrow{font-family:var(--font-mono);font-size:12px;color:var(--cyan);
+.cover-eyebrow{font-family:var(--font-mono);font-size:12px;color:var(--rust);
                letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
 .cover-h1{font-family:var(--font-display);font-size:clamp(52px,7vw,96px);
           font-weight:800;line-height:.95;letter-spacing:-3px;
@@ -145,7 +145,7 @@ section+section{border-top:1px solid var(--border)}
 .t-body-lg{font-size:18px;color:var(--text-2);line-height:1.7}
 .t-body{font-size:16px;color:var(--text-2);line-height:1.65}
 .t-caption{font-size:12px;color:var(--text-3);letter-spacing:.5px}
-.t-mono{font-family:var(--font-mono);font-size:14px;color:var(--cyan)}
+.t-mono{font-family:var(--font-mono);font-size:14px;color:var(--rust)}
 .t-label{font-family:var(--font-body);font-size:11px;font-weight:500;
          text-transform:uppercase;letter-spacing:1.5px;color:var(--text-3)}
 
@@ -180,8 +180,8 @@ section+section{border-top:1px solid var(--border)}
      background:var(--surface-2)}
 .tag.primary{background:var(--primary-glow);border-color:var(--primary);
              color:var(--primary-lt)}
-.tag.cyan{background:var(--cyan-dim);border-color:rgba(34,211,238,.3);
-          color:var(--cyan)}
+.tag.cyan{background:var(--rust-dim);border-color:rgba(210,83,47,.3);
+          color:var(--rust)}
 .tag.amber{background:var(--amber-dim);border-color:rgba(245,158,11,.3);
            color:var(--amber)}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
@@ -205,7 +205,7 @@ section+section{border-top:1px solid var(--border)}
   width:300px;height:300px;
   background:radial-gradient(circle,var(--primary-glow) 0%,transparent 70%)}
 .hero-demo-eyebrow{font-family:var(--font-mono);font-size:12px;
-                   color:var(--cyan);letter-spacing:3px;
+                   color:var(--rust);letter-spacing:3px;
                    text-transform:uppercase;margin-bottom:24px}
 .hero-demo h2{font-family:var(--font-display);font-size:clamp(36px,4vw,56px);
               font-weight:800;line-height:1.05;letter-spacing:-1.5px;
@@ -222,8 +222,8 @@ section+section{border-top:1px solid var(--border)}
 
 /* ── MISC ────────────────────────────────────────────────── */
 .divider{border:none;border-top:1px solid var(--border);margin:40px 0}
-.mono-inline{font-family:var(--font-mono);font-size:13px;color:var(--cyan);
-             background:var(--cyan-dim);padding:2px 8px;border-radius:4px}
+.mono-inline{font-family:var(--font-mono);font-size:13px;color:var(--rust);
+             background:var(--rust-dim);padding:2px 8px;border-radius:4px}
 .number-badge{width:28px;height:28px;border-radius:50%;
               background:var(--primary-glow);border:1px solid var(--primary);
               display:flex;align-items:center;justify-content:center;
@@ -256,17 +256,13 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
 <nav>
   <div class="nav-logo">
     <svg viewBox="0 0 248 48" xmlns="http://www.w3.org/2000/svg" fill="none">
-      <defs><linearGradient id="ng" x1="5" y1="9" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#5B5FE8"/>
-      </linearGradient></defs>
-      <line x1="5" y1="9" x2="24" y2="42" stroke="url(#ng)" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="43" y1="5" x2="24" y2="42" stroke="url(#ng)" stroke-width="3.2" stroke-linecap="round"/>
-      <circle cx="24" cy="42" r="3.8" fill="#5B5FE8"/>
-      <circle cx="43" cy="5" r="2.4" fill="#22D3EE"/>
-      <text x="60" y="32" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-            font-weight="800" font-size="24" fill="#E8EAF4" letter-spacing="-0.6">VELORA</text>
-      <text x="61.5" y="46" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-            font-weight="500" font-size="10.5" fill="#8B8DA8" letter-spacing="4.5">LABS</text>
+      <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+      <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+      <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
+      <text x="60" y="32" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+            font-weight="800" font-size="24" fill="#E7E6DD" letter-spacing="-0.6">VELKIN</text>
+      <text x="61.5" y="46" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+            font-weight="500" font-size="9.5" fill="#8B8DA8" letter-spacing="3.2">DATA STUDIOS</text>
     </svg>
   </div>
   <ul class="nav-links">
@@ -287,7 +283,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <div class="cover-grid"></div>
   <div class="page cover-content" style="width:100%">
     <p class="cover-eyebrow">Brand Identity System · v1.0 · 2026</p>
-    <h1 class="cover-h1">Velora<br><span>Labs</span></h1>
+    <h1 class="cover-h1">Velkin<br><span>Data Studios</span></h1>
     <p class="cover-tagline">Branding &nbsp;·&nbsp; Growth Systems &nbsp;·&nbsp; Automation</p>
     <div class="cover-meta">
       <div class="cover-meta-item">
@@ -332,7 +328,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div class="card" style="border-top:3px solid var(--primary)">
       <p class="card-label">Philosophy</p>
       <p class="card-title">We don't create content. We build growth systems.</p>
-      <p class="card-body">Most agencies produce deliverables. Velora Labs builds systems. The difference isn't output volume — it's whether the work keeps generating value when you're not watching.</p>
+      <p class="card-body">Most agencies produce deliverables. Velkin Data Studios builds systems. The difference isn't output volume — it's whether the work keeps generating value when you're not watching.</p>
     </div>
   </div>
 
@@ -341,7 +337,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div class="card" style="background:var(--surface-2)">
       <p class="card-label">Brand Positioning</p>
       <p class="card-title">The growth partner for businesses ready to stop improvising.</p>
-      <p class="card-body" style="margin-top:16px">Velora Labs sits at the precise intersection of structured thinking and creative execution. A growth partner built differently — one that leaves systems running, not just files delivered.<br><br>Technology and automation allow us to offer premium growth systems to companies of any size: from the startup scaling fast to the small business that never had access to this level of execution. Operating across <strong style="color:var(--text-1)">Mexico and Germany</strong> — built to serve LATAM and European markets from a single integrated team.</p>
+      <p class="card-body" style="margin-top:16px">Velkin Data Studios sits at the precise intersection of structured thinking and creative execution. A growth partner built differently — one that leaves systems running, not just files delivered.<br><br>Technology and automation allow us to offer premium growth systems to companies of any size: from the startup scaling fast to the small business that never had access to this level of execution. Operating across <strong style="color:var(--text-1)">Mexico and Germany</strong> — built to serve LATAM and European markets from a single integrated team.</p>
     </div>
     <div class="card" style="background:linear-gradient(135deg,var(--primary-glow),transparent);border-color:var(--primary)">
       <p class="card-label">Brand Promise</p>
@@ -386,7 +382,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
         <span class="tag primary" style="font-size:13px;padding:6px 16px;margin-bottom:8px;display:inline-block">Primary: The Magician</span><br>
         <span class="tag" style="font-size:13px;padding:6px 16px;display:inline-block">Secondary: The Ruler</span>
       </div>
-      <p class="card-body">The Magician transforms. Velora Labs takes the invisible (strategy, data, systems) and makes it produce visible results. The Ruler provides the structure and authority that transforms that magic into repeatable, scalable performance.</p>
+      <p class="card-body">The Magician transforms. Velkin Data Studios takes the invisible (strategy, data, systems) and makes it produce visible results. The Ruler provides the structure and authority that transforms that magic into repeatable, scalable performance.</p>
     </div>
     <div class="card">
       <p class="card-label">Brand Differentiators</p>
@@ -410,30 +406,31 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
 <section id="naming">
 <div class="page">
   <p class="section-label">02 — Naming Analysis</p>
-  <h2 class="section-title">Why "Velora Labs"<br>works.</h2>
+  <h2 class="section-title">Why "Velkin Data Studios"<br>works.</h2>
   <p class="section-sub">Great names don't need explanation. But understanding the mechanics reveals how deep the roots go.</p>
   <hr class="divider">
 
   <div class="grid-2" style="margin-bottom:20px">
     <div>
       <div class="card" style="margin-bottom:16px">
-        <p class="card-label">Phonetic Architecture — "Velora"</p>
+        <p class="card-label">Phonetic Architecture — "Velkin"</p>
         <p class="card-body" style="margin-top:12px">
-          <strong style="color:var(--text-1)">V</strong> — Forceful, forward, velocity. The letter V in brand linguistics carries directional energy. It points somewhere.<br><br>
+          <strong style="color:var(--text-1)">V</strong> — Forceful, forward, directional. The letter V in brand linguistics carries pointed energy — a mark aimed at something specific, not scattered.<br><br>
           <strong style="color:var(--text-1)">el</strong> — Soft connector. Humanizes the force of V, prevents it from sounding aggressive.<br><br>
-          <strong style="color:var(--text-1)">ora</strong> — Latin-rooted suffix. Appears in: aurora (light), hora (time), memora (memory). Brings timelessness, internationalism, subtle elegance.<br><br>
-          Combined resonances: <span class="mono-inline">velocity</span> + <span class="mono-inline">aurora</span> + <span class="mono-inline">valor</span>. Speed, light, courage. The brand in three words.
+          <strong style="color:var(--text-1)">kin</strong> — Germanic root meaning family, connection, lineage. Also the front half of <em>kinetic</em> — motion with structure, not chaos. The deliberate echo of Jalil's cross-border operation: Mexico and Germany, one family, one system.<br><br>
+          Combined resonances: <span class="mono-inline">direction</span> + <span class="mono-inline">kinship</span> + <span class="mono-inline">kinetic</span>. A mark that points somewhere, built by people who are connected across two countries.
         </p>
       </div>
       <div class="card">
-        <p class="card-label">Strategic Value — "Labs"</p>
+        <p class="card-label">Strategic Value — "Data Studios"</p>
         <p class="card-body" style="margin-top:12px">
-          "Labs" is a precision decision. Compare the alternatives:<br><br>
+          "Data Studios" is a precision decision. Compare the alternatives:<br><br>
           <span class="mono-inline">Agency</span> → commoditized, deliverable-focused<br>
-          <span class="mono-inline">Studio</span> → artistic but soft, unclear on execution<br>
-          <span class="mono-inline">Co</span> → startup-cheap, temporary feel<br>
+          <span class="mono-inline">Labs</span> → R&D rigor, but suggests experimentation without delivery discipline<br>
+          <span class="mono-inline">Consultancy</span> → analysis without craft, no hands on the work<br>
           <span class="mono-inline">Group</span> → corporate, impersonal<br><br>
-          <strong style="color:var(--primary-lt)">Labs</strong> → R&D rigor, experimentation with purpose, proof-driven, scientific. Used by Google, Apple, Figma, Design Labs. Labs implies: we test before we ship. We measure what we build.
+          <strong style="color:var(--primary-lt)">Data</strong> → evidence over opinion. Every claim the studio makes about brand, growth or automation is measured, not felt.<br>
+          <strong style="color:var(--rust)">Studios</strong> → a place where things are built with intention, plural because the discipline spans branding, growth systems and automation as one connected practice.
         </p>
       </div>
     </div>
@@ -442,19 +439,19 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       <div style="margin:20px 0">
         <div style="font-family:var(--font-display);font-size:52px;font-weight:800;
                     letter-spacing:-2px;color:var(--text-1);line-height:1">
-          Velora<span style="color:var(--primary-lt)">_</span>
+          Velkin<span style="color:var(--primary-lt)">_</span>
         </div>
-        <div style="font-family:var(--font-display);font-size:52px;font-weight:800;
+        <div style="font-family:var(--font-display);font-size:44px;font-weight:800;
                     letter-spacing:-2px;color:var(--text-2);line-height:1;margin-bottom:24px">
-          Labs
+          Data Studios
         </div>
       </div>
       <ul class="styled">
-        <li>No dictionary definition — creates pure brand equity with zero pre-loaded associations to fight</li>
-        <li>Two syllables + one: natural spoken rhythm, easy to say in Spanish, English, German, French, Portuguese</li>
-        <li>VL monogram works as an icon system — clean, geometric, memorable</li>
-        <li>Scales into product names: Velora Grow, Velora OS, Velora CMS, Velora API</li>
-        <li>Domain: <strong>veloralabs.studio</strong> (primary) · <strong>veloralabs.systems</strong> (defensive redirect) — .studio signals creative execution with accessibility; "Growth Systems" descriptor preserves strategic differentiation. veloralabs.com is registered by an unrelated Canadian company.</li>
+        <li>No dictionary definition on "Velkin" — creates pure brand equity with zero pre-loaded associations to fight</li>
+        <li>Natural spoken rhythm in Spanish, English and German — the three working languages of the studio's cross-border operation</li>
+        <li>The benchmark mark works as a standalone icon — a fixed reference point, independent of any monogram</li>
+        <li>Scales into product names: Velkin Grow, Velkin Audit, Velkin OS, Velkin API</li>
+        <li>Domain: <strong>velkindatastudios.com</strong> — already acquired, single canonical domain, no defensive redirect needed</li>
         <li>Trademark validation pending — recommended before broader commercial rollout (IMPI / EUIPO / WIPO)</li>
       </ul>
       <div class="tags" style="margin-top:24px">
@@ -462,7 +459,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
         <span class="tag cyan">International</span>
         <span class="tag">Premium-positioned</span>
         <span class="tag">Scalable</span>
-        <span class="tag amber">Tech-adjacent</span>
+        <span class="tag amber">Data-informed</span>
       </div>
     </div>
   </div>
@@ -492,7 +489,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       </ul>
       <div style="margin-top:20px;padding:16px;background:var(--surface-3);border-radius:var(--r-md)">
         <p style="font-size:12px;color:var(--text-3);margin-bottom:6px">WHAT THEY FEEL SEEING THE BRAND</p>
-        <p style="font-size:14px;color:var(--cyan);font-style:italic">"Finally — a team that thinks like engineers."</p>
+        <p style="font-size:14px;color:var(--rust);font-style:italic">"Finally — a team that thinks like engineers."</p>
       </div>
     </div>
     <div class="card" style="border-top:3px solid var(--green)">
@@ -503,14 +500,14 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
         <li>Doesn't know what they're missing — but feels it</li>
         <li>Has tried freelancers or cheap agencies with no results</li>
         <li>Needs someone who treats them seriously, not like a small account</li>
-        <li>Technology allows Velora Labs to serve them at a price that works</li>
+        <li>Technology allows Velkin Data Studios to serve them at a price that works</li>
       </ul>
       <div style="margin-top:20px;padding:16px;background:var(--surface-3);border-radius:var(--r-md)">
         <p style="font-size:12px;color:var(--text-3);margin-bottom:6px">WHAT THEY FEEL SEEING THE BRAND</p>
-        <p style="font-size:14px;color:var(--cyan);font-style:italic">"This is exactly what I needed — and I didn't know it existed at this price."</p>
+        <p style="font-size:14px;color:var(--rust);font-style:italic">"This is exactly what I needed — and I didn't know it existed at this price."</p>
       </div>
     </div>
-    <div class="card" style="border-top:3px solid var(--cyan)">
+    <div class="card" style="border-top:3px solid var(--rust)">
       <p class="card-label">Profile C</p>
       <h3 class="card-title">The Execution-Frustrated SMB</h3>
       <p class="card-body" style="margin-bottom:16px">$1M–$20M revenue. B2B services or SaaS. Has had 2–3 agencies before. Each one delivered decks; none delivered systems.</p>
@@ -522,7 +519,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       </ul>
       <div style="margin-top:20px;padding:16px;background:var(--surface-3);border-radius:var(--r-md)">
         <p style="font-size:12px;color:var(--text-3);margin-bottom:6px">WHAT THEY FEEL SEEING THE BRAND</p>
-        <p style="font-size:14px;color:var(--cyan);font-style:italic">"This feels different. This actually looks like it works."</p>
+        <p style="font-size:14px;color:var(--rust);font-style:italic">"This feels different. This actually looks like it works."</p>
       </div>
     </div>
     <div class="card" style="border-top:3px solid var(--amber)">
@@ -537,7 +534,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       </ul>
       <div style="margin-top:20px;padding:16px;background:var(--surface-3);border-radius:var(--r-md)">
         <p style="font-size:12px;color:var(--text-3);margin-bottom:6px">WHAT THEY FEEL SEEING THE BRAND</p>
-        <p style="font-size:14px;color:var(--cyan);font-style:italic">"I want my brand to look exactly like this."</p>
+        <p style="font-size:14px;color:var(--rust);font-style:italic">"I want my brand to look exactly like this."</p>
       </div>
     </div>
   </div>
@@ -551,7 +548,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
 <div class="page">
   <p class="section-label">04 — Logo System</p>
   <h2 class="section-title">The mark.</h2>
-  <p class="section-sub">A geometric V with deliberate asymmetry. The velocity node. Simple enough to hold at 16px. Strong enough to own a wall.</p>
+  <p class="section-sub">A geodetic benchmark — the symbol cartographers use to mark a fixed, surveyed point. Simple enough to hold at 16px. Precise enough to survive a wall.</p>
   <hr class="divider">
 
   <!-- Primary Logo -->
@@ -560,17 +557,13 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div>
       <div class="logo-stage dark">
         <svg viewBox="0 0 248 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:44px;width:auto">
-          <defs><linearGradient id="lg1" x1="5" y1="9" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#5B5FE8"/>
-          </linearGradient></defs>
-          <line x1="5" y1="9" x2="24" y2="42" stroke="url(#lg1)" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="5" x2="24" y2="42" stroke="url(#lg1)" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="42" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="5" r="2.4" fill="#22D3EE"/>
-          <text x="60" y="32" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-                font-weight="800" font-size="24" fill="#E8EAF4" letter-spacing="-0.6">VELORA</text>
-          <text x="61.5" y="46" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-                font-weight="500" font-size="10.5" fill="#8B8DA8" letter-spacing="4.5">LABS</text>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
+          <text x="60" y="32" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+                font-weight="800" font-size="24" fill="#E7E6DD" letter-spacing="-0.6">VELKIN</text>
+          <text x="61.5" y="46" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+                font-weight="500" font-size="9.5" fill="#8B8DA8" letter-spacing="3.2">DATA STUDIOS</text>
         </svg>
       </div>
       <p class="logo-caption">Primary — on brand black</p>
@@ -578,14 +571,13 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div>
       <div class="logo-stage white">
         <svg viewBox="0 0 248 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:44px;width:auto">
-          <line x1="5" y1="9" x2="24" y2="42" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="5" x2="24" y2="42" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="42" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="5" r="2.4" fill="#22D3EE"/>
-          <text x="60" y="32" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-                font-weight="800" font-size="24" fill="#09090B" letter-spacing="-0.6">VELORA</text>
-          <text x="61.5" y="46" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-                font-weight="500" font-size="10.5" fill="#52525B" letter-spacing="4.5">LABS</text>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#16202B" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
+          <text x="60" y="32" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+                font-weight="800" font-size="24" fill="#16202B" letter-spacing="-0.6">VELKIN</text>
+          <text x="61.5" y="46" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+                font-weight="500" font-size="9.5" fill="#6B6F63" letter-spacing="3.2">DATA STUDIOS</text>
         </svg>
       </div>
       <p class="logo-caption">On white — light contexts</p>
@@ -593,18 +585,14 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   </div>
 
   <!-- Symbol -->
-  <p class="section-label">Symbol — The Velocity Node</p>
+  <p class="section-label">Symbol — The Benchmark Point</p>
   <div class="grid-4" style="margin-bottom:40px">
     <div>
       <div class="logo-stage dark mark" style="padding:32px">
         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:56px">
-          <defs><linearGradient id="mk1" x1="5" y1="8" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#5B5FE8"/>
-          </linearGradient></defs>
-          <line x1="5" y1="8" x2="24" y2="41" stroke="url(#mk1)" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="4" x2="24" y2="41" stroke="url(#mk1)" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
       </div>
       <p class="logo-caption">Symbol — dark</p>
@@ -612,13 +600,9 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div>
       <div class="logo-stage surface mark" style="padding:32px">
         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:56px">
-          <defs><linearGradient id="mk2" x1="5" y1="8" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#5B5FE8"/>
-          </linearGradient></defs>
-          <line x1="5" y1="8" x2="24" y2="41" stroke="url(#mk2)" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="4" x2="24" y2="41" stroke="url(#mk2)" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
       </div>
       <p class="logo-caption">Symbol — on surface</p>
@@ -626,21 +610,19 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div>
       <div class="logo-stage white mark" style="padding:32px">
         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:56px">
-          <line x1="5" y1="8" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="4" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#16202B" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
       </div>
       <p class="logo-caption">Symbol — on white</p>
     </div>
     <div>
-      <div class="logo-stage dark mark" style="padding:32px;background:#5B5FE8">
+      <div class="logo-stage dark mark" style="padding:32px;background:#3E9B82">
         <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:56px">
-          <line x1="5" y1="8" x2="24" y2="41" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="4" x2="24" y2="41" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="41" r="3.8" fill="#FFFFFF"/>
-          <circle cx="43" cy="4" r="2.4" fill="rgba(255,255,255,.6)"/>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#FFFFFF" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#FFFFFF"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="rgba(255,255,255,.6)" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
       </div>
       <p class="logo-caption">Symbol — on primary</p>
@@ -652,16 +634,16 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <p class="card-label">Construction Rationale</p>
     <div class="grid-3" style="margin-top:16px;gap:32px">
       <div>
-        <p style="font-size:14px;font-weight:600;color:var(--primary-lt);margin-bottom:8px">The V — Brand Letter</p>
-        <p class="card-body">Two converging diagonal strokes form the letter V for Velora. The geometry is deliberate: 63° angle, consistent with natural perspective lines and architectural forms.</p>
+        <p style="font-size:14px;font-weight:600;color:var(--primary-lt);margin-bottom:8px">The Triangle — Fixed Position</p>
+        <p class="card-body">An open triangle traces the same geometry surveyors stamp into bedrock to mark a permanent reference point. It reads as a V for Velkin, but its real job is to say: this is measured, not guessed.</p>
       </div>
       <div>
-        <p style="font-size:14px;font-weight:600;color:var(--primary-lt);margin-bottom:8px">The Asymmetry — Velocity</p>
-        <p class="card-body">The right arm starts 4 units higher than the left. This subtle asymmetry creates directional tension — the mark feels like it's moving forward, not standing still.</p>
+        <p style="font-size:14px;font-weight:600;color:var(--primary-lt);margin-bottom:8px">The Pine Node — The Reading</p>
+        <p class="card-body">A single pine-green node sits at the triangle's centroid — the exact point the instrument was aimed at. It's the data point everything else in the system gets measured against.</p>
       </div>
       <div>
-        <p style="font-size:14px;font-weight:600;color:var(--cyan);margin-bottom:8px">The Cyan Dot — Execution</p>
-        <p class="card-body">A single cyan dot marks the top of the right arm. It's the waypoint — the output, the live signal, the proof of execution. The node where systems produce results.</p>
+        <p style="font-size:14px;font-weight:600;color:var(--rust);margin-bottom:8px">The Rust Tick — The Mark</p>
+        <p class="card-body">A short rust-colored tick drops below the apex, the way a surveyor marks a benchmark in red ink. It's the signature stroke — proof a human, not just a machine, confirmed the reading.</p>
       </div>
     </div>
   </div>
@@ -716,34 +698,34 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <p class="section-label">Primary Palette</p>
   <div class="grid-4" style="margin-bottom:32px">
     <div class="swatch">
-      <div class="swatch-color" style="background:#06070D"></div>
+      <div class="swatch-color" style="background:#0A0E13"></div>
       <div class="swatch-info">
         <p class="swatch-name">Brand Black</p>
-        <p class="swatch-hex">#06070D</p>
+        <p class="swatch-hex">#0A0E13</p>
         <p class="swatch-use">Primary background. Not pure black — the slight blue shift makes it feel alive.</p>
       </div>
     </div>
     <div class="swatch">
-      <div class="swatch-color" style="background:#0D0E1A"></div>
+      <div class="swatch-color" style="background:#10151C"></div>
       <div class="swatch-info">
         <p class="swatch-name">Surface</p>
-        <p class="swatch-hex">#0D0E1A</p>
+        <p class="swatch-hex">#10151C</p>
         <p class="swatch-use">Card backgrounds, panel surfaces, elevated UI components.</p>
       </div>
     </div>
     <div class="swatch">
-      <div class="swatch-color" style="background:linear-gradient(135deg,#818CF8,#5B5FE8)"></div>
+      <div class="swatch-color" style="background:linear-gradient(135deg,#7FD1B8,#3E9B82)"></div>
       <div class="swatch-info">
-        <p class="swatch-name">Primary Violet</p>
-        <p class="swatch-hex">#5B5FE8 → #818CF8</p>
+        <p class="swatch-name">Primary Pine</p>
+        <p class="swatch-hex">#3E9B82 → #7FD1B8</p>
         <p class="swatch-use">Primary brand color. CTAs, active states, key accents, logo fill.</p>
       </div>
     </div>
     <div class="swatch">
-      <div class="swatch-color" style="background:#E8EAF4"></div>
+      <div class="swatch-color" style="background:#E7E6DD"></div>
       <div class="swatch-info">
         <p class="swatch-name">Primary Text</p>
-        <p class="swatch-hex">#E8EAF4</p>
+        <p class="swatch-hex">#E7E6DD</p>
         <p class="swatch-use">Headlines and primary body copy on dark backgrounds.</p>
       </div>
     </div>
@@ -753,11 +735,11 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <p class="section-label">Accent Palette</p>
   <div class="grid-4" style="margin-bottom:32px">
     <div class="swatch">
-      <div class="swatch-color" style="background:#22D3EE"></div>
+      <div class="swatch-color" style="background:#D2532F"></div>
       <div class="swatch-info">
-        <p class="swatch-name">Velocity Cyan</p>
-        <p class="swatch-hex">#22D3EE</p>
-        <p class="swatch-use">Speed, output, execution. The "live signal." Use sparingly for maximum impact.</p>
+        <p class="swatch-name">Survey Rust</p>
+        <p class="swatch-hex">#D2532F</p>
+        <p class="swatch-use">The marking color — confirmations, ticks, the human hand on the data. Use sparingly for maximum impact.</p>
       </div>
     </div>
     <div class="swatch">
@@ -769,18 +751,18 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       </div>
     </div>
     <div class="swatch">
-      <div class="swatch-color" style="background:#10B981"></div>
+      <div class="swatch-color" style="background:#2E9E6B"></div>
       <div class="swatch-info">
         <p class="swatch-name">Growth Green</p>
-        <p class="swatch-hex">#10B981</p>
+        <p class="swatch-hex">#2E9E6B</p>
         <p class="swatch-use">Success states, positive metrics, growth indicators, confirmations.</p>
       </div>
     </div>
     <div class="swatch">
-      <div class="swatch-color" style="background:#9698B8"></div>
+      <div class="swatch-color" style="background:#9A9A8E"></div>
       <div class="swatch-info">
         <p class="swatch-name">Secondary Text</p>
-        <p class="swatch-hex">#9698B8</p>
+        <p class="swatch-hex">#9A9A8E</p>
         <p class="swatch-use">Supporting copy, labels, captions, meta information.</p>
       </div>
     </div>
@@ -791,19 +773,19 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <p class="card-label">The Color Story</p>
     <div class="grid-3" style="margin-top:20px;gap:32px">
       <div>
-        <div style="width:32px;height:32px;border-radius:50%;background:#5B5FE8;margin-bottom:12px"></div>
-        <p style="font-size:14px;font-weight:600;color:var(--primary-lt);margin-bottom:8px">Why Violet?</p>
-        <p class="card-body">Violet occupies the exact position where blue's reliability meets red's creativity. It's the engineer-artist bridge. Neither cold-corporate-blue nor loud-creative-red. Violet says: we think deeply, and we make beautiful things.</p>
+        <div style="width:32px;height:32px;border-radius:50%;background:#3E9B82;margin-bottom:12px"></div>
+        <p style="font-size:14px;font-weight:600;color:var(--primary-lt);margin-bottom:8px">Why Pine?</p>
+        <p class="card-body">Pine sits where a forest survey marker sits — grounded, deliberate, unhurried. Neither cold-corporate-blue nor loud-creative-red. Pine says: we measured this carefully, and we stand behind it.</p>
       </div>
       <div>
-        <div style="width:32px;height:32px;border-radius:50%;background:#22D3EE;margin-bottom:12px"></div>
-        <p style="font-size:14px;font-weight:600;color:var(--cyan);margin-bottom:8px">Why Cyan?</p>
-        <p class="card-body">Cyan is the color of execution at speed. Fiber optics, data transfer, electricity in motion. It's the accent that means something is <em>running</em>. When you see cyan in a Velora Labs design, that element is the active output layer.</p>
+        <div style="width:32px;height:32px;border-radius:50%;background:#D2532F;margin-bottom:12px"></div>
+        <p style="font-size:14px;font-weight:600;color:var(--rust);margin-bottom:8px">Why Rust?</p>
+        <p class="card-body">Rust is surveyor's ink — the color used to mark a benchmark by hand once the instrument has done its work. It's the accent that means a human confirmed this. When you see rust in a Velkin Data Studios design, that element has been checked, not just generated.</p>
       </div>
       <div>
-        <div style="width:32px;height:32px;border-radius:50%;background:#06070D;border:1px solid var(--border);margin-bottom:12px"></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:#0A0E13;border:1px solid var(--border);margin-bottom:12px"></div>
         <p style="font-size:14px;font-weight:600;color:var(--text-1);margin-bottom:8px">Why Near-Black?</p>
-        <p class="card-body">Not pure #000000 — which feels flat and cheap at scale. Brand Black (#06070D) has a 3° blue shift that makes it feel like looking into deep space. It's the substrate that makes everything else feel luminous.</p>
+        <p class="card-body">Not pure #000000 — which feels flat and cheap at scale. Brand Black (#0A0E13) has a 3° blue shift that makes it feel like looking into deep space. It's the substrate that makes everything else feel luminous.</p>
       </div>
     </div>
   </div>
@@ -814,19 +796,19 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div class="grid-4" style="margin-top:16px">
       <div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:var(--r-md)">
         <p style="font-size:24px;font-weight:700;color:var(--text-1)">12.6:1</p>
-        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#E8EAF4 on #06070D — AAA</p>
+        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#E7E6DD on #0A0E13 — AAA</p>
       </div>
       <div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:var(--r-md)">
         <p style="font-size:24px;font-weight:700;color:var(--primary-lt)">4.7:1</p>
-        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#818CF8 on #06070D — AA</p>
+        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#7FD1B8 on #0A0E13 — AA</p>
       </div>
       <div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:var(--r-md)">
-        <p style="font-size:24px;font-weight:700;color:var(--cyan)">5.8:1</p>
-        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#22D3EE on #06070D — AA+</p>
+        <p style="font-size:24px;font-weight:700;color:var(--rust)">5.8:1</p>
+        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#D2532F on #0A0E13 — AA+</p>
       </div>
       <div style="text-align:center;padding:16px;background:var(--surface-2);border-radius:var(--r-md)">
         <p style="font-size:24px;font-weight:700;color:var(--amber)">6.3:1</p>
-        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#F59E0B on #06070D — AA+</p>
+        <p style="font-size:12px;color:var(--text-3);margin-top:4px">#F59E0B on #0A0E13 — AA+</p>
       </div>
     </div>
   </div>
@@ -845,23 +827,23 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <!-- Fonts -->
   <div class="grid-3" style="margin-bottom:40px">
     <div class="card" style="border-top:3px solid var(--primary)">
-      <p class="card-label">Display — Plus Jakarta Sans</p>
+      <p class="card-label">Display — Archivo (800)</p>
       <div style="font-family:var(--font-display);font-size:36px;font-weight:800;
                   color:var(--text-1);letter-spacing:-1px;line-height:1;margin:16px 0">Aa</div>
-      <p class="card-body">800 ExtraBold · 700 Bold<br>For headlines, hero text, display moments, names.<br><br>Geometric construction with humanist details. Precise but not cold. International character set.</p>
-      <p class="mono-inline" style="display:inline-block;margin-top:16px;font-size:11px">plus-jakarta-sans</p>
+      <p class="card-body">800 ExtraBold<br>For headlines, hero text, display moments, the wordmark.<br><br>Geometric grotesk, drafted rather than drawn. One family carries the whole page — no second typeface competing for attention.</p>
+      <p class="mono-inline" style="display:inline-block;margin-top:16px;font-size:11px">archivo-800</p>
     </div>
-    <div class="card" style="border-top:3px solid var(--cyan)">
-      <p class="card-label">Body — Inter</p>
+    <div class="card" style="border-top:3px solid var(--rust)">
+      <p class="card-label">Body — Archivo (400/500)</p>
       <div style="font-family:var(--font-body);font-size:36px;font-weight:400;
                   color:var(--text-1);letter-spacing:0;line-height:1;margin:16px 0">Aa</div>
-      <p class="card-body">400 Regular · 500 Medium · 600 SemiBold<br>For paragraphs, labels, UI text, all reading copy.<br><br>The standard for digital precision. Optimized for all screen sizes, densities, and rendering engines.</p>
-      <p class="mono-inline" style="display:inline-block;margin-top:16px;font-size:11px">inter</p>
+      <p class="card-body">400 Regular · 500 Medium · 600 SemiBold<br>For paragraphs, labels, UI text, all reading copy.<br><br>Same family as the display face, lighter weight only. Restraint is the point — zero visual noise between headline and body.</p>
+      <p class="mono-inline" style="display:inline-block;margin-top:16px;font-size:11px">archivo-400</p>
     </div>
     <div class="card" style="border-top:3px solid var(--amber)">
       <p class="card-label">Monospace — JetBrains Mono</p>
       <div style="font-family:var(--font-mono);font-size:32px;font-weight:400;
-                  color:var(--cyan);letter-spacing:0;line-height:1;margin:16px 0">Aa</div>
+                  color:var(--rust);letter-spacing:0;line-height:1;margin:16px 0">Aa</div>
       <p class="card-body">400 · 500<br>For code, data, tech accents, terminal aesthetics, metric labels.<br><br>Signals: precision, engineering, systems. Use strategically — not decoratively.</p>
       <p class="mono-inline" style="display:inline-block;margin-top:16px;font-size:11px">jetbrains-mono</p>
     </div>
@@ -871,39 +853,39 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <p class="section-label">Type Scale</p>
   <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-top:16px">
     <div class="type-specimen" style="padding:32px 40px">
-      <p class="type-meta">DISPLAY · 72px · Plus Jakarta Sans 800 · -3px tracking</p>
+      <p class="type-meta">DISPLAY · 72px · Archivo 800 · -3px tracking</p>
       <div class="t-display">Systems built.</div>
     </div>
     <div class="type-specimen" style="padding:28px 40px">
-      <p class="type-meta">H1 · 48px · Plus Jakarta Sans 800 · -1.5px tracking</p>
+      <p class="type-meta">H1 · 48px · Archivo 800 · -1.5px tracking</p>
       <div class="t-h1">Your growth. Engineered.</div>
     </div>
     <div class="type-specimen" style="padding:24px 40px">
-      <p class="type-meta">H2 · 36px · Plus Jakarta Sans 700 · -1px tracking</p>
+      <p class="type-meta">H2 · 36px · Archivo 700 · -1px tracking</p>
       <div class="t-h2">We build growth systems.</div>
     </div>
     <div class="type-specimen" style="padding:20px 40px">
-      <p class="type-meta">H3 · 28px · Plus Jakarta Sans 700 · -0.5px tracking</p>
+      <p class="type-meta">H3 · 28px · Archivo 700 · -0.5px tracking</p>
       <div class="t-h3">From brand to automation — one connected system.</div>
     </div>
     <div class="type-specimen" style="padding:18px 40px">
-      <p class="type-meta">H4 · 22px · Inter 600</p>
+      <p class="type-meta">H4 · 22px · Archivo 600</p>
       <div class="t-h4">The studio for businesses ready to stop improvising.</div>
     </div>
     <div class="type-specimen" style="padding:16px 40px">
-      <p class="type-meta">BODY LARGE · 18px · Inter 400 · 1.7 line height</p>
-      <div class="t-body-lg">Most agencies run campaigns. Velora Labs builds the systems that make yours outperform — and improve with every cycle.</div>
+      <p class="type-meta">BODY LARGE · 18px · Archivo 400 · 1.7 line height</p>
+      <div class="t-body-lg">Most agencies run campaigns. Velkin Data Studios builds the systems that make yours outperform — and improve with every cycle.</div>
     </div>
     <div class="type-specimen" style="padding:14px 40px">
-      <p class="type-meta">BODY · 16px · Inter 400 · 1.65 line height</p>
+      <p class="type-meta">BODY · 16px · Archivo 400 · 1.65 line height</p>
       <div class="t-body">We combine engineering-grade systems thinking with brand strategy and creative execution to build growth machines that compound over time.</div>
     </div>
     <div class="type-specimen" style="padding:14px 40px">
       <p class="type-meta">MONO ACCENT · 14px · JetBrains Mono 500</p>
-      <div class="t-mono">velora.build_system(brand, growth, automation)</div>
+      <div class="t-mono">velkin.build_system(brand, growth, automation)</div>
     </div>
     <div class="type-specimen" style="padding:12px 40px">
-      <p class="type-meta">LABEL · 11px · Inter 500 · 1.5px tracking · ALL CAPS</p>
+      <p class="type-meta">LABEL · 11px · Archivo 500 · 1.5px tracking · ALL CAPS</p>
       <div class="t-label">Brand Identity System · Version 1.0</div>
     </div>
   </div>
@@ -949,15 +931,15 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <div class="grid-2" style="margin-bottom:32px">
     <div>
       <div class="copy-ex">
-        <p class="copy-ex-label good">✓ Velora Voice</p>
+        <p class="copy-ex-label good">✓ Velkin Voice</p>
         <p style="font-family:var(--font-display);font-size:28px;font-weight:800;letter-spacing:-.5px;color:var(--text-1);line-height:1.1">"Systems built. Growth shipped."</p>
       </div>
       <div class="copy-ex">
-        <p class="copy-ex-label good">✓ Velora Voice</p>
+        <p class="copy-ex-label good">✓ Velkin Voice</p>
         <p style="font-family:var(--font-display);font-size:28px;font-weight:800;letter-spacing:-.5px;color:var(--text-1);line-height:1.1">"Campaigns engineered to compound."</p>
       </div>
       <div class="copy-ex">
-        <p class="copy-ex-label good">✓ Velora Voice</p>
+        <p class="copy-ex-label good">✓ Velkin Voice</p>
         <p style="font-family:var(--font-display);font-size:28px;font-weight:800;letter-spacing:-.5px;color:var(--text-1);line-height:1.1">"Beautiful brands. Brutal results."</p>
       </div>
     </div>
@@ -1066,7 +1048,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       <p class="card-title" style="margin-bottom:12px">Shot with intent. Never stock.</p>
       <ul class="styled">
         <li>Dark environments with precision light sources — think studio, server room, control room</li>
-        <li>Color grade: cooled highlights, deep shadows, subtle violet push in midtones</li>
+        <li>Color grade: cooled highlights, deep shadows, subtle pine push in midtones</li>
         <li>Subjects in motion or deeply focused — no staged smiles</li>
         <li>Close crops: hands on keyboards, screens with real data, architectural details</li>
         <li>Performance and execution imagery: dashboards with live metrics, campaign graphs trending up, systems at work</li>
@@ -1075,7 +1057,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
         <span class="tag">Dark environments</span>
         <span class="tag">Precision light</span>
         <span class="tag cyan">Motion blur</span>
-        <span class="tag">Violet-toned</span>
+        <span class="tag">Pine-toned</span>
         <span class="tag">Documentary</span>
       </div>
     </div>
@@ -1121,8 +1103,8 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       <p class="card-title" style="margin-bottom:12px">Subtle layers, not decoration.</p>
       <ul class="styled">
         <li>Fine dot or line grids as background texture (≤30% opacity)</li>
-        <li>Radial gradient glows — violet and cyan only</li>
-        <li>Thin border lines (#1E2040) to define structure</li>
+        <li>Radial gradient glows — pine and rust only</li>
+        <li>Thin border lines (#232B34) to define structure</li>
         <li>Glass/blur effects for overlapping panels</li>
         <li>No gradients on text (legibility first)</li>
       </ul>
@@ -1178,7 +1160,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <div class="hero-demo" style="margin:16px 0 40px">
     <p class="hero-demo-eyebrow">// Growth Systems · Brand · Automation</p>
     <h2>Growth doesn't fail<br>from lack of ideas.<br><em>It fails from lack of system.</em></h2>
-    <p>Velora Labs connects brand, acquisition and automation into growth systems for businesses ready to stop improvising.</p>
+    <p>Velkin Data Studios connects brand, acquisition and automation into growth systems for businesses ready to stop improvising.</p>
     <div class="cta-row">
       <button class="btn-primary">Start the audit →</button>
       <a class="btn-ghost" href="#">See how we build <span style="color:var(--primary-lt)">↗</span></a>
@@ -1194,7 +1176,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
         <li><strong style="color:var(--text-1)">Proof bar:</strong> Logos of notable clients (greyscale, minimal)</li>
         <li><strong style="color:var(--text-1)">Services:</strong> Not a list of services — a system map. Shows how brand → growth → automation connect.</li>
         <li><strong style="color:var(--text-1)">Case studies:</strong> Two or three deep, with specific numbers and system diagrams.</li>
-        <li><strong style="color:var(--text-1)">Process:</strong> The Velora Method — numbered, systematic, confident</li>
+        <li><strong style="color:var(--text-1)">Process:</strong> The Velkin Method — numbered, systematic, confident</li>
         <li><strong style="color:var(--text-1)">CTA block:</strong> Application form or "Request strategy session" — never generic contact</li>
       </ul>
     </div>
@@ -1216,20 +1198,20 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div class="grid-2" style="margin-top:16px;gap:32px">
       <div>
         <p style="font-size:14px;font-weight:600;color:var(--primary-lt);margin-bottom:10px">Always use the full name + descriptor</p>
-        <p class="card-body" style="margin-bottom:16px">Search engines surface results based on the full string in title tags and bios. "Velora Labs" alone risks competing with clinical and research laboratories. Every digital property must append a category descriptor.</p>
+        <p class="card-body" style="margin-bottom:16px">Search engines surface results based on the full string in title tags and bios. "Velkin Data Studios" alone risks competing with clinical and research laboratories. Every digital property must append a category descriptor.</p>
         <div class="copy-ex" style="margin-top:0">
           <p class="copy-ex-label good">✓ Correct format</p>
-          <p><strong style="color:var(--text-1)">Website title tag:</strong> Velora Labs | Growth Systems & Brand Studio<br>
-          <strong style="color:var(--text-1)">Instagram bio:</strong> Velora Labs · Growth. Brand. Automation.<br>
-          <strong style="color:var(--text-1)">LinkedIn:</strong> Velora Labs — Growth Systems Studio<br>
-          <strong style="color:var(--text-1)">Google Business:</strong> Velora Labs · Branding, Growth & Automation Studio</p>
+          <p><strong style="color:var(--text-1)">Website title tag:</strong> Velkin Data Studios | Growth Systems & Brand Studio<br>
+          <strong style="color:var(--text-1)">Instagram bio:</strong> Velkin Data Studios · Growth. Brand. Automation.<br>
+          <strong style="color:var(--text-1)">LinkedIn:</strong> Velkin Data Studios — Growth Systems Studio<br>
+          <strong style="color:var(--text-1)">Google Business:</strong> Velkin Data Studios · Branding, Growth & Automation Studio</p>
         </div>
       </div>
       <div>
         <p style="font-size:14px;font-weight:600;color:var(--amber);margin-bottom:10px">Never use the name alone</p>
         <div class="copy-ex bad" style="margin-top:0">
           <p class="copy-ex-label bad">✗ Avoid</p>
-          <p>"Velora Labs" — as the only string in a title tag or bio.<br><br>Without a descriptor, search results may surface clinical labs, medical laboratories, or research institutions ahead of the brand.</p>
+          <p>"Velkin Data Studios" — as the only string in a title tag or bio.<br><br>Without a descriptor, search results may surface clinical labs, medical laboratories, or research institutions ahead of the brand.</p>
         </div>
         <div class="tags" style="margin-top:16px">
           <span class="tag primary">Always append descriptor</span>
@@ -1246,19 +1228,18 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);
                 aspect-ratio:1;padding:32px;display:flex;flex-direction:column;justify-content:space-between">
       <div>
-        <p style="font-family:var(--font-mono);font-size:10px;color:var(--cyan);letter-spacing:2px;margin-bottom:20px">SYSTEMS THINKING</p>
+        <p style="font-family:var(--font-mono);font-size:10px;color:var(--rust);letter-spacing:2px;margin-bottom:20px">SYSTEMS THINKING</p>
         <p style="font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--text-1);line-height:1.15;letter-spacing:-.5px">
           Your brand<br>is an asset.<br><span style="color:var(--primary-lt)">Treat it like one.</span>
         </p>
       </div>
       <div style="display:flex;align-items:center;gap:8px">
         <svg viewBox="0 0 48 48" style="height:20px;width:auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="5" y1="8" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="4" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
-        <span style="font-size:12px;font-weight:600;color:var(--text-2)">velora_labs</span>
+        <span style="font-size:12px;font-weight:600;color:var(--text-2)">velkindatastudios</span>
       </div>
     </div>
     <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);
@@ -1270,12 +1251,11 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       </div>
       <div style="display:flex;align-items:center;gap:8px">
         <svg viewBox="0 0 48 48" style="height:20px;width:auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="5" y1="8" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="4" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
-        <span style="font-size:12px;font-weight:600;color:var(--text-2)">velora_labs</span>
+        <span style="font-size:12px;font-weight:600;color:var(--text-2)">velkindatastudios</span>
       </div>
     </div>
     <div style="background:linear-gradient(135deg,var(--surface-3),var(--surface));
@@ -1284,17 +1264,16 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       <p style="font-family:var(--font-mono);font-size:10px;color:var(--primary-lt);letter-spacing:2px">SHARP TAKE</p>
       <p style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text-1);line-height:1.3;letter-spacing:-.3px">
         "If your marketing stops when you stop posting,<br>
-        <span style="color:var(--cyan)">you don't have a strategy.</span><br>
+        <span style="color:var(--rust)">you don't have a strategy.</span><br>
         You have a habit."
       </p>
       <div style="display:flex;align-items:center;gap:8px">
         <svg viewBox="0 0 48 48" style="height:20px;width:auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="5" y1="8" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <line x1="43" y1="4" x2="24" y2="41" stroke="#5B5FE8" stroke-width="3.2" stroke-linecap="round"/>
-          <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-          <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+          <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
         </svg>
-        <span style="font-size:12px;font-weight:600;color:var(--text-2)">velora_labs</span>
+        <span style="font-size:12px;font-weight:600;color:var(--text-2)">velkindatastudios</span>
       </div>
     </div>
   </div>
@@ -1308,7 +1287,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
 <div class="page">
   <p class="section-label">10 — Competitive Positioning</p>
   <h2 class="section-title">How to stay<br>premium.</h2>
-  <p class="section-sub">The greatest threat to Velora Labs isn't a competitor. It's looking like one.</p>
+  <p class="section-sub">The greatest threat to Velkin Data Studios isn't a competitor. It's looking like one.</p>
   <hr class="divider">
 
   <table class="compare-table" style="margin-bottom:40px">
@@ -1317,7 +1296,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
         <th>Dimension</th>
         <th>Generic Agency</th>
         <th>Cheap Growth Hacker</th>
-        <th style="color:var(--primary-lt)">Velora Labs</th>
+        <th style="color:var(--primary-lt)">Velkin Data Studios</th>
       </tr>
     </thead>
     <tbody>
@@ -1368,7 +1347,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       <ul class="styled" style="margin-top:12px">
         <li><strong style="color:var(--text-1)">Application process</strong> — not a contact form. Applications communicate that clients must qualify, not just pay.</li>
         <li><strong style="color:var(--text-1)">Capacity narrative</strong> — "We work with 3–4 clients per quarter." Scarcity that's real, not manufactured.</li>
-        <li><strong style="color:var(--text-1)">Named methodology</strong> — The Velora Growth System. A proprietary framework commands more than a service list.</li>
+        <li><strong style="color:var(--text-1)">Named methodology</strong> — The Velkin Growth System. A proprietary framework commands more than a service list.</li>
         <li><strong style="color:var(--text-1)">No pricing on website</strong> — Pricing pages commoditize. Show the outcome; let the conversation set the price.</li>
         <li><strong style="color:var(--text-1)">Specific testimonials</strong> — "They connected our brand, website and follow-up process in 6 weeks" beats "Great team!"</li>
       </ul>
@@ -1389,12 +1368,12 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
 
   <!-- Commercial Architecture -->
   <p class="section-label" style="margin-top:60px">Commercial Architecture — Two Entry Points</p>
-  <p style="font-size:14px;color:var(--text-2);margin-bottom:24px;max-width:640px">The brand stays premium. The entry points adapt. Both routes lead to the same Velora Labs — the difference is where the client is starting from.</p>
+  <p style="font-size:14px;color:var(--text-2);margin-bottom:24px;max-width:640px">The brand stays premium. The entry points adapt. Both routes lead to the same Velkin Data Studios — the difference is where the client is starting from.</p>
   <div class="grid-2" style="margin-top:16px">
     <div class="card" style="border-top:3px solid var(--green)">
-      <p class="card-label" style="color:var(--green)">Velora Start</p>
+      <p class="card-label" style="color:var(--green)">Velkin Start</p>
       <p class="card-title">For businesses with untapped potential.</p>
-      <p class="card-body" style="margin:12px 0">Tu negocio ya tiene valor. Velora Start le da la presencia, estructura y automatización básica para vender mejor.</p>
+      <p class="card-body" style="margin:12px 0">Tu negocio ya tiene valor. Velkin Start le da la presencia, estructura y automatización básica para vender mejor.</p>
       <ul class="styled">
         <li>Brand audit + identity refresh</li>
         <li>Website or landing page</li>
@@ -1409,7 +1388,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       </div>
     </div>
     <div class="card" style="border-top:3px solid var(--primary)">
-      <p class="card-label">Velora Scale</p>
+      <p class="card-label">Velkin Scale</p>
       <p class="card-title">For startups and SMBs ready to systematize growth.</p>
       <p class="card-body" style="margin:12px 0">Brand, acquisition and automation connected into a growth system that compounds over time.</p>
       <ul class="styled">
@@ -1442,7 +1421,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
     <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--text-1);letter-spacing:-1px">Engineered.</span>
     <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--primary-lt);letter-spacing:-1px">Precise.</span>
     <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--text-1);letter-spacing:-1px">Systems.</span>
-    <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--cyan);letter-spacing:-1px">Fast.</span>
+    <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--rust);letter-spacing:-1px">Fast.</span>
     <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--text-1);letter-spacing:-1px">Premium.</span>
     <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--text-2);letter-spacing:-1px">Scalable.</span>
     <span style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--text-1);letter-spacing:-1px">Creative.</span>
@@ -1477,9 +1456,9 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
         <span class="tag primary">dark mode</span>
         <span class="tag primary">geometric</span>
         <span class="tag cyan">precision</span>
-        <span class="tag cyan">velocity</span>
+        <span class="tag cyan">cartographic</span>
         <span class="tag">systems diagram</span>
-        <span class="tag">violet accent</span>
+        <span class="tag">pine accent</span>
         <span class="tag">engineering aesthetic</span>
         <span class="tag amber">execution</span>
         <span class="tag">monospace</span>
@@ -1499,16 +1478,12 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
 <div class="page">
   <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none"
        style="height:32px;width:auto;margin:0 auto 16px">
-    <defs><linearGradient id="fg" x1="5" y1="8" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#5B5FE8"/>
-    </linearGradient></defs>
-    <line x1="5" y1="8" x2="24" y2="41" stroke="url(#fg)" stroke-width="3.2" stroke-linecap="round"/>
-    <line x1="43" y1="4" x2="24" y2="41" stroke="url(#fg)" stroke-width="3.2" stroke-linecap="round"/>
-    <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-    <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+    <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+    <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+    <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
   </svg>
   <p style="font-family:var(--font-mono);font-size:11px;color:var(--text-3);letter-spacing:2px">
-    VELORA LABS · BRAND IDENTITY SYSTEM v1.0 · CONFIDENTIAL
+    VELKIN DATA STUDIOS · BRAND IDENTITY SYSTEM v1.0 · CONFIDENTIAL
   </p>
   <p style="font-size:12px;color:var(--text-3);margin-top:8px">
     Your growth. Engineered.

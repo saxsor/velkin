@@ -3,31 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diagnóstico gratuito — Velora Labs</title>
+<title>Diagnóstico gratuito — Velkin Data Studios</title>
 <meta name="description" content="Cuéntanos tu situación. En menos de 48 h tienes una respuesta con claridad sobre qué necesitas y por dónde empezar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
 /* ─── TOKENS ──────────────────────────────────────────── */
 :root {
-  --ink:         #080709;
-  --ink-2:       #0E0D12;
-  --ink-3:       #141318;
-  --rule:        #1E1C28;
-  --rule-2:      #262432;
-  --violet:      #5B5FE8;
-  --violet-lt:   #818CF8;
-  --cyan:        #22D3EE;
-  --green:       #10B981;
+  --ink:         #0A0E13;
+  --ink-2:       #10151C;
+  --ink-3:       #161C24;
+  --rule:        #232B34;
+  --rule-2:      #303B47;
+  --pine:      #3E9B82;
+  --pine-lt:   #7FD1B8;
+  --rust:        #D2532F;
+  --green:       #2E9E6B;
   --amber:       #F59E0B;
   --red:         #EF4444;
-  --snow:        #E8EAF4;
-  --mist:        #9698B8;
-  --dim:         #4E5075;
-  --jk: "Plus Jakarta Sans", "Helvetica Neue", sans-serif;
-  --it: "Inter", "Helvetica Neue", sans-serif;
+  --snow:        #E7E6DD;
+  --mist:        #9A9A8E;
+  --dim:         #5C5B50;
+  --jk: "Archivo", "Helvetica Neue", sans-serif;
+  --it: "Archivo", "Helvetica Neue", sans-serif;
   --mo: "JetBrains Mono", "Fira Code", monospace;
   --expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -60,17 +60,17 @@ body::after {
 .ambient-1 {
   width: 50vw; height: 50vw;
   top: 20vh; right: -15vw;
-  background: radial-gradient(circle, rgba(91,95,232,.055) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.055) 0%, transparent 65%);
 }
 .ambient-2 {
   width: 40vw; height: 40vw;
   top: 60vh; left: -10vw;
-  background: radial-gradient(circle, rgba(34,211,238,.035) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(210,83,47,.035) 0%, transparent 65%);
 }
 .ambient-3 {
   width: 35vw; height: 35vw;
   bottom: 10vh; right: 5vw;
-  background: radial-gradient(circle, rgba(91,95,232,.04) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.04) 0%, transparent 65%);
 }
 
 /* ─── LAYOUT ──────────────────────────────────────────── */
@@ -94,14 +94,14 @@ body::after {
 .mono { font-family: var(--mo); }
 .label {
   font-family: var(--mo); font-size: 10px; letter-spacing: 2.5px;
-  text-transform: uppercase; color: var(--violet-lt);
+  text-transform: uppercase; color: var(--pine-lt);
 }
 
 /* ─── NAV ─────────────────────────────────────────────── */
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: 68px; display: flex; align-items: center;
-  background: rgba(8,7,9,.85);
+  background: rgba(10,14,19,.85);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(30,28,40,.8);
   transition: background .3s;
@@ -118,11 +118,11 @@ body::after {
 .nav-links a.active { color: var(--snow); }
 .nav-btn {
   padding: 9px 20px; border-radius: 7px;
-  background: var(--violet); color: #fff;
+  background: var(--pine); color: #fff;
   font-size: 14px; font-weight: 600;
   transition: background .2s, transform .15s; flex-shrink: 0; white-space: nowrap;
 }
-.nav-btn:hover { background: var(--violet-lt); transform: translateY(-1px); }
+.nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
 @media (max-width: 860px) { .nav-links { display: none; } }
 
 /* ─── HERO ────────────────────────────────────────────── */
@@ -148,62 +148,63 @@ body::after {
 .hero-orb-1 {
   width: 60vw; height: 50vw;
   top: -25%; left: 50%; transform: translateX(-50%);
-  background: radial-gradient(circle, rgba(91,95,232,.18) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.18) 0%, transparent 65%);
   animation: orb-a 22s ease-in-out infinite alternate;
 }
 .hero-orb-2 {
   width: 30vw; height: 30vw;
   bottom: 5%; right: 5%;
-  background: radial-gradient(circle, rgba(34,211,238,.07) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(210,83,47,.07) 0%, transparent 60%);
   animation: orb-b 28s ease-in-out infinite alternate;
 }
 @media (prefers-reduced-motion: reduce) { .hero-orb { animation: none; } }
 .hero-content {
   position: relative; z-index: 1;
-  max-width: 760px; margin: 0 auto; text-align: center;
+  max-width: 1080px; margin: 0 auto;
 }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(91,95,232,.12); border: 1px solid rgba(91,95,232,.3);
-  border-radius: 99px; padding: 6px 14px; margin-bottom: 28px;
+.hero-top {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: clamp(40px,6vw,64px);
 }
-.badge-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 6px var(--green);
-  animation: pulse-dot 2s ease infinite;
+.hero-tick { width: 2px; height: 14px; background: var(--rust); flex-shrink: 0; }
+.hero-top-text {
+  font-family: var(--mo); font-size: 11px; letter-spacing: 1.8px;
+  text-transform: uppercase; color: var(--mist);
 }
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: .6; transform: scale(.85); }
-}
-.badge-text {
-  font-family: var(--mo); font-size: 10.5px; letter-spacing: 1.8px;
-  text-transform: uppercase; color: var(--violet-lt);
+.hero-split {
+  display: grid; grid-template-columns: 1fr 230px;
+  gap: clamp(32px,5vw,64px);
+  align-items: end;
+  padding-bottom: clamp(28px,4vw,40px);
+  border-bottom: 1px solid var(--rule);
 }
 .hero h1 {
   font-family: var(--jk); font-weight: 800;
-  font-size: clamp(36px, 6vw, 64px);
+  font-size: clamp(36px, 5.6vw, 60px);
   line-height: 1.06; letter-spacing: -1.5px;
   color: var(--snow); margin-bottom: 20px;
 }
 .hero h1 em {
   font-style: normal;
-  color: var(--violet-lt);
+  color: var(--pine-lt);
 }
 .hero-sub {
-  font-size: 17px; color: var(--mist); max-width: 540px; margin: 0 auto 40px;
+  font-size: 17px; color: var(--mist); max-width: 480px;
   line-height: 1.7;
 }
-.hero-meta {
-  display: flex; justify-content: center; gap: 28px; flex-wrap: wrap;
-  margin-bottom: 0;
+.hero-ledger {
+  display: flex; flex-direction: column; gap: 18px;
+  padding-bottom: 6px;
 }
-.hero-meta-item {
-  display: flex; align-items: center; gap: 7px;
+.ledger-item {
+  display: flex; align-items: center; gap: 10px;
   font-size: 13px; color: var(--mist);
 }
-.hero-meta-item svg { color: var(--green); flex-shrink: 0; }
+.ledger-tick { width: 10px; height: 2px; background: var(--rust); flex-shrink: 0; }
+@media (max-width: 760px) {
+  .hero-split { grid-template-columns: 1fr; align-items: start; }
+  .hero-ledger { flex-direction: row; flex-wrap: wrap; gap: 10px 24px; }
+}
 
 /* ─── MAIN GRID ───────────────────────────────────────── */
 .contact-section {
@@ -230,7 +231,7 @@ body::after {
 }
 .left-label {
   font-family: var(--mo); font-size: 10px; letter-spacing: 2.5px;
-  text-transform: uppercase; color: var(--violet-lt);
+  text-transform: uppercase; color: var(--pine-lt);
   margin-bottom: 16px; display: block;
 }
 .left-panel h2 {
@@ -257,7 +258,7 @@ body::after {
 .step-item:last-child { border-bottom: none; }
 .step-num {
   font-family: var(--mo); font-size: 11px; letter-spacing: 1px;
-  color: var(--violet-lt); flex-shrink: 0;
+  color: var(--pine-lt); flex-shrink: 0;
   width: 24px; padding-top: 2px;
 }
 .step-content h4 {
@@ -278,8 +279,8 @@ body::after {
 }
 .trust-icon {
   width: 36px; height: 36px; flex-shrink: 0;
-  background: rgba(16,185,129,.1);
-  border: 1px solid rgba(16,185,129,.2);
+  background: rgba(46,158,107,.1);
+  border: 1px solid rgba(46,158,107,.2);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   color: var(--green);
@@ -301,7 +302,7 @@ body::after {
 .form-card::before {
   content: '';
   position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(91,95,232,.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(62,155,130,.6), transparent);
 }
 
 .form-header {
@@ -336,7 +337,7 @@ body::after {
   display: flex; align-items: center; gap: 4px;
 }
 .label-req {
-  color: var(--violet-lt);
+  color: var(--pine-lt);
   font-family: var(--mo); font-size: 11px;
 }
 .label-opt {
@@ -365,8 +366,8 @@ body::after {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--violet);
-  box-shadow: 0 0 0 3px rgba(91,95,232,.18);
+  border-color: var(--pine);
+  box-shadow: 0 0 0 3px rgba(62,155,130,.18);
 }
 .form-group input.error,
 .form-group select.error,
@@ -407,7 +408,7 @@ body::after {
 /* ─── SUBMIT ──────────────────────────────────────────── */
 .btn-submit {
   width: 100%;
-  background: var(--violet);
+  background: var(--pine);
   color: #fff;
   font-family: var(--jk); font-size: 15px; font-weight: 700;
   letter-spacing: -.1px;
@@ -428,7 +429,7 @@ body::after {
 }
 .btn-submit:hover:not(:disabled) {
   opacity: .9; transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(91,95,232,.4);
+  box-shadow: 0 8px 24px rgba(62,155,130,.4);
 }
 .btn-submit:active:not(:disabled) { transform: translateY(0); }
 .btn-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
@@ -465,8 +466,8 @@ body::after {
 }
 .success-icon {
   width: 72px; height: 72px;
-  background: rgba(16,185,129,.1);
-  border: 1px solid rgba(16,185,129,.3);
+  background: rgba(46,158,107,.1);
+  border: 1px solid rgba(46,158,107,.3);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 24px;
@@ -569,8 +570,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-wrap">
-    <a href="index.html" class="nav-logo" aria-label="Velora Labs — inicio">
-      <img src="logo.svg" alt="Velora Labs" height="44" style="display:block;">
+    <a href="index.html" class="nav-logo" aria-label="Velkin Data Studios — inicio">
+      <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;">
     </a>
     <ul class="nav-links">
       <li><a href="index.html#portafolio">Portafolio</a></li>
@@ -588,28 +589,24 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
   <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
   <div class="bound">
     <div class="hero-content">
-      <div class="hero-badge fu">
-        <span class="badge-dot"></span>
-        <span class="badge-text">Respuesta en &lt; 48 h</span>
+      <div class="hero-top fu">
+        <span class="hero-tick" aria-hidden="true"></span>
+        <span class="hero-top-text">Diagnóstico · respuesta confirmada en &lt; 48 h</span>
       </div>
-      <h1 class="fu d1">
-        Sin ventas.<br>Solo <em>claridad</em>.
-      </h1>
-      <p class="hero-sub fu d2">
-        Cuéntanos tu situación en dos minutos. Te respondemos con un diagnóstico honesto: qué necesitas, qué no necesitas y por dónde empezar.
-      </p>
-      <div class="hero-meta fu d3">
-        <div class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Gratis y sin compromiso
+
+      <div class="hero-split">
+        <div class="hero-main">
+          <h1 class="fu d1">
+            Sin ventas.<br>Solo <em>claridad</em>.
+          </h1>
+          <p class="hero-sub fu d2">
+            Cuéntanos tu situación en dos minutos. Te respondemos con un diagnóstico honesto: qué necesitas, qué no necesitas y por dónde empezar.
+          </p>
         </div>
-        <div class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Responde una persona real
-        </div>
-        <div class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-          Sin datos innecesarios
+        <div class="hero-ledger fu d3">
+          <div class="ledger-item"><span class="ledger-tick" aria-hidden="true"></span>Gratis y sin compromiso</div>
+          <div class="ledger-item"><span class="ledger-tick" aria-hidden="true"></span>Responde una persona real</div>
+          <div class="ledger-item"><span class="ledger-tick" aria-hidden="true"></span>Sin datos innecesarios</div>
         </div>
       </div>
     </div>
@@ -673,7 +670,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div id="form-wrap">
           <div class="form-header">
             <h3>Cuéntanos tu situación</h3>
-            <p>Todos los campos marcados con <span style="color:var(--violet-lt);font-family:var(--mo);">*</span> son requeridos.</p>
+            <p>Todos los campos marcados con <span style="color:var(--pine-lt);font-family:var(--mo);">*</span> son requeridos.</p>
           </div>
 
           <form id="contact-form" novalidate>
@@ -801,7 +798,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       </div>
       <div class="faq-item rv rv1">
         <h4>¿Trabajan con negocios pequeños?</h4>
-        <p>Sí, es parte de nuestra misión. Velora Start está diseñado específicamente para negocios que quieren sistemas profesionales sin precios de agencia enterprise.</p>
+        <p>Sí, es parte de nuestra misión. Velkin Start está diseñado específicamente para negocios que quieren sistemas profesionales sin precios de agencia enterprise.</p>
       </div>
       <div class="faq-item rv rv2">
         <h4>¿Operan en México y en Europa?</h4>
@@ -821,7 +818,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <div class="foot-inner">
       <div class="foot-brand">
         <div class="foot-logo">
-          <img src="logo.svg" alt="Velora Labs" height="38" style="display:block;opacity:.65;">
+          <img src="logo.svg" alt="Velkin Data Studios" height="38" style="display:block;opacity:.65;">
         </div>
         <span class="foot-tag">Branding · Growth Systems · Automatización</span>
       </div>
@@ -831,7 +828,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <a href="servicios.html">Servicios</a>
         <a href="contacto.html">Contacto</a>
       </nav>
-      <p class="foot-copy">© 2026 Velora Labs<br>Built for businesses ready<br>to stop improvising.</p>
+      <p class="foot-copy">© 2026 Velkin Data Studios<br>Built for businesses ready<br>to stop improvising.</p>
     </div>
   </div>
 </footer>
@@ -932,7 +929,7 @@ form.addEventListener('submit', async (e) => {
   } catch (err) {
     btn.classList.remove('loading');
     btn.disabled = false;
-    alert('Hubo un error al enviar. Por favor escríbenos directamente a hola@veloralabs.studio');
+    alert('Hubo un error al enviar. Por favor escríbenos directamente a hola@velkindatastudios.com');
   }
 });
 </script>

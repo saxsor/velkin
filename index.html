@@ -3,30 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velora Labs — Your Growth. Engineered.</title>
-<meta name="description" content="Velora Labs conecta marca, captación y automatización en sistemas de crecimiento para negocios listos para dejar de improvisar.">
+<title>Velkin Data Studios — Your Growth. Engineered.</title>
+<meta name="description" content="Velkin Data Studios conecta marca, captación y automatización en sistemas de crecimiento para negocios listos para dejar de improvisar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
 /* ─── TOKENS ──────────────────────────────────────────── */
 :root {
-  --ink:         #080709;
-  --ink-2:       #0E0D12;
-  --ink-3:       #141318;
-  --rule:        #1E1C28;
-  --rule-2:      #262432;
-  --violet:      #5B5FE8;
-  --violet-lt:   #818CF8;
-  --cyan:        #22D3EE;
-  --green:       #10B981;
+  --ink:         #0A0E13;
+  --ink-2:       #10151C;
+  --ink-3:       #161C24;
+  --rule:        #232B34;
+  --rule-2:      #303B47;
+  --pine:      #3E9B82;
+  --pine-lt:   #7FD1B8;
+  --rust:        #D2532F;
+  --green:       #2E9E6B;
   --amber:       #F59E0B;
-  --snow:        #E8EAF4;
-  --mist:        #9698B8;
-  --dim:         #4E5075;
-  --jk: "Plus Jakarta Sans", "Helvetica Neue", sans-serif;
-  --it: "Inter", "Helvetica Neue", sans-serif;
+  --snow:        #E7E6DD;
+  --mist:        #9A9A8E;
+  --dim:         #5C5B50;
+  --jk: "Archivo", "Helvetica Neue", sans-serif;
+  --it: "Archivo", "Helvetica Neue", sans-serif;
   --mo: "JetBrains Mono", "Fira Code", monospace;
   --expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -77,7 +77,7 @@ body::after {
 .mono { font-family: var(--mo); }
 .label {
   font-family: var(--mo); font-size: 10px; letter-spacing: 2.5px;
-  text-transform: uppercase; color: var(--violet-lt);
+  text-transform: uppercase; color: var(--pine-lt);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -86,7 +86,7 @@ body::after {
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: 68px; display: flex; align-items: center;
-  background: rgba(6,7,13,.8);
+  background: rgba(10,14,19,.8);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(26,29,58,.8);
   transition: background .3s;
@@ -109,12 +109,12 @@ body::after {
 .nav-links a:hover { color: var(--mist); }
 .nav-btn {
   padding: 9px 20px; border-radius: 7px;
-  background: var(--violet); color: #fff;
+  background: var(--pine); color: #fff;
   font-size: 14px; font-weight: 600; letter-spacing: .1px;
   transition: background .2s, transform .15s;
   flex-shrink: 0; white-space: nowrap;
 }
-.nav-btn:hover { background: var(--violet-lt); transform: translateY(-1px); }
+.nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
 @media (max-width: 860px) { .nav-links { display: none; } }
 
 /* ═══════════════════════════════════════════════════════
@@ -154,17 +154,17 @@ body::after {
 }
 .hero-orb-1 {
   width: 60vw; height: 60vw; top: -15%; left: 20%;
-  background: radial-gradient(circle, rgba(91,95,232,.18) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.18) 0%, transparent 65%);
   animation: orb-a 22s ease-in-out infinite alternate;
 }
 .hero-orb-2 {
   width: 50vw; height: 50vw; bottom: -10%; right: -5%;
-  background: radial-gradient(circle, rgba(34,211,238,.09) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(210,83,47,.09) 0%, transparent 60%);
   animation: orb-b 28s ease-in-out infinite alternate;
 }
 .hero-orb-3 {
   width: 40vw; height: 40vw; top: 30%; left: -10%;
-  background: radial-gradient(circle, rgba(91,95,232,.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(62,155,130,.08) 0%, transparent 60%);
   animation: orb-c 18s ease-in-out infinite alternate;
 }
 /* Dark vignette overlay — edges darker, center breathes */
@@ -208,7 +208,7 @@ body::after {
 }
 .hero-eyebrow p {
   font-family: var(--mo); font-size: 12px;
-  letter-spacing: 2.5px; text-transform: uppercase; color: var(--cyan);
+  letter-spacing: 2.5px; text-transform: uppercase; color: var(--rust);
   opacity: .85;
 }
 
@@ -251,7 +251,7 @@ h1.hero-h1 {
   letter-spacing: -0.03em; color: #fff;
 }
 .hero-h1 .thin  { display: block; font-weight: 300; color: rgba(255,255,255,.5); }
-.hero-h1 .accent{ display: block; color: var(--violet-lt); }
+.hero-h1 .accent{ display: block; color: var(--pine-lt); }
 
 .hero-actions {
   display: flex; align-items: center; justify-content: flex-end;
@@ -260,20 +260,20 @@ h1.hero-h1 {
 .btn-solid {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 11px 22px; border-radius: 7px;
-  background: var(--violet); color: #fff;
+  background: var(--pine); color: #fff;
   font-size: 13px; font-weight: 600;
   transition: background .2s, transform .15s, box-shadow .25s;
   white-space: nowrap;
 }
 .btn-solid:hover {
-  background: var(--violet-lt); transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(91,95,232,.3);
+  background: var(--pine-lt); transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(62,155,130,.3);
 }
 .btn-text {
   font-size: 13px; font-weight: 400; color: rgba(255,255,255,.35);
   transition: color .2s; white-space: nowrap;
 }
-.btn-text span { color: var(--violet-lt); }
+.btn-text span { color: var(--pine-lt); }
 .btn-text:hover { color: rgba(255,255,255,.6); }
 
 /* Bottom rule */
@@ -299,13 +299,13 @@ h1.hero-h1 {
 .belt {
   overflow: hidden; white-space: nowrap;
   background: linear-gradient(90deg,
-    rgba(91,95,232,.06) 0%,
-    rgba(91,95,232,.10) 30%,
-    rgba(91,95,232,.06) 70%,
-    rgba(91,95,232,.10) 100%
+    rgba(62,155,130,.06) 0%,
+    rgba(62,155,130,.10) 30%,
+    rgba(62,155,130,.06) 70%,
+    rgba(62,155,130,.10) 100%
   ), var(--ink-2);
-  border-top: 1px solid rgba(91,95,232,.25);
-  border-bottom: 1px solid rgba(91,95,232,.25);
+  border-top: 1px solid rgba(62,155,130,.25);
+  border-bottom: 1px solid rgba(62,155,130,.25);
   padding: 17px 0;
 }
 .belt-track {
@@ -315,14 +315,14 @@ h1.hero-h1 {
   display: inline-flex; align-items: center; gap: 20px; padding: 0 20px;
   font-family: var(--mo); font-size: 12px;
   letter-spacing: 2px; text-transform: uppercase;
-  color: rgba(232,234,244,.55);
+  color: rgba(231,230,221,.55);
 }
 .belt-item.v {
-  color: var(--violet-lt);
+  color: var(--pine-lt);
   opacity: .85;
 }
 .belt-sep {
-  color: var(--violet-lt); font-size: 18px; line-height: 1;
+  color: var(--pine-lt); font-size: 18px; line-height: 1;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -401,85 +401,7 @@ h1.hero-h1 {
    DIFFERENTIATORS — CLAIM BLOCKS (no bento)
 ═══════════════════════════════════════════════════════ */
 
-/* MX × DE — full-width featured claim */
-.claim-featured {
-  position: relative; overflow: hidden;
-  border: 1px solid var(--rule); border-radius: 14px;
-  padding: clamp(24px,3vw,40px);
-  margin-bottom: 2px;
-  background: var(--ink);
-  transition: background .2s;
-}
-.claim-featured:hover { background: #080910; }
-.claim-featured-wm {
-  position: absolute; bottom: -16px; right: -4px;
-  font-family: var(--jk); font-size: clamp(80px,14vw,160px);
-  font-weight: 800; letter-spacing: -.05em;
-  color: var(--violet-lt); opacity: .08;
-  line-height: .85; pointer-events: none; user-select: none;
-}
-.claim-title {
-  font-family: var(--jk);
-  font-size: clamp(18px,2.2vw,26px);
-  font-weight: 700; letter-spacing: -.025em;
-  color: var(--snow); line-height: 1.2;
-  margin-bottom: clamp(20px,2.5vw,32px);
-  max-width: 560px; position: relative; z-index: 1;
-}
-
-/* Two-market split */
-.claim-markets {
-  display: grid; grid-template-columns: 1fr 40px 1fr;
-  gap: 0; align-items: stretch;
-  position: relative; z-index: 1;
-  max-width: 680px;
-}
-.claim-market {
-  display: flex; flex-direction: column; gap: 10px;
-  padding: 16px 0;
-}
-.cm-flag {
-  font-family: var(--mo); font-size: 10px; letter-spacing: 2.5px;
-  text-transform: uppercase; font-weight: 500;
-}
-.cm-mx { color: var(--violet-lt); }
-.cm-de { color: var(--cyan); }
-.cm-region {
-  font-family: var(--jk); font-size: clamp(17px,2vw,22px);
-  font-weight: 700; letter-spacing: -.02em; color: var(--snow);
-}
-.cm-tags { display: flex; flex-direction: column; gap: 5px; }
-.cm-tag {
-  font-size: 12.5px; font-weight: 300; color: var(--mist);
-  display: flex; align-items: center; gap: 8px;
-}
-.cm-tag::before {
-  content: ''; display: block;
-  width: 3px; height: 3px; border-radius: 50%;
-  flex-shrink: 0;
-}
-.cm-mx .cm-tag::before { background: var(--violet-lt); }
-.cm-de .cm-tag::before { background: var(--cyan); }
-
-/* Divider with × */
-.claim-divider {
-  display: flex; align-items: center; justify-content: center;
-  border-left: 1px solid var(--rule); border-right: 1px solid var(--rule);
-  margin: 0 4px;
-}
-.claim-x {
-  font-family: var(--jk); font-size: 18px; font-weight: 300;
-  color: var(--dim); letter-spacing: -1px;
-}
-
-@media (max-width: 600px) {
-  .claim-markets { grid-template-columns: 1fr; }
-  .claim-divider { display: none; }
-  .claim-market { border-bottom: 1px solid var(--rule); padding: 20px 0; }
-  .claim-market:last-child { border-bottom: none; }
-}
-
-/* 4 claims in 2×2, no card borders */
+/* 5 claims, 2 cols, no card borders */
 .claims-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -500,16 +422,18 @@ h1.hero-h1 {
   opacity: 0; transition: opacity .35s;
 }
 .claim-cell:hover::before { opacity: 1; }
-.cs-v::before { background: linear-gradient(90deg,transparent,rgba(129,140,248,.5),transparent); }
-.cs-c::before { background: linear-gradient(90deg,transparent,rgba(34,211,238,.4),transparent); }
-.cs-g::before { background: linear-gradient(90deg,transparent,rgba(16,185,129,.4),transparent); }
+.cs-v::before { background: linear-gradient(90deg,transparent,rgba(127,209,184,.5),transparent); }
+.cs-c::before { background: linear-gradient(90deg,transparent,rgba(210,83,47,.4),transparent); }
+.cs-g::before { background: linear-gradient(90deg,transparent,rgba(46,158,107,.4),transparent); }
 .cs-a::before { background: linear-gradient(90deg,transparent,rgba(245,158,11,.35),transparent); }
+.cs-m::before { background: linear-gradient(90deg,transparent,rgba(154,154,142,.4),transparent); }
 
 .cc-num { font-family: var(--mo); font-size: 10px; letter-spacing: 1.5px; }
-.cs-v .cc-num { color: var(--violet-lt); }
-.cs-c .cc-num { color: var(--cyan); }
+.cs-v .cc-num { color: var(--pine-lt); }
+.cs-c .cc-num { color: var(--rust); }
 .cs-g .cc-num { color: var(--green); }
 .cs-a .cc-num { color: var(--amber); }
+.cs-m .cc-num { color: var(--mist); }
 
 .cc-title {
   font-family: var(--jk); font-size: clamp(16px,1.8vw,20px);
@@ -554,7 +478,7 @@ h1.hero-h1 {
   font-family: var(--mo); font-size: 12px; color: var(--mist);
   letter-spacing: 1px; display: block; transition: color .2s;
 }
-.method-item:hover .method-step-num { color: var(--violet-lt); }
+.method-item:hover .method-step-num { color: var(--pine-lt); }
 .method-step-sub {
   display: block; margin-top: 6px;
   font-family: var(--mo); font-size: 10px;
@@ -567,7 +491,7 @@ h1.hero-h1 {
   font-weight: 700; letter-spacing: -.02em; color: var(--snow);
   transition: color .2s;
 }
-.method-item:hover .method-name { color: var(--violet-lt); }
+.method-item:hover .method-name { color: var(--pine-lt); }
 .method-desc {
   font-size: 13.5px; font-weight: 300; color: var(--mist);
   line-height: 1.75; max-width: 520px;
@@ -591,7 +515,7 @@ h1.hero-h1 {
 }
 .route:first-child { border-right: 1px solid var(--rule); background: var(--ink-2); }
 .route:last-child {
-  background: linear-gradient(148deg, rgba(91,95,232,.07) 0%, var(--ink-2) 55%);
+  background: linear-gradient(148deg, rgba(62,155,130,.07) 0%, var(--ink-2) 55%);
 }
 .route:hover { background: #0a0b18; }
 
@@ -602,7 +526,7 @@ h1.hero-h1 {
 }
 .route:hover .route-shimmer { opacity: 1; }
 .rs-green  { background: linear-gradient(90deg,transparent,var(--green),transparent); }
-.rs-violet { background: linear-gradient(90deg,transparent,var(--violet-lt),transparent); }
+.rs-violet { background: linear-gradient(90deg,transparent,var(--pine-lt),transparent); }
 
 .route-meta { display: flex; align-items: center; justify-content: space-between; }
 .route-badge {
@@ -610,7 +534,7 @@ h1.hero-h1 {
   letter-spacing: 3px; text-transform: uppercase; font-weight: 500;
 }
 .rb-g { color: var(--green); }
-.rb-v { color: var(--violet-lt); }
+.rb-v { color: var(--pine-lt); }
 .route-idx { font-family: var(--mo); font-size: 10px; color: var(--dim); letter-spacing: 2px; }
 
 .route-title {
@@ -629,7 +553,7 @@ h1.hero-h1 {
 }
 .route-link:hover { gap: 14px; }
 .rl-g { color: var(--green); }
-.rl-v { color: var(--violet-lt); }
+.rl-v { color: var(--pine-lt); }
 @media (max-width: 700px) {
   .routes-wrap { grid-template-columns: 1fr; }
   .route:first-child { border-right: none; border-bottom: 1px solid var(--rule); }
@@ -653,24 +577,24 @@ h1.hero-h1 {
 .svc:hover { background: #070810; }
 .svc::before {
   content: ''; position: absolute; top: 0; left: 20px; right: 20px; height: 1px;
-  background: linear-gradient(90deg,transparent,var(--violet-lt),transparent);
+  background: linear-gradient(90deg,transparent,var(--pine-lt),transparent);
   opacity: 0; transition: opacity .35s;
 }
 .svc:hover::before { opacity: 1; }
 .svc-tag {
   align-self: flex-start; padding: 3px 10px; border-radius: 100px;
-  background: rgba(91,95,232,.12);
+  background: rgba(62,155,130,.12);
   font-family: var(--mo); font-size: 9.5px;
-  letter-spacing: 1.5px; text-transform: uppercase; color: var(--violet-lt);
+  letter-spacing: 1.5px; text-transform: uppercase; color: var(--pine-lt);
 }
-.svc-price { font-family: var(--mo); font-size: 12.5px; color: var(--cyan); letter-spacing: .3px; }
+.svc-price { font-family: var(--mo); font-size: 12.5px; color: var(--rust); letter-spacing: .3px; }
 .svc-title {
   font-family: var(--jk); font-size: 15px; font-weight: 700;
   letter-spacing: -.02em; color: var(--snow); line-height: 1.3;
 }
 .svc-desc { font-size: 12.5px; font-weight: 300; color: var(--mist); line-height: 1.65; flex: 1; }
 .svc-link {
-  font-size: 12px; color: var(--violet-lt); font-weight: 500;
+  font-size: 12px; color: var(--pine-lt); font-weight: 500;
   display: inline-flex; align-items: center; gap: 5px; transition: gap .18s;
 }
 .svc-link:hover { gap: 9px; }
@@ -695,7 +619,7 @@ h1.hero-h1 {
   cursor: pointer; transition: border-color .2s, color .2s, background .2s;
   flex-shrink: 0;
 }
-.pf-btn:hover { border-color: var(--violet-lt); color: var(--snow); background: var(--ink-3); }
+.pf-btn:hover { border-color: var(--pine-lt); color: var(--snow); background: var(--ink-3); }
 .pf-btn svg { width: 16px; height: 16px; }
 
 /* Track — full width with peek effect */
@@ -713,11 +637,11 @@ h1.hero-h1 {
 }
 .pf-track-wrap::before {
   left: 0;
-  background: linear-gradient(to right, #0E0D12 20%, transparent 100%);
+  background: linear-gradient(to right, #10151C 20%, transparent 100%);
 }
 .pf-track-wrap::after {
   right: 0;
-  background: linear-gradient(to left, #0E0D12 20%, transparent 100%);
+  background: linear-gradient(to left, #10151C 20%, transparent 100%);
 }
 
 .pf-track {
@@ -780,10 +704,10 @@ h1.hero-h1 {
   font-weight: 800; letter-spacing: -.03em; color: var(--snow);
   line-height: 1.1;
 }
-.pf-sub { font-size: 13px; color: var(--violet-lt); font-weight: 500; }
+.pf-sub { font-size: 13px; color: var(--pine-lt); font-weight: 500; }
 .pf-desc {
   font-size: 13px; font-weight: 300;
-  color: rgba(150,152,184,.9); line-height: 1.7;
+  color: rgba(154,154,142,.9); line-height: 1.7;
 }
 .pf-dels {
   display: flex; flex-direction: column; gap: 0;
@@ -791,7 +715,7 @@ h1.hero-h1 {
 }
 .pf-del {
   display: flex; align-items: center; gap: 10px;
-  font-size: 12.5px; color: rgba(150,152,184,.85); font-weight: 300;
+  font-size: 12.5px; color: rgba(154,154,142,.85); font-weight: 300;
   padding: 7px 0; border-bottom: 1px solid var(--rule-2);
 }
 .pf-del:last-child { border-bottom: none; }
@@ -811,17 +735,17 @@ h1.hero-h1 {
   transition: background .25s, transform .25s;
 }
 .pf-dot.active {
-  background: var(--violet-lt); transform: scale(1.3);
+  background: var(--pine-lt); transform: scale(1.3);
 }
 @media (max-width: 700px) {
   .case-wrap { grid-template-columns: 1fr; }
 }
 
 /* ═══════════════════════════════════════════════════════
-   CTA FINAL — VIOLET DRENCH
+   CTA FINAL — PINE DRENCH
 ═══════════════════════════════════════════════════════ */
 .cta-sect {
-  background: var(--violet);
+  background: var(--pine);
   border-top: none;
   padding: clamp(72px,10vw,140px) 0;
 }
@@ -855,7 +779,7 @@ h1.hero-h1 {
 .cta-input:focus { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.18); }
 .cta-btn {
   padding: 13px 22px; border-radius: 7px;
-  background: #fff; color: var(--violet);
+  background: #fff; color: var(--pine);
   font-size: 13px; font-weight: 700; white-space: nowrap;
   transition: background .2s, transform .15s, box-shadow .2s;
   cursor: pointer;
@@ -913,15 +837,15 @@ footer {
   content: '';
   position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(91,95,232,.07) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 60% at 10% 70%, rgba(34,211,238,.04) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(62,155,130,.07) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 60% at 10% 70%, rgba(210,83,47,.04) 0%, transparent 60%);
 }
 
 /* Glow for portfolio section */
 .portfolio-glow::before {
   content: '';
   position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(91,95,232,.06) 0%, transparent 65%);
+  background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(62,155,130,.06) 0%, transparent 65%);
 }
 
 </style>
@@ -931,8 +855,8 @@ footer {
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Navegación">
   <div class="nav-wrap">
-    <a href="/" class="nav-logo" aria-label="Velora Labs inicio">
-      <img src="logo.svg" alt="Velora Labs" height="44" style="display:block;">
+    <a href="/" class="nav-logo" aria-label="Velkin Data Studios inicio">
+      <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;">
     </a>
     <ul class="nav-links">
       <li><a href="#portafolio">Portafolio</a></li>
@@ -963,7 +887,7 @@ footer {
     <!-- Left: sub text — extreme left -->
     <div class="hero-left">
       <p class="hero-sub fu d4">
-        Velora Labs conecta marca, captación y automatización
+        Velkin Data Studios conecta marca, captación y automatización
         en sistemas de crecimiento para negocios listos para
         dejar de improvisar.
       </p>
@@ -1041,47 +965,17 @@ footer {
       <h2 class="sect-title" id="diff-title">Construido diferente.</h2>
     </div>
 
-    <!-- Featured: MX × DE -->
-    <div class="claim-featured rv">
-      <span class="claim-featured-wm" aria-hidden="true">MX × DE</span>
-      <h3 class="claim-title">El único equipo en LATAM con operación directa en Europa.</h3>
-
-      <div class="claim-markets">
-        <!-- México -->
-        <div class="claim-market cm-mx" style="padding-right: clamp(10px, 1.5vw, 20px);">
-          <span class="cm-flag">México · LATAM</span>
-          <span class="cm-region">Estrategia y ejecución</span>
-          <div class="cm-tags">
-            <span class="cm-tag">Branding y sistemas de crecimiento</span>
-            <span class="cm-tag">Tecnología y automatización</span>
-            <span class="cm-tag">Gestión de producto y ventas</span>
-          </div>
-        </div>
-
-        <!-- Divider -->
-        <div class="claim-divider" aria-hidden="true">
-          <span class="claim-x">×</span>
-        </div>
-
-        <!-- Alemania -->
-        <div class="claim-market cm-de" style="padding-left: clamp(16px, 2.5vw, 32px);">
-          <span class="cm-flag">Alemania · Europa</span>
-          <span class="cm-region">Marketing y expansión</span>
-          <div class="cm-tags">
-            <span class="cm-tag">Estrategia de marketing internacional</span>
-            <span class="cm-tag">Acceso al mercado europeo</span>
-            <span class="cm-tag">Perspectiva cross-cultural</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4 claims -->
+    <!-- 5 claims -->
     <div class="claims-grid rv">
       <div class="claim-cell cs-v">
         <span class="cc-num">01</span>
         <h3 class="cc-title">Sistemas, no campañas</h3>
         <p class="cc-desc">Construimos lo que sigue funcionando cuando no estás mirando.</p>
+      </div>
+      <div class="claim-cell cs-m">
+        <span class="cc-num">02</span>
+        <h3 class="cc-title">Cross-border por diseño</h3>
+        <p class="cc-desc">Equipo operando desde México, con presencia en Alemania — servimos LATAM y Europa desde un mismo equipo.</p>
       </div>
       <div class="claim-cell cs-c">
         <span class="cc-num">03</span>
@@ -1093,10 +987,10 @@ footer {
         <h3 class="cc-title">Disciplina de ingeniería</h3>
         <p class="cc-desc">Rigurosos en sistemas. Intencionales en craft. Sin ejecución, la estrategia no vale nada.</p>
       </div>
-      <div class="claim-cell cs-a">
+      <div class="claim-cell cs-a" style="grid-column: 1 / -1;">
         <span class="cc-num">05</span>
         <h3 class="cc-title">Shipped beats perfect</h3>
-        <p class="cc-desc">Dos entradas claras. Velora Start para comenzar. Velora Build para escalar. Sin rodeos.</p>
+        <p class="cc-desc">Dos entradas claras. Velkin Start para comenzar. Velkin Build para escalar. Sin rodeos.</p>
       </div>
     </div>
   </div>
@@ -1179,7 +1073,7 @@ footer {
       <div class="route">
         <div class="route-shimmer rs-green" aria-hidden="true"></div>
         <div class="route-meta">
-          <span class="route-badge rb-g">Velora Start</span>
+          <span class="route-badge rb-g">Velkin Start</span>
           <span class="route-idx">01</span>
         </div>
         <h3 class="route-title">Para negocios con potencial sin explotar.</h3>
@@ -1189,7 +1083,7 @@ footer {
       <div class="route">
         <div class="route-shimmer rs-violet" aria-hidden="true"></div>
         <div class="route-meta">
-          <span class="route-badge rb-v">Velora Build</span>
+          <span class="route-badge rb-v">Velkin Build</span>
           <span class="route-idx">02</span>
         </div>
         <h3 class="route-title">Para negocios listos para sistematizar.</h3>
@@ -1209,28 +1103,28 @@ footer {
     </div>
     <div class="svc-list rv">
       <div class="svc">
-        <span class="svc-tag">Velora Audit</span>
+        <span class="svc-tag">Velkin Audit</span>
         <span class="svc-price">MX$3,500</span>
         <h3 class="svc-title">Saber que mover primero.</h3>
         <p class="svc-desc">Diagnóstico completo de marca, presencia digital y automatización. Acreditable a cualquier paquete.</p>
         <a href="contacto.html" class="svc-link">Iniciar diagnóstico →</a>
       </div>
       <div class="svc">
-        <span class="svc-tag">Velora Start</span>
+        <span class="svc-tag">Velkin Start</span>
         <span class="svc-price">desde MX$28,000</span>
         <h3 class="svc-title">Presencia profesional y seguimiento.</h3>
         <p class="svc-desc">Identidad visual, sitio web, Google Business, redes y automatización básica. En 10 a 15 días.</p>
         <a href="servicios.html" class="svc-link">Ver detalles →</a>
       </div>
       <div class="svc">
-        <span class="svc-tag">Velora Build</span>
+        <span class="svc-tag">Velkin Build</span>
         <span class="svc-price">desde MX$65,000</span>
         <h3 class="svc-title">Sistema completo de captación.</h3>
         <p class="svc-desc">Brand system, sitio robusto, Meta Ads, CRM, automatizaciones avanzadas y analytics conectados.</p>
         <a href="servicios.html" class="svc-link">Ver detalles →</a>
       </div>
       <div class="svc">
-        <span class="svc-tag">Velora Grow</span>
+        <span class="svc-tag">Velkin Grow</span>
         <span class="svc-price">desde MX$12,000/mes</span>
         <h3 class="svc-title">Operación mensual continua.</h3>
         <p class="svc-desc">Contenido, campañas Meta, reportes y optimizaciones. El sistema funcionando mes a mes.</p>
@@ -1275,10 +1169,10 @@ footer {
           <p class="pf-sub">De cero a marca completa.</p>
           <p class="pf-desc">Sin nombre definido, sin presencia digital. Construimos identidad de marca, brand guidelines y sitio web desde cero.</p>
           <div class="pf-dels">
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--violet-lt)"></span>Naming y posicionamiento</div>
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--violet-lt)"></span>Identidad visual completa</div>
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--violet-lt)"></span>Brand guidelines</div>
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--violet-lt)"></span>Sitio web funcional</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--pine-lt)"></span>Naming y posicionamiento</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--pine-lt)"></span>Identidad visual completa</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--pine-lt)"></span>Brand guidelines</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--pine-lt)"></span>Sitio web funcional</div>
           </div>
         </div>
       </a>
@@ -1330,9 +1224,9 @@ footer {
           <p class="pf-sub">Performance Lab y operación automática.</p>
           <p class="pf-desc">Producto interno para análisis de tandas y flujo automatizado para publicar contenido en redes sin operación manual repetitiva.</p>
           <div class="pf-dels">
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--cyan)"></span>Performance Lab</div>
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--cyan)"></span>Análisis IA de tandas</div>
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--cyan)"></span>Automatización de redes</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--rust)"></span>Performance Lab</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--rust)"></span>Análisis IA de tandas</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--rust)"></span>Automatización de redes</div>
           </div>
         </div>
       </a>
@@ -1343,14 +1237,14 @@ footer {
           <img src="assets/portfolio/thumb-lapipus.svg" alt="La Lente de Pipus social publishing workflow" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="pf-body">
-          <div class="pf-cats"><span class="pf-cat">Fotografía</span><span class="pf-cat">n8n</span><span class="pf-cat">Meta</span></div>
+          <div class="pf-cats"><span class="pf-cat">Fotografía</span><span class="pf-cat">Content Hub</span><span class="pf-cat">Meta</span></div>
           <h3 class="pf-name">La Lente de Pipus</h3>
           <p class="pf-sub">Publicación asistida para redes.</p>
           <p class="pf-desc">Flujo que recibe fotos, pregunta filtros y formato, genera captions, acepta contexto adicional y publica en Instagram/Facebook tras aprobación.</p>
           <div class="pf-dels">
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--cyan)"></span>Asistente de captions</div>
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--cyan)"></span>Post o historia</div>
-            <div class="pf-del"><span class="pf-del-dot" style="background:var(--cyan)"></span>Publicación automática</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--rust)"></span>Asistente de captions</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--rust)"></span>Post o historia</div>
+            <div class="pf-del"><span class="pf-del-dot" style="background:var(--rust)"></span>Publicación automática</div>
           </div>
         </div>
       </a>
@@ -1363,7 +1257,7 @@ footer {
   </div>
 </section>
 
-<!-- CTA FINAL — VIOLET DRENCH -->
+<!-- CTA FINAL — PINE DRENCH -->
 <section id="diagnostico" class="sect cta-sect">
   <div class="bound">
     <div class="cta-inner rv">
@@ -1387,7 +1281,7 @@ footer {
     <div class="foot-inner">
       <div class="foot-brand">
         <div class="foot-logo">
-          <img src="logo.svg" alt="Velora Labs" height="38" style="display:block;opacity:.65;">
+          <img src="logo.svg" alt="Velkin Data Studios" height="38" style="display:block;opacity:.65;">
         </div>
         <span class="foot-tag">Branding · Growth Systems · Automatización</span>
       </div>
@@ -1397,7 +1291,7 @@ footer {
         <a href="servicios.html">Servicios</a>
         <a href="contacto.html">Contacto</a>
       </nav>
-      <p class="foot-copy">© 2026 Velora Labs<br>Built for businesses ready<br>to stop improvising.</p>
+      <p class="foot-copy">© 2026 Velkin Data Studios<br>Built for businesses ready<br>to stop improvising.</p>
     </div>
   </div>
 </footer>
@@ -1410,7 +1304,7 @@ document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 /* Nav */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.style.background = scrollY > 36 ? 'rgba(6,7,13,.97)' : 'rgba(6,7,13,.8)';
+  nav.style.background = scrollY > 36 ? 'rgba(10,14,19,.97)' : 'rgba(10,14,19,.8)';
 }, {passive:true});
 
 /* Marquee */
@@ -1496,7 +1390,7 @@ const belt = document.getElementById('belt');
   const W=400,H=420;
   const NP=[{x:200,y:60},{x:340,y:140},{x:320,y:280},{x:200,y:360},{x:60,y:280},{x:80,y:140}];
   const NL=['MARCA','WEB','LEADS','FOLLOW-UP','AUTO','REPORT'];
-  const NC=['#818CF8','#22D3EE','#818CF8','#22D3EE','#818CF8','#22D3EE'];
+  const NC=['#7FD1B8','#D2532F','#7FD1B8','#D2532F','#7FD1B8','#D2532F'];
   const ED=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,0],[0,3],[1,4]];
   const ns='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(ns,'svg');
@@ -1507,7 +1401,7 @@ const belt = document.getElementById('belt');
     const l=document.createElementNS(ns,'line');
     l.setAttribute('x1',NP[a].x); l.setAttribute('y1',NP[a].y);
     l.setAttribute('x2',NP[a].x); l.setAttribute('y2',NP[a].y);
-    l.setAttribute('stroke','rgba(91,95,232,0.25)'); l.setAttribute('stroke-width','1');
+    l.setAttribute('stroke','rgba(62,155,130,0.25)'); l.setAttribute('stroke-width','1');
     l.setAttribute('stroke-linecap','round'); svg.appendChild(l);
     return {el:l,ax:NP[a].x,ay:NP[a].y,bx:NP[b].x,by:NP[b].y};
   });
@@ -1600,10 +1494,10 @@ function makeNeural(id, opts) {
 }
 
 /* Diferenciadores — más fuerte, sección de "built different" */
-makeNeural('nc-diff', { nc:'rgba(129,140,248,', lc:'rgba(129,140,248,', md:190, n:50, sp:0.16, r:2.2, no:0.55, lo:0.28 });
+makeNeural('nc-diff', { nc:'rgba(127,209,184,', lc:'rgba(127,209,184,', md:190, n:50, sp:0.16, r:2.2, no:0.55, lo:0.28 });
 
 /* Servicios — más sutil, solo textura */
-makeNeural('nc-svc',  { nc:'rgba(129,140,248,', lc:'rgba(91,95,232,',  md:160, n:36, sp:0.13, r:1.8, no:0.40, lo:0.18 });
+makeNeural('nc-svc',  { nc:'rgba(127,209,184,', lc:'rgba(62,155,130,',  md:160, n:36, sp:0.13, r:1.8, no:0.40, lo:0.18 });
 
 </script>
 </body>

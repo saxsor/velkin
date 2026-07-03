@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CriptasMX — Portafolio · Velora Labs</title>
+<title>CriptasMX — Portafolio · Velkin Data Studios</title>
 <meta name="description" content="Identidad de marca, sitio web y sistema de captación para Criptas MX — bienes raíces funerarios B2B con 33 años en el mercado.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Cinzel:wght@400;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&family=Cinzel:wght@400;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
 
 /* ─── TOKENS ──────────────────────────────────────────── */
 :root {
-  --ink:       #080709;
-  --ink-2:     #0E0D12;
-  --ink-3:     #141318;
-  --rule:      #1E1C28;
-  --rule-2:    #262432;
-  --violet:    #5B5FE8;
-  --violet-lt: #818CF8;
-  --cyan:      #22D3EE;
-  --green:     #10B981;
-  --snow:      #E8EAF4;
-  --mist:      #9698B8;
-  --dim:       #4E5075;
-  --jk: "Plus Jakarta Sans", "Helvetica Neue", sans-serif;
-  --it: "Inter", "Helvetica Neue", sans-serif;
+  --ink:       #0A0E13;
+  --ink-2:     #10151C;
+  --ink-3:     #161C24;
+  --rule:      #232B34;
+  --rule-2:    #303B47;
+  --pine:    #3E9B82;
+  --pine-lt: #7FD1B8;
+  --rust:      #D2532F;
+  --green:     #2E9E6B;
+  --snow:      #E7E6DD;
+  --mist:      #9A9A8E;
+  --dim:       #5C5B50;
+  --jk: "Archivo", "Helvetica Neue", sans-serif;
+  --it: "Archivo", "Helvetica Neue", sans-serif;
   --mo: "JetBrains Mono", "Fira Code", monospace;
   --expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -62,15 +62,15 @@ body::after {
 }
 .ambient-1 {
   width: 50vw; height: 50vw; top: 20vh; right: -15vw;
-  background: radial-gradient(circle, rgba(91,95,232,.055) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.055) 0%, transparent 65%);
 }
 .ambient-2 {
   width: 40vw; height: 40vw; top: 60vh; left: -10vw;
-  background: radial-gradient(circle, rgba(34,211,238,.035) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(210,83,47,.035) 0%, transparent 65%);
 }
 .ambient-3 {
   width: 35vw; height: 35vw; bottom: 10vh; right: 5vw;
-  background: radial-gradient(circle, rgba(91,95,232,.04) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(62,155,130,.04) 0%, transparent 65%);
 }
 
 /* ─── LAYOUT ──────────────────────────────────────────── */
@@ -92,7 +92,7 @@ body::after {
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   height: 68px; display: flex; align-items: center;
-  background: rgba(8,7,9,.85);
+  background: rgba(10,14,19,.85);
   backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(30,28,40,.8);
   transition: background .3s;
@@ -109,11 +109,11 @@ body::after {
 .nav-links a.active { color: var(--snow); }
 .nav-btn {
   padding: 9px 20px; border-radius: 7px;
-  background: var(--violet); color: #fff;
+  background: var(--pine); color: #fff;
   font-size: 14px; font-weight: 600;
   transition: background .2s, transform .15s; flex-shrink: 0; white-space: nowrap;
 }
-.nav-btn:hover { background: var(--violet-lt); transform: translateY(-1px); }
+.nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
 @media (max-width: 860px) { .nav-links { display: none; } }
 
 /* ─── PROJECT HERO ────────────────────────────────────── */
@@ -134,8 +134,8 @@ body::after {
 .chip {
   font-family: var(--mo); font-size: 10px; letter-spacing: 2px;
   text-transform: uppercase; padding: 5px 11px; border-radius: 99px;
-  border: 1px solid rgba(91,95,232,.3); color: var(--violet-lt);
-  background: rgba(91,95,232,.08);
+  border: 1px solid rgba(62,155,130,.3); color: var(--pine-lt);
+  background: rgba(62,155,130,.08);
 }
 .proj-hero h1 {
   font-family: var(--jk); font-weight: 800;
@@ -200,7 +200,7 @@ body::after {
 .proj-section { padding-bottom: 88px; }
 .section-label {
   font-family: var(--mo); font-size: 10px; letter-spacing: 2.5px;
-  text-transform: uppercase; color: var(--violet-lt);
+  text-transform: uppercase; color: var(--pine-lt);
   margin-bottom: 12px; display: block;
 }
 .section-h2 {
@@ -331,7 +331,7 @@ body::after {
   border-radius: 10px; padding: 14px 20px; flex-shrink: 0;
 }
 .flow-node.trigger {
-  border-color: rgba(91,95,232,.4); background: rgba(91,95,232,.08);
+  border-color: rgba(62,155,130,.4); background: rgba(62,155,130,.08);
 }
 .flow-node.engine {
   border-color: rgba(245,158,11,.3); background: rgba(245,158,11,.06);
@@ -340,7 +340,7 @@ body::after {
   font-family: var(--mo); font-size: 9px; letter-spacing: 2px;
   text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 4px;
 }
-.flow-node.trigger .fn-label { color: var(--violet-lt); }
+.flow-node.trigger .fn-label { color: var(--pine-lt); }
 .flow-node.engine .fn-label { color: #F59E0B; }
 .fn-name { font-family: var(--jk); font-size: 13px; font-weight: 600; color: var(--snow); }
 .flow-arrow {
@@ -367,8 +367,8 @@ body::after {
   display: flex; align-items: center; justify-content: center;
 }
 .out-icon.sheets { background: rgba(22,163,74,.12); border: 1px solid rgba(22,163,74,.2); }
-.out-icon.email  { background: rgba(91,95,232,.12);  border: 1px solid rgba(91,95,232,.2); }
-.out-icon.wa     { background: rgba(34,211,238,.12);  border: 1px solid rgba(34,211,238,.2); }
+.out-icon.email  { background: rgba(62,155,130,.12);  border: 1px solid rgba(62,155,130,.2); }
+.out-icon.wa     { background: rgba(210,83,47,.12);  border: 1px solid rgba(210,83,47,.2); }
 .out-label {
   font-family: var(--mo); font-size: 9px; letter-spacing: 2px;
   text-transform: uppercase; color: var(--dim); display: block; margin-bottom: 2px;
@@ -387,7 +387,7 @@ body::after {
 }
 .result-icon {
   width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px;
-  background: rgba(16,185,129,.1); border: 1px solid rgba(16,185,129,.2);
+  background: rgba(46,158,107,.1); border: 1px solid rgba(46,158,107,.2);
   display: flex; align-items: center; justify-content: center; color: var(--green);
 }
 .result-item h4 {
@@ -403,7 +403,7 @@ body::after {
 }
 .proj-cta .label {
   font-family: var(--mo); font-size: 10px; letter-spacing: 2.5px;
-  text-transform: uppercase; color: var(--violet-lt);
+  text-transform: uppercase; color: var(--pine-lt);
   display: block; margin-bottom: 16px;
 }
 .proj-cta h2 {
@@ -415,11 +415,11 @@ body::after {
 .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .btn-primary {
   padding: 12px 28px; border-radius: 8px;
-  background: var(--violet); color: #fff;
+  background: var(--pine); color: #fff;
   font-family: var(--jk); font-size: 15px; font-weight: 600;
   transition: background .2s, transform .15s;
 }
-.btn-primary:hover { background: var(--violet-lt); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--pine-lt); transform: translateY(-1px); }
 .btn-secondary {
   padding: 12px 28px; border-radius: 8px;
   border: 1px solid var(--rule-2); color: var(--mist);
@@ -456,8 +456,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-wrap">
-    <a href="index.html" class="nav-logo" aria-label="Velora Labs — inicio">
-      <img src="logo.svg" alt="Velora Labs" height="44" style="display:block;">
+    <a href="index.html" class="nav-logo" aria-label="Velkin Data Studios — inicio">
+      <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;">
     </a>
     <ul class="nav-links">
       <li><a href="index.html#portafolio" class="active">Portafolio</a></li>
@@ -604,7 +604,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div class="mock-bar">
           <div class="mock-dot" style="background:#EF4444;"></div>
           <div class="mock-dot" style="background:#F59E0B;"></div>
-          <div class="mock-dot" style="background:#10B981;"></div>
+          <div class="mock-dot" style="background:#2E9E6B;"></div>
         </div>
         <div class="mock-body">
           <div class="ml accent"></div>
@@ -619,7 +619,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div class="mock-bar">
           <div class="mock-dot" style="background:#EF4444;"></div>
           <div class="mock-dot" style="background:#F59E0B;"></div>
-          <div class="mock-dot" style="background:#10B981;"></div>
+          <div class="mock-dot" style="background:#2E9E6B;"></div>
         </div>
         <div class="mock-body">
           <div class="ml w70"></div>
@@ -634,7 +634,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div class="mock-bar">
           <div class="mock-dot" style="background:#EF4444;"></div>
           <div class="mock-dot" style="background:#F59E0B;"></div>
-          <div class="mock-dot" style="background:#10B981;"></div>
+          <div class="mock-dot" style="background:#2E9E6B;"></div>
         </div>
         <div class="mock-body">
           <div class="ml w55"></div>
@@ -649,7 +649,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <div class="mock-bar">
           <div class="mock-dot" style="background:#EF4444;"></div>
           <div class="mock-dot" style="background:#F59E0B;"></div>
-          <div class="mock-dot" style="background:#10B981;"></div>
+          <div class="mock-dot" style="background:#2E9E6B;"></div>
         </div>
         <div class="mock-body">
           <div class="ml w70"></div>
@@ -697,7 +697,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         </div>
         <div class="output-node">
           <div class="out-icon email">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7FD1B8" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </div>
           <div>
             <span class="out-label">Notificación</span>
@@ -706,7 +706,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         </div>
         <div class="output-node">
           <div class="out-icon wa">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D2532F" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
           <div>
             <span class="out-label">Conversación</span>
@@ -785,7 +785,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <div class="foot-inner">
       <div class="foot-brand">
         <div class="foot-logo">
-          <img src="logo.svg" alt="Velora Labs" height="38" style="display:block;opacity:.65;">
+          <img src="logo.svg" alt="Velkin Data Studios" height="38" style="display:block;opacity:.65;">
         </div>
         <span class="foot-tag">Branding · Growth Systems · Automatización</span>
       </div>
@@ -795,7 +795,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <a href="servicios.html">Servicios</a>
         <a href="contacto.html">Contacto</a>
       </nav>
-      <p class="foot-copy">© 2026 Velora Labs<br>Built for businesses ready<br>to stop improvising.</p>
+      <p class="foot-copy">© 2026 Velkin Data Studios<br>Built for businesses ready<br>to stop improvising.</p>
     </div>
   </div>
 </footer>

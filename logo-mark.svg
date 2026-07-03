@@ -1,18 +1,8 @@
 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none">
-  <defs>
-    <linearGradient id="vl-g1" x1="5" y1="8" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#818CF8"/>
-      <stop offset="100%" stop-color="#5B5FE8"/>
-    </linearGradient>
-  </defs>
-  <!-- Left arm of V -->
-  <line x1="5" y1="8" x2="24" y2="41"
-        stroke="url(#vl-g1)" stroke-width="3.2" stroke-linecap="round"/>
-  <!-- Right arm (starts 4px higher — asymmetry = velocity / forward direction) -->
-  <line x1="43" y1="4" x2="24" y2="41"
-        stroke="url(#vl-g1)" stroke-width="3.2" stroke-linecap="round"/>
-  <!-- System node — the convergence point (Labs: where everything meets) -->
-  <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-  <!-- Velocity accent — the execution dot (cyan = speed, output, energy) -->
-  <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+  <!-- Benchmark triangle — a fixed, surveyed reference point -->
+  <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+  <!-- The reading — pine node at the centroid -->
+  <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+  <!-- The mark — rust tick, hand-confirmed benchmark -->
+  <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
 </svg>

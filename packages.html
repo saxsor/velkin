@@ -3,32 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velora Labs — Paquetes y Servicios</title>
+<title>Velkin Data Studios — Paquetes y Servicios</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --black:       #06070D;
-  --surface:     #0D0E1A;
-  --surface-2:   #131528;
-  --surface-3:   #1A1C35;
-  --border:      #1E2040;
-  --border-2:    #252848;
-  --primary:     #5B5FE8;
-  --primary-lt:  #818CF8;
-  --primary-glow:rgba(91,95,232,.14);
-  --cyan:        #22D3EE;
-  --cyan-dim:    rgba(34,211,238,.12);
+  --black:       #0A0E13;
+  --surface:     #10151C;
+  --surface-2:   #161C24;
+  --surface-3:   #1C232C;
+  --border:      #232B34;
+  --border-2:    #303B47;
+  --primary:     #3E9B82;
+  --primary-lt:  #7FD1B8;
+  --primary-glow:rgba(62,155,130,.14);
+  --rust:        #D2532F;
+  --rust-dim:    rgba(210,83,47,.12);
   --amber:       #F59E0B;
   --amber-dim:   rgba(245,158,11,.10);
-  --green:       #10B981;
-  --green-dim:   rgba(16,185,129,.12);
+  --green:       #2E9E6B;
+  --green-dim:   rgba(46,158,107,.12);
   --white:       #FFFFFF;
-  --text-1:      #E8EAF4;
-  --text-2:      #9698B8;
-  --text-3:      #4E5075;
-  --font-display:"Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-body:   "Inter", "Helvetica Neue", Arial, sans-serif;
+  --text-1:      #E7E6DD;
+  --text-2:      #9A9A8E;
+  --text-3:      #5C5B50;
+  --font-display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body:   "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-mono:   "JetBrains Mono", "Fira Code", monospace;
   --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 24px;
 }
@@ -42,7 +42,7 @@ section+section{border-top:1px solid var(--border)}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(6,7,13,.85);backdrop-filter:blur(16px);
+    background:rgba(10,14,19,.85);backdrop-filter:blur(16px);
     border-bottom:1px solid var(--border);
     display:flex;align-items:center;justify-content:space-between;
     padding:0 40px;height:60px}
@@ -55,8 +55,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;
 /* HERO */
 .cover{min-height:60vh;display:flex;align-items:center;padding-top:60px;position:relative;overflow:hidden}
 .cover-bg{position:absolute;inset:0;
-  background:radial-gradient(ellipse 60% 50% at 60% 40%,rgba(91,95,232,.1) 0%,transparent 65%),
-             radial-gradient(ellipse 40% 30% at 80% 70%,rgba(34,211,238,.05) 0%,transparent 55%)}
+  background:radial-gradient(ellipse 60% 50% at 60% 40%,rgba(62,155,130,.1) 0%,transparent 65%),
+             radial-gradient(ellipse 40% 30% at 80% 70%,rgba(210,83,47,.05) 0%,transparent 55%)}
 .cover-grid{position:absolute;inset:0;
   background-image:linear-gradient(var(--border) 1px,transparent 1px),
                    linear-gradient(90deg,var(--border) 1px,transparent 1px);
@@ -119,16 +119,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;
 /* BADGE */
 .badge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:100px;
        font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
-.badge-green{background:var(--green-dim);border:1px solid rgba(16,185,129,.3);color:var(--green)}
+.badge-green{background:var(--green-dim);border:1px solid rgba(46,158,107,.3);color:var(--green)}
 .badge-primary{background:var(--primary-glow);border:1px solid var(--primary);color:var(--primary-lt)}
 .badge-amber{background:var(--amber-dim);border:1px solid rgba(245,158,11,.3);color:var(--amber)}
-.badge-cyan{background:var(--cyan-dim);border:1px solid rgba(34,211,238,.3);color:var(--cyan)}
+.badge-cyan{background:var(--rust-dim);border:1px solid rgba(210,83,47,.3);color:var(--rust)}
 
 /* ADDONS */
 .addon{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);
        padding:24px;display:flex;flex-direction:column;gap:12px}
 .addon-name{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text-1)}
-.addon-price{font-family:var(--font-mono);font-size:13px;color:var(--cyan)}
+.addon-price{font-family:var(--font-mono);font-size:13px;color:var(--rust)}
 
 /* COMPARISON */
 .cmp-table{width:100%;border-collapse:collapse}
@@ -157,17 +157,13 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
 <nav>
   <div class="nav-logo">
     <svg viewBox="0 0 248 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:26px;width:auto">
-      <defs><linearGradient id="ng" x1="5" y1="9" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#5B5FE8"/>
-      </linearGradient></defs>
-      <line x1="5" y1="9" x2="24" y2="42" stroke="url(#ng)" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="43" y1="5" x2="24" y2="42" stroke="url(#ng)" stroke-width="3.2" stroke-linecap="round"/>
-      <circle cx="24" cy="42" r="3.8" fill="#5B5FE8"/>
-      <circle cx="43" cy="5" r="2.4" fill="#22D3EE"/>
-      <text x="60" y="32" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-            font-weight="800" font-size="24" fill="#E8EAF4" letter-spacing="-0.6">VELORA</text>
-      <text x="61.5" y="46" font-family="'Plus Jakarta Sans','Helvetica Neue',Arial,sans-serif"
-            font-weight="500" font-size="10.5" fill="#8B8DA8" letter-spacing="4.5">LABS</text>
+      <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+      <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+      <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
+      <text x="60" y="32" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+            font-weight="800" font-size="24" fill="#E7E6DD" letter-spacing="-0.6">VELKIN</text>
+      <text x="61.5" y="46" font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+            font-weight="500" font-size="9.5" fill="#8B8DA8" letter-spacing="3.2">DATA STUDIOS</text>
     </svg>
   </div>
   <ul class="nav-links">
@@ -187,7 +183,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
   <div class="cover-bg"></div>
   <div class="cover-grid"></div>
   <div class="page cover-content" style="width:100%">
-    <p style="font-family:var(--font-mono);font-size:11px;color:var(--cyan);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px">Servicios · Paquetes · 2026</p>
+    <p style="font-family:var(--font-mono);font-size:11px;color:var(--rust);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px">Servicios · Paquetes · 2026</p>
     <h1 style="font-family:var(--font-display);font-size:clamp(40px,6vw,80px);font-weight:800;line-height:.95;letter-spacing:-2.5px;margin-bottom:24px">
       Lo que<br><span style="color:var(--primary-lt)">construimos</span><br>juntos.
     </h1>
@@ -195,10 +191,10 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
       Cuatro productos diseñados para distintas etapas de crecimiento. Todos con la misma premisa: dejamos sistemas funcionando, no solo archivos entregados.
     </p>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <span class="badge badge-green">Velora Start</span>
-      <span class="badge badge-primary">Velora Build</span>
-      <span class="badge badge-cyan">Velora Grow</span>
-      <span class="badge badge-amber">Velora Audit</span>
+      <span class="badge badge-green">Velkin Start</span>
+      <span class="badge badge-primary">Velkin Build</span>
+      <span class="badge badge-cyan">Velkin Grow</span>
+      <span class="badge badge-amber">Velkin Audit</span>
     </div>
   </div>
 </div>
@@ -207,14 +203,14 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
 <section id="audit">
 <div class="page">
   <p class="section-label">Punto de entrada</p>
-  <h2 class="section-title">Velora Audit</h2>
+  <h2 class="section-title">Velkin Audit</h2>
   <p style="font-size:17px;color:var(--text-2);max-width:600px;margin-bottom:40px;line-height:1.7">
     El diagnóstico que clarifica qué está frenando el crecimiento y qué mover primero. Sirve para cualquier tipo de negocio — y el costo se acredita completo si contratas cualquier paquete mayor.
   </p>
   <div class="grid-2">
     <div class="pkg" style="border-top:3px solid var(--amber)">
       <div class="pkg-header">
-        <p class="pkg-label">Velora Audit</p>
+        <p class="pkg-label">Velkin Audit</p>
         <p class="pkg-name" style="color:var(--amber)">El diagnóstico.</p>
         <p class="pkg-tagline">Antes de construir, hay que saber qué está roto y qué ya está funcionando.</p>
       </div>
@@ -279,16 +275,16 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
 <!-- ══ START ══════════════════════════════════════════════════ -->
 <section id="start">
 <div class="page">
-  <p class="section-label">Velora Start — Core Market</p>
+  <p class="section-label">Velkin Start — Core Market</p>
   <h2 class="section-title">Para negocios con<br>potencial sin explotar.</h2>
   <p style="font-size:17px;color:var(--text-2);max-width:600px;margin-bottom:40px;line-height:1.7">
-    Tu negocio ya tiene valor. Velora Start le da la presencia, estructura y automatización básica para que más personas lo encuentren — y para que no pierdas clientes por falta de seguimiento.
+    Tu negocio ya tiene valor. Velkin Start le da la presencia, estructura y automatización básica para que más personas lo encuentren — y para que no pierdas clientes por falta de seguimiento.
   </p>
   <div class="pkg" style="border-top:3px solid var(--green)">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
       <div style="display:flex;flex-direction:column;gap:24px">
         <div class="pkg-header">
-          <p class="pkg-label">Velora Start</p>
+          <p class="pkg-label">Velkin Start</p>
           <p class="pkg-name" style="color:var(--green)">Presencia. Estructura. Sistema.</p>
           <p class="pkg-tagline">Todo lo que un negocio necesita para verse profesional, ser encontrado y no perder clientes por falta de seguimiento.</p>
         </div>
@@ -348,7 +344,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
 <!-- ══ BUILD ══════════════════════════════════════════════════ -->
 <section id="build">
 <div class="page">
-  <p class="section-label">Velora Build</p>
+  <p class="section-label">Velkin Build</p>
   <h2 class="section-title">Para negocios listos<br>para sistematizar.</h2>
   <p style="font-size:17px;color:var(--text-2);max-width:600px;margin-bottom:40px;line-height:1.7">
     Marca, captación y automatización conectados como un solo sistema. Para negocios que ya tienen tracción y quieren crecer sin improvisar cada mes.
@@ -357,7 +353,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
       <div style="display:flex;flex-direction:column;gap:24px">
         <div class="pkg-header">
-          <p class="pkg-label">Velora Build</p>
+          <p class="pkg-label">Velkin Build</p>
           <p class="pkg-name" style="color:var(--primary-lt)">El sistema completo.</p>
           <p class="pkg-tagline">Brand system + sitio robusto + Meta Ads + automatizaciones + analytics. Todo conectado, todo midiendo.</p>
         </div>
@@ -404,7 +400,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
           <ul class="pkg-list not">
             <li>Presupuesto de pauta (inversión del cliente, recomendado MX$3,000–8,000/mes)</li>
             <li>Producción de video o fotografía profesional</li>
-            <li>Gestión mensual continua (ver Velora Grow)</li>
+            <li>Gestión mensual continua (ver Velkin Grow)</li>
             <li>Desarrollo personalizado a medida</li>
           </ul>
         </div>
@@ -417,17 +413,17 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
 <!-- ══ GROW ══════════════════════════════════════════════════ -->
 <section id="grow">
 <div class="page">
-  <p class="section-label">Velora Grow — Retainer</p>
+  <p class="section-label">Velkin Grow — Retainer</p>
   <h2 class="section-title">El sistema que sigue<br>trabajando.</h2>
   <p style="font-size:17px;color:var(--text-2);max-width:600px;margin-bottom:40px;line-height:1.7">
     Gestión continua de contenido, campañas y optimizaciones. Para negocios que ya tienen su base construida y quieren crecer mes con mes sin tener que operar el marketing ellos mismos.
   </p>
-  <div class="pkg" style="border-top:3px solid var(--cyan)">
+  <div class="pkg" style="border-top:3px solid var(--rust)">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
       <div style="display:flex;flex-direction:column;gap:24px">
         <div class="pkg-header">
-          <p class="pkg-label">Velora Grow</p>
-          <p class="pkg-name" style="color:var(--cyan)">Crecimiento continuo.</p>
+          <p class="pkg-label">Velkin Grow</p>
+          <p class="pkg-name" style="color:var(--rust)">Crecimiento continuo.</p>
           <p class="pkg-tagline">Contenido diario, campañas activas, reportes claros. Tu marketing operando solo mientras tú te enfocas en el negocio.</p>
         </div>
         <div class="pkg-price">
@@ -451,10 +447,10 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
             <span class="pkg-meta-val">Mensual anticipado</span>
           </div>
         </div>
-        <p class="pkg-payment" style="border-left:3px solid var(--cyan)">
+        <p class="pkg-payment" style="border-left:3px solid var(--rust)">
           Primer mes incluye fee de onboarding de MX$3,000 (configuración inicial, accesos, calendario). A partir del mes 2, solo el fee mensual. Presupuesto de pauta es adicional y del cliente.
         </p>
-        <a href="#" class="pkg-cta primary" style="background:var(--cyan);color:var(--black)">Solicitar información →</a>
+        <a href="#" class="pkg-cta primary" style="background:var(--rust);color:var(--black)">Solicitar información →</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px">
         <div class="pkg-includes">
@@ -484,11 +480,11 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
   </div>
   <!-- Grow levels internal -->
   <div style="margin-top:40px">
-    <p class="section-label">Niveles internos — Velora Grow</p>
+    <p class="section-label">Niveles internos — Velkin Grow</p>
     <p style="font-size:14px;color:var(--text-2);margin-bottom:24px;max-width:580px">Referencia interna de pricing. En el sitio público mostrar solo "desde MX$12,000/mes". El nivel se define durante la sesión de onboarding según necesidades del cliente.</p>
     <div class="grid-3">
-      <div class="card" style="border-top:3px solid var(--cyan)">
-        <p class="card-label" style="color:var(--cyan)">Grow Lite</p>
+      <div class="card" style="border-top:3px solid var(--rust)">
+        <p class="card-label" style="color:var(--rust)">Grow Lite</p>
         <p style="font-family:var(--font-display);font-size:24px;font-weight:800;color:var(--text-1);margin:12px 0">MX$12,000<span style="font-size:14px;font-weight:500;color:var(--text-3)">/mes</span></p>
         <ul class="pkg-list" style="font-size:13px">
           <li>Calendario de contenido mensual</li>
@@ -531,9 +527,9 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
 <section id="care">
 <div class="page">
   <p class="section-label">Mantenimiento y soporte</p>
-  <h2 class="section-title">Velora Care.</h2>
+  <h2 class="section-title">Velkin Care.</h2>
   <p style="font-size:17px;color:var(--text-2);max-width:600px;margin-bottom:40px;line-height:1.7">
-    Para clientes que ya tienen su sitio entregado y quieren que siga funcionando bien sin depender de Velora Grow. Mantenimiento técnico, respaldos y cambios menores sin necesidad de un retainer de marketing completo.
+    Para clientes que ya tienen su sitio entregado y quieren que siga funcionando bien sin depender de Velkin Grow. Mantenimiento técnico, respaldos y cambios menores sin necesidad de un retainer de marketing completo.
   </p>
   <div class="grid-3">
     <div class="card" style="border-top:3px solid var(--border-2)">
@@ -546,8 +542,8 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
         <li>Soporte técnico ante caídas</li>
       </ul>
     </div>
-    <div class="card" style="border-top:3px solid var(--cyan)">
-      <p class="card-label" style="color:var(--cyan)">Care Plus</p>
+    <div class="card" style="border-top:3px solid var(--rust)">
+      <p class="card-label" style="color:var(--rust)">Care Plus</p>
       <p style="font-family:var(--font-display);font-size:28px;font-weight:800;color:var(--text-1);margin:12px 0">MX$3,500<span style="font-size:13px;font-weight:500;color:var(--text-3)">/mes</span></p>
       <ul class="pkg-list" style="margin-top:12px">
         <li>Todo lo de Care Basic</li>
@@ -587,7 +583,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
   <div class="grid-3">
     <div class="addon">
       <div style="display:flex;justify-content:space-between;align-items:flex-start">
-        <p class="addon-name">Velora Automate</p>
+        <p class="addon-name">Velkin Automate</p>
         <span class="badge badge-cyan">Add-on</span>
       </div>
       <p style="font-size:13px;color:var(--text-2);line-height:1.6">Flujo de automatización personalizado vía n8n. Integraciones, workflows, reportes automáticos, CRM, notificaciones.</p>
@@ -596,7 +592,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
     </div>
     <div class="addon">
       <div style="display:flex;justify-content:space-between;align-items:flex-start">
-        <p class="addon-name">Velora Founder OS</p>
+        <p class="addon-name">Velkin Founder OS</p>
         <span class="badge badge-primary">Add-on</span>
       </div>
       <p style="font-size:13px;color:var(--text-2);line-height:1.6">Marca personal + sistema de contenido + distribución para founders que quieren ser reconocidos en su vertical.</p>
@@ -657,7 +653,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
           <th style="color:var(--amber)">Audit</th>
           <th style="color:var(--green)">Start</th>
           <th style="color:var(--primary-lt)">Build</th>
-          <th style="color:var(--cyan)">Grow</th>
+          <th style="color:var(--rust)">Grow</th>
         </tr>
       </thead>
       <tbody>
@@ -682,7 +678,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
           <td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓ Gestión</td>
         </tr>
         <tr>
-          <td class="pkg-col">Automatizaciones n8n</td>
+          <td class="pkg-col">Automatizaciones (Content Hub / n8n)</td>
           <td class="no">—</td><td class="yes">✓ Básica</td><td class="yes">✓ Avanzada</td><td class="yes">✓ Continua</td>
         </tr>
         <tr>
@@ -706,7 +702,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
           <td style="color:var(--amber);font-weight:700">MX$3,500</td>
           <td style="color:var(--green);font-weight:700">MX$28,000 <span style="font-size:11px;color:var(--text-3)">lanzamiento / $32k regular</span></td>
           <td style="color:var(--primary-lt);font-weight:700">Desde MX$65,000</td>
-          <td style="color:var(--cyan);font-weight:700">Desde MX$12,000/mes</td>
+          <td style="color:var(--rust);font-weight:700">Desde MX$12,000/mes</td>
         </tr>
         <tr>
           <td class="pkg-col">Tiempo de entrega</td>
@@ -724,7 +720,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
   <p class="section-label">Condiciones generales</p>
   <h2 class="section-title">Cómo trabajamos.</h2>
   <p style="font-size:15px;color:var(--text-2);max-width:600px;margin-bottom:40px;line-height:1.7">
-    Estas condiciones protegen tanto al cliente como a Velora Labs. Leerlas evita malentendidos y hace que los proyectos lleguen a tiempo.
+    Estas condiciones protegen tanto al cliente como a Velkin Data Studios. Leerlas evita malentendidos y hace que los proyectos lleguen a tiempo.
   </p>
   <div class="grid-2">
     <div style="display:flex;flex-direction:column;gap:16px">
@@ -736,11 +732,11 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
           <li>Designar un contacto único para aprobaciones y comunicación durante el proyecto</li>
         </ul>
       </div>
-      <div class="card" style="border-left:3px solid var(--cyan)">
-        <p style="font-size:13px;font-weight:600;color:var(--cyan);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Política de revisiones</p>
+      <div class="card" style="border-left:3px solid var(--rust)">
+        <p style="font-size:13px;font-weight:600;color:var(--rust);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Política de revisiones</p>
         <ul class="pkg-list">
-          <li><strong style="color:var(--text-1)">Velora Start:</strong> 1 ronda de refinamiento incluida por entregable</li>
-          <li><strong style="color:var(--text-1)">Velora Build:</strong> 2 rondas por fase del proyecto</li>
+          <li><strong style="color:var(--text-1)">Velkin Start:</strong> 1 ronda de refinamiento incluida por entregable</li>
+          <li><strong style="color:var(--text-1)">Velkin Build:</strong> 2 rondas por fase del proyecto</li>
           <li>Cambios fuera del scope original o rondas adicionales se cotizan por separado</li>
           <li>Cambios de dirección creativa después de aprobación inicial cuentan como nueva ronda</li>
         </ul>
@@ -748,8 +744,8 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
       <div class="card" style="border-left:3px solid var(--green)">
         <p style="font-size:13px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Dominio y hosting</p>
         <ul class="pkg-list">
-          <li>Preferimos que dominio, hosting y herramientas queden bajo cuentas propiedad del cliente — Velora Labs apoya con la configuración inicial</li>
-          <li>Renovaciones, mantenimiento posterior, correos empresariales y soporte técnico no están incluidos salvo contrato activo de Velora Grow o Velora Care</li>
+          <li>Preferimos que dominio, hosting y herramientas queden bajo cuentas propiedad del cliente — Velkin Data Studios apoya con la configuración inicial</li>
+          <li>Renovaciones, mantenimiento posterior, correos empresariales y soporte técnico no están incluidos salvo contrato activo de Velkin Grow o Velkin Care</li>
           <li>El cliente conserva propiedad total de dominio, sitio y activos digitales una vez liquidado el proyecto</li>
         </ul>
       </div>
@@ -760,14 +756,14 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
         <ul class="pkg-list">
           <li>Los precios presentados tienen vigencia de <strong style="color:var(--text-1)">15 días naturales</strong> desde la fecha de envío</li>
           <li>Pasado ese plazo, la propuesta puede ajustarse según disponibilidad y condiciones vigentes</li>
-          <li>El crédito del Velora Audit aplica dentro de los <strong style="color:var(--text-1)">30 días naturales</strong> posteriores al diagnóstico</li>
+          <li>El crédito del Velkin Audit aplica dentro de los <strong style="color:var(--text-1)">30 días naturales</strong> posteriores al diagnóstico</li>
         </ul>
       </div>
       <div class="card" style="border-left:3px solid var(--primary)">
         <p style="font-size:13px;font-weight:600;color:var(--primary-lt);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Propiedad y entregables</p>
         <ul class="pkg-list">
           <li>Los activos diseñados (logo, sitio, assets) son del cliente una vez completado el pago total</li>
-          <li>Velora Labs puede usar el proyecto como referencia en portafolio salvo acuerdo de confidencialidad explícito</li>
+          <li>Velkin Data Studios puede usar el proyecto como referencia en portafolio salvo acuerdo de confidencialidad explícito</li>
           <li>El código fuente, automatizaciones y configuraciones quedan disponibles para el cliente en la entrega final</li>
         </ul>
       </div>
@@ -777,7 +773,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
           <li>Canal principal: WhatsApp + email (Lun–Vie, 9am–7pm)</li>
           <li>Tiempo de respuesta: máximo 24 horas hábiles</li>
           <li>Soporte post-entrega incluido por <strong style="color:var(--text-1)">7 días</strong> para correcciones menores del entregable</li>
-          <li>Soporte extendido disponible mediante Velora Care (ver sección)</li>
+          <li>Soporte extendido disponible mediante Velkin Care (ver sección)</li>
           <li>Solicitudes de cambios deben enviarse por escrito en el canal acordado — mensajes informales por WhatsApp no constituyen aprobación ni solicitud formal</li>
         </ul>
       </div>
@@ -790,16 +786,12 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
 <footer style="padding:48px 0;text-align:center;border-top:1px solid var(--border)">
 <div class="page">
   <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="none" style="height:32px;width:auto;margin:0 auto 16px">
-    <defs><linearGradient id="fg" x1="5" y1="8" x2="43" y2="42" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#818CF8"/><stop offset="100%" stop-color="#5B5FE8"/>
-    </linearGradient></defs>
-    <line x1="5" y1="8" x2="24" y2="41" stroke="url(#fg)" stroke-width="3.2" stroke-linecap="round"/>
-    <line x1="43" y1="4" x2="24" y2="41" stroke="url(#fg)" stroke-width="3.2" stroke-linecap="round"/>
-    <circle cx="24" cy="41" r="3.8" fill="#5B5FE8"/>
-    <circle cx="43" cy="4" r="2.4" fill="#22D3EE"/>
+    <path d="M7 11 L41 11 L24 39 Z" stroke="#E7E6DD" stroke-width="2.6" stroke-linejoin="round"/>
+    <circle cx="24" cy="20.5" r="3.2" fill="#3E9B82"/>
+    <line x1="24" y1="39" x2="24" y2="45" stroke="#D2532F" stroke-width="2.2" stroke-linecap="round"/>
   </svg>
   <p style="font-family:var(--font-mono);font-size:11px;color:var(--text-3);letter-spacing:2px">
-    VELORA LABS · PAQUETES Y SERVICIOS · DOCUMENTO INTERNO
+    VELKIN DATA STUDIOS · PAQUETES Y SERVICIOS · DOCUMENTO INTERNO
   </p>
   <p style="font-size:12px;color:var(--text-3);margin-top:8px">
     Precios en MXN. No incluyen IVA salvo que se indique lo contrario. Sujetos a ajuste según scope y mercado.
