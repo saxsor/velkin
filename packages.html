@@ -31,6 +31,7 @@
   --font-body:   "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-mono:   "JetBrains Mono", "Fira Code", monospace;
   --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 24px;
+  --expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
@@ -111,10 +112,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;
 .pkg-cta{display:inline-flex;align-items:center;justify-content:center;
          padding:14px 28px;border-radius:var(--r-md);font-size:14px;
          font-weight:600;letter-spacing:-.2px;cursor:pointer;
-         text-decoration:none;transition:.2s;width:100%}
+         text-decoration:none;transition:background .2s,border-color .2s,color .2s,filter .2s,transform .15s var(--expo);width:100%}
 .pkg-cta.primary{background:var(--primary);color:#fff;border:none}
+.pkg-cta.primary:hover{filter:brightness(1.12);transform:translateY(-1px)}
 .pkg-cta.outline{background:transparent;color:var(--text-1);border:1px solid var(--border-2)}
 .pkg-cta.outline:hover{border-color:var(--primary);color:var(--primary-lt)}
+.pkg-cta:active{transform:scale(0.97)}
 
 /* BADGE */
 .badge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:100px;
@@ -604,9 +607,9 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
         <p class="addon-name">Campaña Meta Extra</p>
         <span class="badge badge-amber">Add-on</span>
       </div>
-      <p style="font-size:13px;color:var(--text-2);line-height:1.6">Lanzamiento de campaña adicional fuera del scope del retainer. Incluye estrategia, creativos y setup.</p>
+      <p style="font-size:13px;color:var(--text-2);line-height:1.6">Lanzamiento de campaña adicional fuera del scope del retainer. Incluye estrategia, copy/dirección creativa y setup de campaña.</p>
       <p class="addon-price">MX$3,500</p>
-      <p style="font-size:12px;color:var(--text-3)">Por campaña · no incluye pauta</p>
+      <p style="font-size:12px;color:var(--text-3)">Por campaña · no incluye pauta ni producción de foto/video</p>
     </div>
     <div class="addon">
       <div style="display:flex;justify-content:space-between;align-items:flex-start">

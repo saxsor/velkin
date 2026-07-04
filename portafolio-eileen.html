@@ -111,9 +111,10 @@ body::after {
   padding: 9px 20px; border-radius: 7px;
   background: var(--pine); color: #fff;
   font-size: 14px; font-weight: 600;
-  transition: background .2s, transform .15s; flex-shrink: 0; white-space: nowrap;
+  transition: background .2s, transform .15s var(--expo); flex-shrink: 0; white-space: nowrap;
 }
 .nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
+.nav-btn:active { transform: scale(0.97); }
 @media (max-width: 860px) { .nav-links { display: none; } }
 
 /* ─── PROJECT HERO ────────────────────────────────────── */
@@ -168,6 +169,11 @@ body::after {
   background: repeating-linear-gradient(
     90deg, transparent, transparent 79px, rgba(194,39,45,.03) 80px
   );
+}
+.hero-placeholder img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  position: relative; z-index: 1;
 }
 .ph-label {
   font-family: var(--mo); font-size: 11px; letter-spacing: 2.5px;
@@ -418,15 +424,17 @@ body::after {
   padding: 12px 28px; border-radius: 8px;
   background: var(--pine); color: #fff;
   font-family: var(--jk); font-size: 15px; font-weight: 600;
-  transition: background .2s, transform .15s;
+  transition: background .2s, transform .15s var(--expo);
 }
 .btn-primary:hover { background: var(--pine-lt); transform: translateY(-1px); }
+.btn-primary:active { transform: scale(0.97); }
 .btn-secondary {
   padding: 12px 28px; border-radius: 8px;
   border: 1px solid var(--rule-2); color: var(--mist);
   font-size: 15px; font-weight: 500; transition: color .2s, border-color .2s;
 }
 .btn-secondary:hover { color: var(--snow); border-color: var(--dim); }
+.btn-secondary:active { transform: scale(0.97); }
 
 /* ─── FOOTER ──────────────────────────────────────────── */
 footer { border-top: 1px solid var(--rule); padding: 44px 0; }
@@ -487,7 +495,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     </h1>
     <p class="proj-hero-tagline fu d3">No soy el futuro — soy el presente.</p>
     <div class="hero-placeholder">
-      <span class="ph-label">Imagen del proyecto</span>
+      <img src="assets/portfolio/hero-eileen.jpg" alt="Sitio de Eileen Dino Bonilla">
     </div>
   </div>
 </section>

@@ -108,9 +108,10 @@ body::after {
   padding: 9px 20px; border-radius: 7px;
   background: var(--pine); color: #fff;
   font-size: 14px; font-weight: 600;
-  transition: background .2s, transform .15s; flex-shrink: 0; white-space: nowrap;
+  transition: background .2s, transform .15s var(--expo); flex-shrink: 0; white-space: nowrap;
 }
 .nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
+.nav-btn:active { transform: scale(0.97); }
 @media (max-width: 860px) { .nav-links { display: none; } }
 
 /* ─── PROJECT HERO ────────────────────────────────────── */
@@ -363,9 +364,10 @@ body::after {
   padding: 12px 28px; border-radius: 8px;
   background: var(--pine); color: #fff;
   font-family: var(--jk); font-size: 15px; font-weight: 600;
-  transition: background .2s, transform .15s;
+  transition: background .2s, transform .15s var(--expo);
 }
 .btn-primary:hover { background: var(--pine-lt); transform: translateY(-1px); }
+.btn-primary:active { transform: scale(0.97); }
 .btn-secondary {
   padding: 12px 28px; border-radius: 8px;
   border: 1px solid var(--rule-2); color: var(--mist);
@@ -373,6 +375,7 @@ body::after {
   transition: color .2s, border-color .2s;
 }
 .btn-secondary:hover { color: var(--snow); border-color: var(--dim); }
+.btn-secondary:active { transform: scale(0.97); }
 
 /* ─── FOOTER ──────────────────────────────────────────── */
 footer { border-top: 1px solid var(--rule); padding: 44px 0; }
@@ -431,7 +434,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
     <h1 class="fu d2">La Lente de Pipus</h1>
     <p class="proj-hero-sub fu d3">Velkin Content Hub, nuestro propio asistente de publicación, convierte fotos aprobadas en posts o historias listas para Instagram y Facebook.</p>
     <div class="hero-placeholder">
-      <img src="assets/portfolio/thumb-lapipus.svg" alt="Workflow de publicación automática para La Lente de Pipus">
+      <img src="assets/portfolio/hero-lapipus.jpg" alt="Velkin Content Hub, plataforma de publicación usada en el caso de La Lente de Pipus">
     </div>
   </div>
 </section>

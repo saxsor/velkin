@@ -120,9 +120,10 @@ body::after {
   padding: 9px 20px; border-radius: 7px;
   background: var(--pine); color: #fff;
   font-size: 14px; font-weight: 600;
-  transition: background .2s, transform .15s; flex-shrink: 0; white-space: nowrap;
+  transition: background .2s, transform .15s var(--expo); flex-shrink: 0; white-space: nowrap;
 }
 .nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
+.nav-btn:active { transform: scale(0.97); }
 @media (max-width: 860px) { .nav-links { display: none; } }
 
 /* ─── HERO ────────────────────────────────────────────── */
@@ -417,7 +418,7 @@ body::after {
   border: none;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center; gap: 10px;
-  transition: opacity .2s, transform .2s, box-shadow .2s;
+  transition: opacity .2s, transform .15s var(--expo), box-shadow .2s;
   position: relative;
   overflow: hidden;
 }
@@ -431,7 +432,7 @@ body::after {
   opacity: .9; transform: translateY(-1px);
   box-shadow: 0 8px 24px rgba(62,155,130,.4);
 }
-.btn-submit:active:not(:disabled) { transform: translateY(0); }
+.btn-submit:active:not(:disabled) { transform: scale(0.97); }
 .btn-submit:disabled { opacity: .6; cursor: not-allowed; transform: none; }
 
 .btn-submit .spinner {
