@@ -1,0 +1,13 @@
+# Bloquea acceso público al historial de git (expuesto al clonar el repo directo en public_html)
+RedirectMatch 404 /\.git
+
+# Bloquea archivos internos que no son parte del sitio publico
+<FilesMatch "^(gas-contacto\.js|PRODUCT\.md)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
