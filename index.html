@@ -468,6 +468,45 @@ h1.hero-h1 {
 }
 
 /* ═══════════════════════════════════════════════════════
+   SISTEMAS PROPIOS
+═══════════════════════════════════════════════════════ */
+.sys-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
+  background: var(--rule);
+}
+.sys-card {
+  background: var(--ink);
+  padding: clamp(28px,3vw,40px);
+  display: flex; flex-direction: column; gap: 12px;
+  text-decoration: none;
+  transition: background .2s;
+}
+.sys-card:hover { background: #080910; }
+.sys-card .proj-chips { margin: 0; }
+.sys-card .cc-title { margin-top: 4px; }
+.sys-link {
+  font-family: var(--mo); font-size: 11px; letter-spacing: .01em;
+  color: var(--pine-lt); margin-top: auto; padding-top: 14px;
+  transition: transform .2s var(--expo);
+  display: inline-block;
+}
+.sys-card:hover .sys-link { transform: translateX(3px); }
+
+@media (max-width: 900px) {
+  .sys-grid { grid-template-columns: 1fr; }
+}
+
+.proj-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  font-family: var(--mo); font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; padding: 5px 11px; border-radius: 99px;
+  border: 1px solid rgba(62,155,130,.3); color: var(--pine-lt);
+  background: rgba(62,155,130,.08);
+}
+
+/* ═══════════════════════════════════════════════════════
    METHOD — EDITORIAL NUMBERED LIST
 ═══════════════════════════════════════════════════════ */
 .method-item {
@@ -1160,6 +1199,45 @@ footer {
         <p class="svc-desc">Contenido, campañas Meta, reportes y optimizaciones. El sistema funcionando mes a mes.</p>
         <a href="servicios.html" class="svc-link">Ver detalles →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- SISTEMAS PROPIOS -->
+<section id="sistemas" class="sect" aria-labelledby="sys-title">
+  <div class="bound">
+    <div class="sect-hdr rv">
+      <h2 class="sect-title" id="sys-title">Sistemas propios.</h2>
+      <p class="sect-sub">No solo construimos sistemas a la medida — operamos los nuestros. Los mismos que ves corriendo dentro del portafolio de abajo.</p>
+    </div>
+    <div class="sys-grid rv">
+      <a href="portafolio-kartingclub.html" class="sys-card">
+        <div class="proj-chips">
+          <span class="chip">Velkin Racing Hub</span>
+          <span class="chip">White-label</span>
+        </div>
+        <h3 class="cc-title">Gestión de carreras de karting.</h3>
+        <p class="cc-desc">Inscripciones, pagos, resultados en tiempo real y campeonatos acumulados, entregado 100% bajo la marca del cliente.</p>
+        <span class="sys-link">Ver caso: Karting Club México →</span>
+      </a>
+      <a href="portafolio-edelracing.html" class="sys-card">
+        <div class="proj-chips">
+          <span class="chip">Velkin Sector</span>
+          <span class="chip">SaaS · Rentado</span>
+        </div>
+        <h3 class="cc-title">Análisis de telemetría y rendimiento.</h3>
+        <p class="cc-desc">Plataforma propia de análisis para pilotos y academias, rentada al equipo que la usa.</p>
+        <span class="sys-link">Ver caso: Edel Racing Team →</span>
+      </a>
+      <a href="https://contenthub.mktjal.dpdns.org/" target="_blank" rel="noopener" class="sys-card">
+        <div class="proj-chips">
+          <span class="chip">Velkin Content Hub</span>
+          <span class="chip">SaaS</span>
+        </div>
+        <h3 class="cc-title">Publicación automática en redes.</h3>
+        <p class="cc-desc">Arma el calendario, genera captions con IA y publica en Instagram, Facebook y TikTok sin intervención manual.</p>
+        <span class="sys-link">Conocer Content Hub →</span>
+      </a>
     </div>
   </div>
 </section>
