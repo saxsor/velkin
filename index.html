@@ -477,6 +477,7 @@ h1.hero-h1 {
   background: var(--rule);
 }
 .sys-card {
+  position: relative;
   background: var(--ink);
   padding: clamp(28px,3vw,40px);
   display: flex; flex-direction: column; gap: 12px;
@@ -486,6 +487,15 @@ h1.hero-h1 {
 .sys-card:hover { background: #080910; }
 .sys-card .proj-chips { margin: 0; }
 .sys-card .cc-title { margin-top: 4px; }
+/* Top shimmer on hover */
+.sys-card::before {
+  content: ''; position: absolute; top: 0; left: 32px; right: 32px; height: 1px;
+  opacity: 0; transition: opacity .35s var(--expo);
+}
+.sys-card:hover::before { opacity: 1; }
+.sys-card:nth-child(1)::before { background: linear-gradient(90deg,transparent,rgba(127,209,184,.5),transparent); }
+.sys-card:nth-child(2)::before { background: linear-gradient(90deg,transparent,rgba(210,83,47,.4),transparent); }
+.sys-card:nth-child(3)::before { background: linear-gradient(90deg,transparent,rgba(46,158,107,.4),transparent); }
 .sys-link {
   font-family: var(--mo); font-size: 11px; letter-spacing: .01em;
   color: var(--pine-lt); margin-top: auto; padding-top: 14px;
@@ -923,6 +933,7 @@ footer {
     </a>
     <ul class="nav-links">
       <li><a href="#portafolio">Portafolio</a></li>
+      <li><a href="#sistemas">Sistemas</a></li>
       <li><a href="#metodo">Método</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="contacto.html">Contacto</a></li>

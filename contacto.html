@@ -844,7 +844,7 @@ document.querySelectorAll('.rv').forEach(el => ro.observe(el));
 /* ─── FORM LOGIC ───────────────────────────────────── */
 
 // ⚠️  REEMPLAZA esta URL con la de tu Google Apps Script Web App
-const GAS_URL = 'TU_GAS_WEB_APP_URL_AQUI';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyP8iLBCxVcrFxN1FmN8YjSRXUhu1WH2CEoj3DOMm50pHgNKH5ymUZYWo0QCppUsmJ8/exec';
 
 const form = document.getElementById('contact-form');
 const btn  = document.getElementById('btn-submit');
@@ -930,7 +930,7 @@ form.addEventListener('submit', async (e) => {
   } catch (err) {
     btn.classList.remove('loading');
     btn.disabled = false;
-    alert('Hubo un error al enviar. Por favor escríbenos directamente a hola@velkindatastudios.com');
+    alert('Hubo un error al enviar. Por favor escríbenos directamente a contacto@velkindatastudios.com');
   }
 });
 </script>

@@ -1,21 +1,38 @@
 /**
  * Velkin Data Studios — Google Apps Script
- * Recibe el formulario de contacto, guarda en Sheets y manda email de notificación.
+ * Recibe el formulario de contacto, guarda en Sheets, te notifica a ti
+ * y manda confirmación automática al lead desde contacto@velkindatastudios.com.
  *
  * SETUP (una sola vez):
- *  1. Abre script.google.com → Nuevo proyecto
- *  2. Pega este código
- *  3. Cambia NOTIFICATION_EMAIL a tu correo
- *  4. Cambia SHEET_NAME si quieres otro nombre de hoja
- *  5. Guarda (Ctrl+S) → Implementar → Nueva implementación
+ *  1. Antes de nada: en Gmail (la cuenta que va a correr el script) →
+ *     Configuración → Cuentas e importación → "Enviar correo como" →
+ *     agrega contacto@velkindatastudios.com y verifica el código que
+ *     llega a ese buzón (vía webmail de Hostinger). Esto solo afecta el
+ *     correo de confirmación AL CLIENTE — el aviso interno hacia ti no
+ *     lo necesita, siempre sale desde tu Gmail real.
+ *  2. Crea un Google Sheet nuevo (sheets.new) — este script NO se crea
+ *     desde dentro del Sheet, así que necesita el ID a mano. Copia el ID
+ *     de la URL (entre /d/ y /edit) y pégalo en SPREADSHEET_ID abajo.
+ *  3. Abre script.google.com → Nuevo proyecto
+ *  4. Pega este código (ya con tu SPREADSHEET_ID puesto)
+ *  5. Cambia SHEET_NAME si quieres otro nombre de hoja
+ *  6. Guarda (Ctrl+S) → Implementar → Nueva implementación
  *     - Tipo: Aplicación web
  *     - Ejecutar como: Yo (tu cuenta)
  *     - Quién tiene acceso: Cualquier persona
- *  6. Copia la URL que te da → pégala en contacto.html donde dice GAS_URL
- *  7. Listo. Cada envío llega a Sheets y a tu correo.
+ *  7. Copia la URL que te da → pégala en contacto.html donde dice GAS_URL
+ *  8. Listo. Cada envío llega a Sheets, te notifica y confirma al lead.
+ *
+ *  Si ya tenías el proyecto desplegado y solo cambiaste código: en
+ *  Implementar → Administrar implementaciones → lápiz de editar →
+ *  Versión: "Nueva versión" → Implementar. Así la misma URL /exec
+ *  usa el código actualizado sin que tengas que cambiar nada en el sitio.
  */
 
-const NOTIFICATION_EMAIL = 'jalilbonilla@outlook.com';
+const NOTIFICATION_EMAIL = 'contacto@velkindatastudios.com'; // buzón interno donde TÚ recibes el aviso
+const SENDER_ALIAS        = 'contacto@velkindatastudios.com'; // remitente del correo al CLIENTE (requiere alias verificado)
+const SENDER_NAME         = 'Velkin Data Studios';
+const SPREADSHEET_ID      = '1kudziWWJ-9yoHUqao5YLsdZls0gpPGQmer4vhnhaKRk';
 const SHEET_NAME          = 'Leads Velkin';
 
 /* ─── HEADERS de hoja ──────────────────────────────── */
@@ -36,6 +53,7 @@ function doPost(e) {
     const data = JSON.parse(e.postData.contents);
     appendToSheet(data);
     sendNotificationEmail(data);
+    sendConfirmationEmail(data);
   } catch (err) {
     Logger.log('Error: ' + err.message);
   }
@@ -47,7 +65,7 @@ function doPost(e) {
 
 /* ─── Guardar en Sheets ────────────────────────────── */
 function appendToSheet(data) {
-  const ss    = SpreadsheetApp.getActiveSpreadsheet();
+  const ss    = SpreadsheetApp.openById(SPREADSHEET_ID);
   let   sheet = ss.getSheetByName(SHEET_NAME);
 
   if (!sheet) {
@@ -169,6 +187,40 @@ function sendNotificationEmail(data) {
 </div>`;
 
   GmailApp.sendEmail(NOTIFICATION_EMAIL, subject, '', { htmlBody: html });
+}
+
+/* ─── Email de confirmación al lead ───────────────────*/
+function sendConfirmationEmail(data) {
+  if (!data.email) return;
+
+  const subject = 'Recibimos tu diagnóstico — Velkin Data Studios';
+
+  const html = `
+<div style="font-family:'Helvetica Neue',Arial,sans-serif;max-width:560px;margin:0 auto;background:#10151C;color:#E7E6DD;border-radius:12px;overflow:hidden;border:1px solid #232B34;">
+
+  <div style="background:#3E9B82;padding:28px 32px;">
+    <p style="margin:0;font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.7;font-family:monospace;">Velkin Data Studios</p>
+    <h1 style="margin:6px 0 0;font-size:22px;font-weight:700;color:#fff;">Recibimos tu formulario</h1>
+  </div>
+
+  <div style="padding:32px;">
+    <p style="margin:0 0 16px;font-size:15px;line-height:1.7;">Hola ${escapeHtml(data.nombre)},</p>
+    <p style="margin:0 0 16px;font-size:15px;line-height:1.7;">Ya tenemos tu información. Revisamos lo que nos compartiste sobre ${escapeHtml(data.empresa)} y te respondemos en menos de 24 horas hábiles con algo concreto — no una propuesta genérica.</p>
+    <p style="margin:0;font-size:15px;line-height:1.7;">Si tienes prisa o quieres agregar contexto, responde este correo directamente.</p>
+  </div>
+
+  <div style="padding:20px 32px;border-top:1px solid #232B34;">
+    <p style="margin:0;font-size:12px;color:#5C5B50;">Velkin Data Studios · velkindatastudios.com</p>
+  </div>
+
+</div>`;
+
+  GmailApp.sendEmail(data.email, subject, '', {
+    htmlBody: html,
+    from: SENDER_ALIAS,
+    name: SENDER_NAME,
+    replyTo: SENDER_ALIAS,
+  });
 }
 
 /* ─── Helpers ──────────────────────────────────────── */
