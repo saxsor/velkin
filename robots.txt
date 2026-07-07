@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /brand-guidelines.html
+Disallow: /packages.html
+Disallow: /portafolio-estampatrend.html
+Disallow: /gas-contacto.js
+Disallow: /PRODUCT.md
+
+Sitemap: https://velkindatastudios.com/sitemap.xml
