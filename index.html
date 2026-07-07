@@ -131,46 +131,16 @@ body::after {
   padding-top: 68px; overflow: hidden;
 }
 
-/* ── Cinematic background (video replacement) ── */
-/* Deep warm-dark base */
+/* ── Cinematic background (hero video) ── */
 .hero-canvas {
   position: absolute; inset: 0;
   background: #080608;
+  overflow: hidden;
 }
-/* Slow-orbiting color masses — simulate video depth */
-@keyframes orb-a {
-  0%   { transform: translate(0%,   0%)   scale(1); }
-  50%  { transform: translate(8%,   12%)  scale(1.08); }
-  100% { transform: translate(-4%,  6%)   scale(.96); }
-}
-@keyframes orb-b {
-  0%   { transform: translate(0%,   0%)   scale(1); }
-  50%  { transform: translate(-10%, -8%)  scale(1.05); }
-  100% { transform: translate(6%,   -14%) scale(.98); }
-}
-@keyframes orb-c {
-  0%   { transform: translate(0%,   0%)   scale(1); }
-  50%  { transform: translate(12%,  -6%)  scale(1.06); }
-  100% { transform: translate(-6%,  10%)  scale(1.02); }
-}
-.hero-orb {
-  position: absolute; border-radius: 50%;
-  pointer-events: none; filter: blur(80px);
-}
-.hero-orb-1 {
-  width: 60vw; height: 60vw; top: -15%; left: 20%;
-  background: radial-gradient(circle, rgba(62,155,130,.18) 0%, transparent 65%);
-  animation: orb-a 22s ease-in-out infinite alternate;
-}
-.hero-orb-2 {
-  width: 50vw; height: 50vw; bottom: -10%; right: -5%;
-  background: radial-gradient(circle, rgba(210,83,47,.09) 0%, transparent 60%);
-  animation: orb-b 28s ease-in-out infinite alternate;
-}
-.hero-orb-3 {
-  width: 40vw; height: 40vw; top: 30%; left: -10%;
-  background: radial-gradient(circle, rgba(62,155,130,.08) 0%, transparent 60%);
-  animation: orb-c 18s ease-in-out infinite alternate;
+.hero-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
 }
 /* Dark vignette overlay — edges darker, center breathes */
 .hero-vignette {
@@ -948,10 +918,11 @@ footer {
 
 <!-- HERO -->
 <section class="hero" aria-labelledby="h1">
-  <div class="hero-canvas"   aria-hidden="true"></div>
-  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
-  <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+  <div class="hero-canvas" aria-hidden="true">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/hero/velkin-hero-poster.jpg">
+      <source src="assets/hero/velkin-hero.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-vignette" aria-hidden="true"></div>
   <div class="hero-grid"    aria-hidden="true"></div>
   <div class="hero-fade"    aria-hidden="true"></div>
