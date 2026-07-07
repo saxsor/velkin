@@ -36,6 +36,9 @@ const SPREADSHEET_ID      = '1kudziWWJ-9yoHUqao5YLsdZls0gpPGQmer4vhnhaKRk';
 const SHEET_NAME          = 'Leads Velkin';
 
 /* ─── HEADERS de hoja ──────────────────────────────── */
+// Si el Sheet ya existía antes de agregar el widget de WhatsApp, agrega
+// "Canal" manualmente en la celda I1 — este array solo escribe headers
+// nuevos cuando el Sheet no existe todavía.
 const COLUMNS = [
   'Fecha',
   'Nombre',
@@ -45,6 +48,7 @@ const COLUMNS = [
   'Sitio web',
   'Necesidad',
   'Mensaje',
+  'Canal',
 ];
 
 /* ─── doPost ───────────────────────────────────────── */
@@ -52,8 +56,13 @@ function doPost(e) {
   try {
     const data = JSON.parse(e.postData.contents);
     appendToSheet(data);
-    sendNotificationEmail(data);
-    sendConfirmationEmail(data);
+
+    if (data.canal === 'whatsapp_widget') {
+      sendWhatsAppLeadNotification(data);
+    } else {
+      sendNotificationEmail(data);
+      sendConfirmationEmail(data);
+    }
   } catch (err) {
     Logger.log('Error: ' + err.message);
   }
@@ -87,6 +96,7 @@ function appendToSheet(data) {
     data.sitio     || '—',
     data.necesidad || '',
     data.mensaje   || '',
+    data.canal === 'whatsapp_widget' ? 'WhatsApp' : 'Formulario web',
   ]);
 }
 
@@ -181,6 +191,70 @@ function sendNotificationEmail(data) {
   <div style="padding:20px 32px;border-top:1px solid #232B34;">
     <p style="margin:0;font-size:12px;color:#5C5B50;">
       Enviado desde el formulario de diagnóstico de velkindatastudios.com · ${data.fecha || ''}
+    </p>
+  </div>
+
+</div>`;
+
+  GmailApp.sendEmail(NOTIFICATION_EMAIL, subject, '', { htmlBody: html });
+}
+
+/* ─── Email de notificación — widget de WhatsApp ─────*/
+function sendWhatsAppLeadNotification(data) {
+  const subject = `[Velkin Data Studios] Nuevo lead por WhatsApp — ${data.nombre}`;
+
+  const html = `
+<div style="font-family:'Helvetica Neue',Arial,sans-serif;max-width:560px;margin:0 auto;background:#10151C;color:#E7E6DD;border-radius:12px;overflow:hidden;border:1px solid #232B34;">
+
+  <div style="background:#3E9B82;padding:28px 32px;">
+    <p style="margin:0;font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.7;font-family:monospace;">Velkin Data Studios</p>
+    <h1 style="margin:6px 0 0;font-size:22px;font-weight:700;color:#fff;">Lead quiere hablar por WhatsApp</h1>
+  </div>
+
+  <div style="padding:32px;">
+    <table style="width:100%;border-collapse:collapse;">
+      <tr>
+        <td style="padding:10px 0;border-bottom:1px solid #232B34;width:36%;">
+          <span style="font-size:11px;font-family:monospace;letter-spacing:1px;text-transform:uppercase;color:#9A9A8E;">Nombre</span>
+        </td>
+        <td style="padding:10px 0;border-bottom:1px solid #232B34;">
+          <strong style="font-size:15px;">${escapeHtml(data.nombre)}</strong>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:10px 0;border-bottom:1px solid #232B34;">
+          <span style="font-size:11px;font-family:monospace;letter-spacing:1px;text-transform:uppercase;color:#9A9A8E;">WhatsApp</span>
+        </td>
+        <td style="padding:10px 0;border-bottom:1px solid #232B34;">
+          <a href="https://wa.me/${sanitizePhone(data.telefono)}" style="color:#7FD1B8;font-size:14px;">${escapeHtml(data.telefono)}</a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:10px 0;">
+          <span style="font-size:11px;font-family:monospace;letter-spacing:1px;text-transform:uppercase;color:#9A9A8E;">Página</span>
+        </td>
+        <td style="padding:10px 0;">
+          <span style="font-size:14px;">${escapeHtml(data.sitio) || '—'}</span>
+        </td>
+      </tr>
+    </table>
+
+    <div style="margin-top:24px;background:#161C24;border:1px solid #232B34;border-radius:10px;padding:20px;">
+      <p style="margin:0 0 8px;font-size:11px;font-family:monospace;letter-spacing:1px;text-transform:uppercase;color:#9A9A8E;">Mensaje</p>
+      <p style="margin:0;font-size:14px;line-height:1.7;color:#E7E6DD;">${escapeHtml(data.mensaje).replace(/\n/g, '<br>')}</p>
+    </div>
+
+    <div style="margin-top:24px;">
+      <a href="https://wa.me/${sanitizePhone(data.telefono)}"
+         style="display:inline-block;background:#3E9B82;color:#fff;padding:11px 22px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;">
+        Abrir WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div style="padding:20px 32px;border-top:1px solid #232B34;">
+    <p style="margin:0;font-size:12px;color:#5C5B50;">
+      Enviado desde el widget de WhatsApp de velkindatastudios.com · ${data.fecha || ''}
     </p>
   </div>
 
