@@ -116,7 +116,28 @@ body::after {
 }
 .nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
 .nav-btn:active { transform: scale(0.97); }
-@media (max-width: 860px) { .nav-links { display: none; } }
+.nav-toggle {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 32px; height: 32px; background: none; border: none; padding: 0;
+  cursor: pointer; flex-shrink: 0;
+}
+.nav-toggle span { display: block; width: 100%; height: 2px; background: var(--snow); transition: transform .25s var(--expo), opacity .2s; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+@media (max-width: 860px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: flex; flex-direction: column; gap: 0;
+    position: fixed; top: 68px; left: 0; right: 0; z-index: 99;
+    background: var(--ink); border-top: 1px solid rgba(231,230,221,.08);
+    max-height: 0; overflow: hidden; padding: 0 24px;
+    transition: max-height .35s var(--expo);
+  }
+  .nav-links.open { max-height: 70vh; padding: 8px 24px 24px; overflow-y: auto; }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 15px 0; font-size: 16px; color: var(--mist); border-bottom: 1px solid rgba(231,230,221,.07); }
+}
 @media (max-width: 480px) {
   .nav-wrap { gap: 12px; }
   .logo-full { display: none !important; }
@@ -419,15 +440,36 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;" class="logo-full">
       <img src="logo-mark.svg" alt="Velkin Data Studios" height="34" style="display:none;" class="logo-mark">
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html#portafolio" class="active">Portafolio</a></li>
       <li><a href="index.html#metodo">Método</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
     <a href="contacto.html" class="nav-btn">Iniciar diagnóstico</a>
   </div>
 </nav>
+<script>
+(function(){
+  const btn = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if(!btn || !links) return;
+  btn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }));
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 860) { links.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  });
+})();
+</script>
 
 <!-- PROJECT HERO -->
 <section class="proj-hero">
