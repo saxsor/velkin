@@ -116,6 +116,12 @@ body::after {
 .nav-btn:hover { background: var(--pine-lt); transform: translateY(-1px); }
 .nav-btn:active { transform: scale(0.97); }
 @media (max-width: 860px) { .nav-links { display: none; } }
+@media (max-width: 480px) {
+  .nav-wrap { gap: 12px; }
+  .logo-full { display: none !important; }
+  .logo-mark { display: block !important; }
+  .nav-btn { padding: 8px 14px; font-size: 13px; }
+}
 
 /* ─── HERO ────────────────────────────────────────────── */
 .proj-hero { padding: clamp(100px,12vw,148px) 0 0; position: relative; overflow: hidden; }
@@ -387,7 +393,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 <nav id="nav">
   <div class="nav-wrap">
     <a href="index.html" class="nav-logo" aria-label="Velkin Data Studios — inicio">
-      <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;">
+      <img src="logo.svg" alt="Velkin Data Studios" height="44" style="display:block;" class="logo-full">
+      <img src="logo-mark.svg" alt="Velkin Data Studios" height="34" style="display:none;" class="logo-mark">
     </a>
     <ul class="nav-links">
       <li><a href="index.html#portafolio" class="active">Portafolio</a></li>

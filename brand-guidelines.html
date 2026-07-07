@@ -218,7 +218,7 @@ section+section{border-top:1px solid var(--border)}
 .hero-demo h2 em{color:var(--primary-lt);font-style:normal}
 .hero-demo p{font-size:17px;color:var(--text-2);max-width:480px;
              line-height:1.7;margin-bottom:36px}
-.cta-row{display:flex;gap:16px;align-items:center}
+.cta-row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .btn-primary{background:var(--primary);color:#fff;padding:14px 28px;
              border-radius:var(--r-md);font-size:14px;font-weight:600;
              letter-spacing:-.2px;border:none;cursor:pointer;
@@ -250,6 +250,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
           color:var(--primary-lt);letter-spacing:2px;text-transform:uppercase}
 @media(max-width:768px){
   .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .grid-2>*,.grid-3>*,.grid-4>*{min-width:0}
   .col-span-2{grid-column:span 1}
   nav{padding:0 20px}
   .page{padding:0 20px}
@@ -1298,7 +1299,8 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
   <p class="section-sub">The greatest threat to Velkin Data Studios isn't a competitor. It's looking like one.</p>
   <hr class="divider">
 
-  <table class="compare-table" style="margin-bottom:40px">
+  <div style="overflow-x:auto;margin-bottom:40px">
+  <table class="compare-table" style="margin-bottom:0;min-width:640px">
     <thead>
       <tr>
         <th>Dimension</th>
@@ -1346,6 +1348,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;
       </tr>
     </tbody>
   </table>
+  </div>
 
   <!-- High-ticket perception -->
   <p class="section-label">High-Ticket Perception Strategy</p>
