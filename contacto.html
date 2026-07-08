@@ -1077,12 +1077,22 @@ function validate() {
   });
 });
 
+function vkGetCookie(name) {
+  const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  return m ? decodeURIComponent(m[1]) : '';
+}
+function vkEventId() {
+  return 'evt_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+}
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!validate()) return;
 
   btn.classList.add('loading');
   btn.disabled = true;
+
+  const eventId = vkEventId();
 
   const payload = {
     nombre:    document.getElementById('nombre').value.trim(),
@@ -1093,6 +1103,11 @@ form.addEventListener('submit', async (e) => {
     necesidad: document.getElementById('necesidad').value,
     mensaje:   document.getElementById('mensaje').value.trim(),
     fecha:     new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' }),
+    event_id:  eventId,
+    pagina:    location.href,
+    fbp:       vkGetCookie('_fbp'),
+    fbc:       vkGetCookie('_fbc'),
+    user_agent: navigator.userAgent,
   };
 
   try {
@@ -1105,7 +1120,7 @@ form.addEventListener('submit', async (e) => {
     // no-cors means we can't read the response, treat as success
     document.getElementById('form-wrap').style.display = 'none';
     document.getElementById('success-state').classList.add('show');
-    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'contact_form' });
+    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'contact_form' }, { eventID: eventId });
     if (typeof gtag === 'function') gtag('event', 'generate_lead', { lead_source: 'contact_form' });
   } catch (err) {
     btn.classList.remove('loading');

@@ -107,6 +107,11 @@
       if (!panel.hidden && !fab.contains(e.target)) closePanel();
     });
 
+    function vkGetCookie(name) {
+      const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+      return m ? decodeURIComponent(m[1]) : '';
+    }
+
     submitBtn.addEventListener('click', () => {
       const nombre = nombreEl.value.trim();
       const tel = telEl.value.trim();
@@ -119,10 +124,12 @@
       }
       errEl.hidden = true;
 
+      const eventId = 'evt_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+
       const texto = `Hola, soy ${nombre}. ${mensaje || 'Quiero platicar sobre un proyecto con Velkin Data Studios.'}`;
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`, '_blank', 'noopener');
 
-      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'whatsapp_widget' });
+      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'whatsapp_widget' }, { eventID: eventId });
       if (typeof gtag === 'function') gtag('event', 'generate_lead', { lead_source: 'whatsapp_widget' });
 
       fetch(GAS_URL, {
@@ -136,6 +143,11 @@
           mensaje: mensaje || '(sin mensaje adicional)',
           sitio: location.pathname,
           fecha: new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' }),
+          event_id: eventId,
+          pagina: location.href,
+          fbp: vkGetCookie('_fbp'),
+          fbc: vkGetCookie('_fbc'),
+          user_agent: navigator.userAgent,
         }),
       }).catch(() => {});
 

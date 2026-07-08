@@ -67,9 +67,90 @@ function doPost(e) {
     Logger.log('Error: ' + err.message);
   }
 
+  try {
+    sendMetaConversionEvent(JSON.parse(e.postData.contents));
+  } catch (err) {
+    Logger.log('Meta CAPI error: ' + err.message);
+  }
+
   return ContentService
     .createTextOutput(JSON.stringify({ ok: true }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+/* ─── Meta Conversions API ─────────────────────────────
+ * Envía server-side el mismo evento "Lead" que ya dispara el Pixel en
+ * el navegador, usando el mismo event_id para que Meta deduplique (no
+ * cuenta doble). Recupera conversiones que el Pixel de navegador pierde
+ * por bloqueadores de anuncios o restricciones de iOS/Safari.
+ *
+ * SETUP (una sola vez, en este proyecto de Apps Script):
+ *  1. Configuración del proyecto (ícono de engranaje) → Propiedades
+ *     del script → Añadir propiedad del script:
+ *       - META_PIXEL_ID     = 1535038168109647
+ *       - META_CAPI_TOKEN   = (el token de Conversions API de Events
+ *         Manager → tu Pixel → Configuración → Conversions API)
+ *  El token NUNCA va escrito en este código — solo vive en Script
+ *  Properties, que no se exporta ni se ve en el repo de GitHub.
+ */
+function sendMetaConversionEvent(data) {
+  const props = PropertiesService.getScriptProperties();
+  const pixelId = props.getProperty('META_PIXEL_ID');
+  const token = props.getProperty('META_CAPI_TOKEN');
+  if (!pixelId || !token) {
+    Logger.log('Meta CAPI: faltan META_PIXEL_ID / META_CAPI_TOKEN en Script Properties, se omite.');
+    return;
+  }
+
+  const userData = {};
+  if (data.email) userData.em = [sha256Hex(normalizeEmail(data.email))];
+  if (data.telefono) userData.ph = [sha256Hex(normalizePhone(data.telefono))];
+  if (data.fbp) userData.fbp = data.fbp;
+  if (data.fbc) userData.fbc = data.fbc;
+  if (data.user_agent) userData.client_user_agent = data.user_agent;
+
+  const eventPayload = {
+    data: [{
+      event_name: 'Lead',
+      event_time: Math.floor(Date.now() / 1000),
+      event_id: data.event_id || undefined,
+      action_source: 'website',
+      event_source_url: data.pagina || 'https://velkindatastudios.com/contacto.html',
+      user_data: userData,
+      custom_data: {
+        content_name: data.canal === 'whatsapp_widget' ? 'whatsapp_widget' : 'contact_form',
+      },
+    }],
+  };
+
+  UrlFetchApp.fetch(
+    `https://graph.facebook.com/v21.0/${pixelId}/events?access_token=${encodeURIComponent(token)}`,
+    {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(eventPayload),
+      muteHttpExceptions: true,
+    }
+  );
+}
+
+function normalizeEmail(email) {
+  return String(email).trim().toLowerCase();
+}
+
+function normalizePhone(phone) {
+  // Meta espera dígitos con código de país, sin '+', sin espacios/guiones.
+  let digits = String(phone).replace(/[^0-9]/g, '');
+  if (digits.length === 10) digits = '52' + digits; // asume MX si viene sin lada país
+  return digits;
+}
+
+function sha256Hex(input) {
+  const bytes = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, input, Utilities.Charset.UTF_8);
+  return bytes.map(b => {
+    const v = (b < 0 ? b + 256 : b).toString(16);
+    return v.length === 1 ? '0' + v : v;
+  }).join('');
 }
 
 /* ─── Guardar en Sheets ────────────────────────────── */
