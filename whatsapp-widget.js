@@ -122,6 +122,8 @@
       const texto = `Hola, soy ${nombre}. ${mensaje || 'Quiero platicar sobre un proyecto con Velkin Data Studios.'}`;
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`, '_blank', 'noopener');
 
+      if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'whatsapp_widget' });
+
       fetch(GAS_URL, {
         method: 'POST',
         mode: 'no-cors',
