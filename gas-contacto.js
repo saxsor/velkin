@@ -157,6 +157,24 @@ function sendMetaConversionEvent(data) {
   return 'FAILED (' + status + '): ' + body.substring(0, 300);
 }
 
+/* ─── Función de prueba manual ──────────────────────────
+ * Ejecuta esta función directamente desde el editor (selecciónala en
+ * el desplegable de arriba → botón ▷ Ejecutar) para: (a) forzar el
+ * diálogo de autorización de "conectarse a un servicio externo" la
+ * primera vez, y (b) ver el resultado real de Meta CAPI en el log de
+ * ejecución sin necesitar un envío real desde el sitio.
+ */
+function testMetaCAPIAuth() {
+  const result = sendMetaConversionEvent({
+    telefono: '5215555555555',
+    event_id: 'evt_auth_test_' + Date.now(),
+    pagina: 'https://velkindatastudios.com/contacto.html',
+    canal: 'whatsapp_widget',
+  });
+  console.log('testMetaCAPIAuth result: ' + result);
+  return result;
+}
+
 function normalizeEmail(email) {
   return String(email).trim().toLowerCase();
 }
