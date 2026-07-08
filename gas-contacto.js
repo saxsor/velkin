@@ -123,7 +123,7 @@ function sendMetaConversionEvent(data) {
     }],
   };
 
-  UrlFetchApp.fetch(
+  const response = UrlFetchApp.fetch(
     `https://graph.facebook.com/v21.0/${pixelId}/events?access_token=${encodeURIComponent(token)}`,
     {
       method: 'post',
@@ -132,6 +132,14 @@ function sendMetaConversionEvent(data) {
       muteHttpExceptions: true,
     }
   );
+
+  const status = response.getResponseCode();
+  const body = response.getContentText();
+  if (status >= 200 && status < 300) {
+    Logger.log('Meta CAPI OK (' + status + '): ' + body);
+  } else {
+    Logger.log('Meta CAPI FAILED (' + status + '): ' + body);
+  }
 }
 
 function normalizeEmail(email) {
