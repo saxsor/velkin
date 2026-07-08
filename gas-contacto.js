@@ -70,7 +70,7 @@ function doPost(e) {
   try {
     sendMetaConversionEvent(JSON.parse(e.postData.contents));
   } catch (err) {
-    Logger.log('Meta CAPI error: ' + err.message);
+    console.error('Meta CAPI error: ' + err.message);
   }
 
   return ContentService
@@ -98,7 +98,7 @@ function sendMetaConversionEvent(data) {
   const pixelId = props.getProperty('META_PIXEL_ID');
   const token = props.getProperty('META_CAPI_TOKEN');
   if (!pixelId || !token) {
-    Logger.log('Meta CAPI: faltan META_PIXEL_ID / META_CAPI_TOKEN en Script Properties, se omite.');
+    console.error('Meta CAPI: faltan META_PIXEL_ID / META_CAPI_TOKEN en Script Properties, se omite.');
     return;
   }
 
@@ -136,9 +136,9 @@ function sendMetaConversionEvent(data) {
   const status = response.getResponseCode();
   const body = response.getContentText();
   if (status >= 200 && status < 300) {
-    Logger.log('Meta CAPI OK (' + status + '): ' + body);
+    console.log('Meta CAPI OK (' + status + '): ' + body);
   } else {
-    Logger.log('Meta CAPI FAILED (' + status + '): ' + body);
+    console.error('Meta CAPI FAILED (' + status + '): ' + body);
   }
 }
 
