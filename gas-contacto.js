@@ -49,13 +49,36 @@ const COLUMNS = [
   'Necesidad',
   'Mensaje',
   'Canal',
+  'Meta CAPI',
 ];
+// Si el Sheet ya existía antes de agregar Conversions API, agrega
+// "Meta CAPI" manualmente en la siguiente celda de headers (después de
+// "Canal") — este array solo escribe headers nuevos cuando el Sheet no
+// existe todavía.
 
 /* ─── doPost ───────────────────────────────────────── */
 function doPost(e) {
+  let data = {};
+  let capiStatus = 'no ejecutado';
+
   try {
-    const data = JSON.parse(e.postData.contents);
-    appendToSheet(data);
+    data = JSON.parse(e.postData.contents);
+  } catch (err) {
+    console.error('Error parseando payload: ' + err.message);
+    return ContentService
+      .createTextOutput(JSON.stringify({ ok: false }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  try {
+    capiStatus = sendMetaConversionEvent(data);
+  } catch (err) {
+    capiStatus = 'ERROR: ' + err.message;
+    console.error('Meta CAPI error: ' + err.message);
+  }
+
+  try {
+    appendToSheet(data, capiStatus);
 
     if (data.canal === 'whatsapp_widget') {
       sendWhatsAppLeadNotification(data);
@@ -64,17 +87,11 @@ function doPost(e) {
       sendConfirmationEmail(data);
     }
   } catch (err) {
-    Logger.log('Error: ' + err.message);
-  }
-
-  try {
-    sendMetaConversionEvent(JSON.parse(e.postData.contents));
-  } catch (err) {
-    console.error('Meta CAPI error: ' + err.message);
+    console.error('Error: ' + err.message);
   }
 
   return ContentService
-    .createTextOutput(JSON.stringify({ ok: true }))
+    .createTextOutput(JSON.stringify({ ok: true, meta_capi: capiStatus }))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -98,8 +115,7 @@ function sendMetaConversionEvent(data) {
   const pixelId = props.getProperty('META_PIXEL_ID');
   const token = props.getProperty('META_CAPI_TOKEN');
   if (!pixelId || !token) {
-    console.error('Meta CAPI: faltan META_PIXEL_ID / META_CAPI_TOKEN en Script Properties, se omite.');
-    return;
+    return 'SKIPPED: faltan META_PIXEL_ID/META_CAPI_TOKEN en Script Properties';
   }
 
   const userData = {};
@@ -136,10 +152,9 @@ function sendMetaConversionEvent(data) {
   const status = response.getResponseCode();
   const body = response.getContentText();
   if (status >= 200 && status < 300) {
-    console.log('Meta CAPI OK (' + status + '): ' + body);
-  } else {
-    console.error('Meta CAPI FAILED (' + status + '): ' + body);
+    return 'OK (' + status + ')';
   }
+  return 'FAILED (' + status + '): ' + body.substring(0, 300);
 }
 
 function normalizeEmail(email) {
@@ -162,7 +177,7 @@ function sha256Hex(input) {
 }
 
 /* ─── Guardar en Sheets ────────────────────────────── */
-function appendToSheet(data) {
+function appendToSheet(data, capiStatus) {
   const ss    = SpreadsheetApp.openById(SPREADSHEET_ID);
   let   sheet = ss.getSheetByName(SHEET_NAME);
 
@@ -186,6 +201,7 @@ function appendToSheet(data) {
     data.necesidad || '',
     data.mensaje   || '',
     data.canal === 'whatsapp_widget' ? 'WhatsApp' : 'Formulario web',
+    capiStatus     || '',
   ]);
 }
 
