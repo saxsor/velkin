@@ -123,6 +123,7 @@
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`, '_blank', 'noopener');
 
       if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: 'whatsapp_widget' });
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { lead_source: 'whatsapp_widget' });
 
       fetch(GAS_URL, {
         method: 'POST',
