@@ -461,6 +461,27 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
   .foot-copy { text-align: center; }
 }
 
+
+.lang-switch {
+  display: inline-flex; align-items: center; gap: 2px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--rule);
+  border-radius: 100px; padding: 3px;
+}
+.lang-switch .lang-opt {
+  font-family: var(--mo); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 5px 11px !important; border-radius: 100px !important;
+  color: var(--mist); text-decoration: none;
+  transition: color .2s, background .2s;
+  display: inline-block !important;
+  border-bottom: none !important;
+}
+.lang-switch a.lang-opt:hover { color: var(--snow); }
+.lang-switch .lang-opt.active { background: var(--pine); color: #fff; }
+@media (max-width: 860px) {
+  .lang-li { width: auto !important; display: flex; justify-content: center; padding: 12px 0 !important; border-bottom: none !important; }
+}
 </style>
 </head>
 <body>
@@ -482,7 +503,12 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <li><a href="index.html#metodo">Método</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="/en/portafolio-kartingclub.html" class="nav-lang">EN</a></li>
+      <li class="lang-li">
+        <div class="lang-switch">
+          <span class="lang-opt active">ES</span>
+          <a href="/en/portafolio-kartingclub.html" class="lang-opt">EN</a>
+        </div>
+      </li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
