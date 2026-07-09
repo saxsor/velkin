@@ -545,6 +545,7 @@ body::after {
   background: var(--rule);
   border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
 }
+.tree-split-3 { grid-template-columns: 1fr 1fr 1fr; }
 .tree-split .svc-panel {
   border-radius: 0; border: none;
   display: flex; flex-direction: column; height: 100%;
@@ -866,13 +867,21 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         </div>
       </div>
 
-      <!-- ── CONNECTOR 0: Audit → Lite ────────────────────── -->
+      <!-- ── CONNECTOR: Audit → Lite + Start + Scale ──────── -->
       <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path d="M500,0 L500,36 L167,88"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
+              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
         <path d="M500,0 L500,88"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <path d="M500,36 L833,88"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
+              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
         <circle cx="500" cy="4"  r="5" fill="rgba(210,83,47,0.6)"/>
-        <circle cx="500" cy="84" r="5" fill="rgba(122,138,160,0.6)"/>
+        <circle cx="167" cy="84" r="5" fill="rgba(122,138,160,0.6)"/>
+        <circle cx="500" cy="84" r="5" fill="rgba(46,158,107,0.6)"/>
+        <circle cx="833" cy="84" r="5" fill="rgba(127,209,184,0.6)"/>
       </svg>
       <div class="tree-connector-mobile" aria-hidden="true">
         <svg viewBox="0 0 20 32" fill="none">
@@ -881,78 +890,59 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         </svg>
       </div>
 
-      <!-- ── LITE (colapsable) ────────────────────────────── -->
-      <div class="svc-panel panel-slate panel-collapsible" id="panel-lite">
-        <div class="panel-hdr">
-          <div class="panel-hdr-left">
-            <span class="panel-badge pb-slate">Velkin Lite</span>
-            <div>
-              <div class="panel-hdr-title">Presencia mínima viable.</div>
-              <div class="panel-hdr-sub">Para negocios que necesitan estar en línea ya.</div>
-            </div>
-          </div>
-          <div class="panel-hdr-right">
-            <span class="panel-price price-slate">desde MX$14,000</span>
-            <button class="panel-toggle" data-target="panel-lite" aria-expanded="false">
-              <svg class="toggle-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg>
-              <span class="toggle-label">Ver detalles</span>
-            </button>
-          </div>
-        </div>
-        <div class="panel-body">
-          <div class="body-col">
-            <span class="body-label">Para quién</span>
-            <p class="body-text">Negocios que apenas comienzan y necesitan presencia digital real, pero todavía no requieren un sitio completo con CRM. El paso antes de Start.</p>
-            <div style="margin-top:8px;">
-              <span class="body-label">Timeline</span>
-              <div class="panel-timeline" style="margin-top:6px;">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2" stroke-linecap="round"/></svg>
-                5–7 días hábiles
+      <!-- ── LITE + START + SCALE (expandibles, 3 columnas) ── -->
+      <div class="tree-split tree-split-3">
+
+        <!-- Velkin Lite -->
+        <div class="svc-panel panel-slate panel-collapsible" id="panel-lite">
+          <div class="panel-hdr">
+            <div class="panel-hdr-left">
+              <span class="panel-badge pb-slate">Velkin Lite</span>
+              <div>
+                <div class="panel-hdr-title">Presencia mínima viable.</div>
+                <div class="panel-hdr-sub">Para estar en línea ya.</div>
               </div>
             </div>
-            <div style="margin-top:16px;">
-              <span class="body-label">No incluye</span>
-              <p class="body-text" style="margin-top:4px;font-size:13px;">Sistema de logo completo · CRM automatizado · sitio multi-página · SEO avanzado · más de 1 ronda de cambios</p>
+            <div class="panel-hdr-right">
+              <span class="panel-price price-slate">desde MX$14,000</span>
+              <button class="panel-toggle" data-target="panel-lite" aria-expanded="false">
+                <svg class="toggle-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg>
+                <span class="toggle-label">Ver detalles</span>
+              </button>
             </div>
           </div>
-          <div class="body-col">
-            <span class="body-label">Incluye</span>
-            <div class="inc-list">
-              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Símbolo/logo básico</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Landing page de una sola página (hero, servicios, contacto)</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Formulario conectado directo a WhatsApp</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Meta tags básicos</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>1 ronda de cambios</div>
+          <div class="panel-body">
+            <div class="body-col">
+              <span class="body-label">Para quién</span>
+              <p class="body-text">Negocios que apenas comienzan y necesitan presencia digital real, pero todavía no requieren un sitio completo con CRM.</p>
+              <div style="margin-top:8px;">
+                <span class="body-label">Timeline</span>
+                <div class="panel-timeline" style="margin-top:6px;">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2" stroke-linecap="round"/></svg>
+                  5–7 días hábiles
+                </div>
+              </div>
+              <div style="margin-top:16px;">
+                <span class="body-label">No incluye</span>
+                <p class="body-text" style="margin-top:4px;font-size:13px;">Sistema de logo completo · CRM automatizado · sitio multi-página · SEO avanzado · más de 1 ronda de cambios</p>
+              </div>
             </div>
-          </div>
-          <div class="panel-footer">
-            <span></span>
-            <a href="contacto.html" class="panel-cta cta-slate">Solicitar Velkin Lite →</a>
+            <div class="body-col">
+              <span class="body-label">Incluye</span>
+              <div class="inc-list">
+                <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Símbolo/logo básico</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Landing de una sola página (hero, servicios, contacto)</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Formulario conectado directo a WhatsApp</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Meta tags básicos</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>1 ronda de cambios</div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <span></span>
+              <a href="contacto.html" class="panel-cta cta-slate">Solicitar Velkin Lite →</a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- ── CONNECTOR 1: Lite → Start + Scale ────────────── -->
-      <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
-        <path d="M500,0 L500,36 L262,88"
-              stroke="rgba(62,155,130,0.35)" stroke-width="1"
-              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <path d="M500,36 L738,88"
-              stroke="rgba(62,155,130,0.35)" stroke-width="1"
-              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <circle cx="500" cy="4"  r="5" fill="rgba(122,138,160,0.6)"/>
-        <circle cx="262" cy="84" r="5" fill="rgba(46,158,107,0.6)"/>
-        <circle cx="738" cy="84" r="5" fill="rgba(127,209,184,0.6)"/>
-      </svg>
-      <div class="tree-connector-mobile" aria-hidden="true">
-        <svg viewBox="0 0 20 32" fill="none">
-          <line x1="10" y1="0" x2="10" y2="32" stroke="rgba(62,155,130,0.35)" stroke-width="1.5"/>
-          <circle cx="10" cy="16" r="3" fill="rgba(122,138,160,0.6)"/>
-        </svg>
-      </div>
-
-      <!-- ── START + BUILD (expandibles) ───────────────── -->
-      <div class="tree-split">
 
         <!-- Velkin Start -->
         <div class="svc-panel panel-green panel-collapsible" id="panel-start">
@@ -1063,19 +1053,23 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 
       </div><!-- end tree-split -->
 
-      <!-- ── CONNECTOR 2: Start + Scale → (nodo común) → Pulse + Ops ─────── -->
+      <!-- ── CONNECTOR: Lite + Start + Scale → (nodo común) → Pulse + Ops ─── -->
       <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
-        <path d="M262,0 L262,22 L500,44"
+        <path d="M167,0 L167,22 L500,44"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <path d="M738,0 L738,22 L500,44"
+        <path d="M500,0 L500,44"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
+              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <path d="M833,0 L833,22 L500,44"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
         <path d="M500,44 L500,88"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <circle cx="262" cy="4"  r="5" fill="rgba(46,158,107,0.6)"/>
-        <circle cx="738" cy="4"  r="5" fill="rgba(127,209,184,0.6)"/>
+        <circle cx="167" cy="4"  r="5" fill="rgba(122,138,160,0.6)"/>
+        <circle cx="500" cy="4"  r="5" fill="rgba(46,158,107,0.6)"/>
+        <circle cx="833" cy="4"  r="5" fill="rgba(127,209,184,0.6)"/>
         <circle cx="500" cy="44" r="5" fill="rgba(231,230,221,0.5)"/>
         <circle cx="500" cy="84" r="5" fill="rgba(231,230,221,0.6)"/>
       </svg>
