@@ -367,7 +367,14 @@ body::after {
   overflow: visible;
   margin: 4px 0;
 }
-@media (max-width: 700px) { .tree-connector { display: none; } }
+.tree-connector-mobile { display: none; }
+@media (max-width: 700px) {
+  .tree-connector { display: none; }
+  .tree-connector-mobile {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 32px;
+  }
+}
 
 /* ─── PANEL BASE ──────────────────────────────────────── */
 .svc-panel {
@@ -537,7 +544,14 @@ body::after {
 @media (max-width: 700px) {
   .panel-body { grid-template-columns: 1fr; gap: 24px; }
   .panel-body-wide { grid-template-columns: 1fr; }
-  .tree-split { grid-template-columns: 1fr; }
+  .tree-split {
+    grid-template-columns: 1fr; gap: 16px;
+    background: none; border: none;
+  }
+  .tree-split .svc-panel {
+    border-radius: 14px; border: 1px solid var(--rule);
+  }
+  .tree-split .svc-panel::before { border-radius: 14px 14px 0 0; }
 }
 @media (max-width: 560px) {
   .panel-hdr { flex-wrap: wrap; }
@@ -850,6 +864,12 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <circle cx="262" cy="84" r="5" fill="rgba(46,158,107,0.6)"/>
         <circle cx="738" cy="84" r="5" fill="rgba(127,209,184,0.6)"/>
       </svg>
+      <div class="tree-connector-mobile" aria-hidden="true">
+        <svg viewBox="0 0 20 32" fill="none">
+          <line x1="10" y1="0" x2="10" y2="32" stroke="rgba(62,155,130,0.35)" stroke-width="1.5"/>
+          <circle cx="10" cy="16" r="3" fill="rgba(62,155,130,0.6)"/>
+        </svg>
+      </div>
 
       <!-- ── START + BUILD (expandibles) ───────────────── -->
       <div class="tree-split">
@@ -979,6 +999,12 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <circle cx="500" cy="44" r="5" fill="rgba(231,230,221,0.5)"/>
         <circle cx="500" cy="84" r="5" fill="rgba(231,230,221,0.6)"/>
       </svg>
+      <div class="tree-connector-mobile" aria-hidden="true">
+        <svg viewBox="0 0 20 32" fill="none">
+          <line x1="10" y1="0" x2="10" y2="32" stroke="rgba(62,155,130,0.35)" stroke-width="1.5"/>
+          <circle cx="10" cy="16" r="3" fill="rgba(231,230,221,0.6)"/>
+        </svg>
+      </div>
 
       <!-- ── PULSE + OPS (expandibles) ───────────────────── -->
       <div class="tree-split">
@@ -1084,6 +1110,12 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <circle cx="738" cy="4"  r="5" fill="rgba(210,83,47,0.6)"/>
         <circle cx="500" cy="84" r="5" fill="rgba(245,158,11,0.6)"/>
       </svg>
+      <div class="tree-connector-mobile" aria-hidden="true">
+        <svg viewBox="0 0 20 32" fill="none">
+          <line x1="10" y1="0" x2="10" y2="32" stroke="rgba(62,155,130,0.35)" stroke-width="1.5"/>
+          <circle cx="10" cy="16" r="3" fill="rgba(245,158,11,0.6)"/>
+        </svg>
+      </div>
 
       <!-- ── GROW (siempre visible) ─────────────────────── -->
       <div class="svc-panel panel-amber rv" id="panel-grow">
