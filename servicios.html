@@ -33,20 +33,20 @@ src="https://www.facebook.com/tr?id=1535038168109647&ev=PageView&noscript=1"
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
-<meta name="description" content="Cuatro servicios diseñados para sumarse: Audit, Start, Scale y Grow. Desde el diagnóstico hasta el sistema completo.">
+<meta name="description" content="Siete productos diseñados para sumarse: Audit, Lite, Start, Scale, Pulse, Ops y Grow. Desde el diagnóstico hasta el sistema completo.">
 <link rel="canonical" href="https://velkindatastudios.com/servicios.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Velkin Data Studios">
 <meta property="og:locale" content="es_MX">
 <meta property="og:url" content="https://velkindatastudios.com/servicios.html">
 <meta property="og:title" content="Servicios — Velkin Data Studios">
-<meta property="og:description" content="Cuatro servicios diseñados para sumarse: Audit, Start, Scale y Grow. Desde el diagnóstico hasta el sistema completo.">
+<meta property="og:description" content="Siete productos diseñados para sumarse: Audit, Lite, Start, Scale, Pulse, Ops y Grow. Desde el diagnóstico hasta el sistema completo.">
 <meta property="og:image" content="https://velkindatastudios.com/assets/og/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Servicios — Velkin Data Studios">
-<meta name="twitter:description" content="Cuatro servicios diseñados para sumarse: Audit, Start, Scale y Grow. Desde el diagnóstico hasta el sistema completo.">
+<meta name="twitter:description" content="Siete productos diseñados para sumarse: Audit, Lite, Start, Scale, Pulse, Ops y Grow. Desde el diagnóstico hasta el sistema completo.">
 <meta name="twitter:image" content="https://velkindatastudios.com/assets/og/og-image.jpg">
 <script type="application/ld+json">
 {
@@ -73,6 +73,14 @@ src="https://www.facebook.com/tr?id=1535038168109647&ev=PageView&noscript=1"
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Empieza con el Velkin Audit. En 5–7 días hábiles tendrás un diagnóstico completo que te dice exactamente qué mover primero. El costo de MX$3,500 se acredita si luego contratas cualquier paquete."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre Velkin Lite y Velkin Start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lite (desde MX$14,000) es una landing de una sola página con logo básico y formulario directo a WhatsApp — pensada para negocios que necesitan estar en línea ya, sin el compromiso completo de un sitio grande. Start (desde MX$28,000) incluye sistema de logo completo, sitio de 3 a 5 páginas y CRM con notificación automática. Si Lite se te queda corto, lo natural es escalar a Start."
       }
     },
     {
@@ -144,6 +152,7 @@ src="https://www.facebook.com/tr?id=1535038168109647&ev=PageView&noscript=1"
   --rust:      #D2532F;
   --green:     #2E9E6B;
   --amber:     #F59E0B;
+  --slate:     #7A8AA0;
   --snow:      #E7E6DD;
   --mist:      #9A9A8E;
   --dim:       #5C5B50;
@@ -397,6 +406,7 @@ body::after {
 .panel-violet::before { background: var(--pine-lt); }
 .panel-amber::before  { background: var(--amber); }
 .panel-pine::before   { background: var(--pine); }
+.panel-slate::before  { background: var(--slate); }
 
 /* Panel header (always visible) */
 .panel-hdr {
@@ -418,6 +428,7 @@ body::after {
 .pb-violet { background:rgba(62,155,130,.12);  color:var(--pine-lt); }
 .pb-amber  { background:rgba(245,158,11,.10); color:var(--amber); }
 .pb-pine   { background:rgba(62,155,130,.10);  color:var(--pine); }
+.pb-slate  { background:rgba(122,138,160,.14); color:var(--slate); }
 
 .panel-hdr-title {
   font-family: var(--jk); font-size: clamp(16px,1.8vw,20px);
@@ -437,6 +448,7 @@ body::after {
 .price-violet { color: var(--pine-lt); }
 .price-amber  { color: var(--amber); }
 .price-pine   { color: var(--pine); }
+.price-slate  { color: var(--slate); }
 .panel-price-note { font-size: 11px; color: var(--mist); opacity: .6; font-family: var(--mo); }
 
 /* Toggle button (Start + Build only) */
@@ -511,6 +523,7 @@ body::after {
 .cta-violet { color: var(--pine-lt); }
 .cta-amber  { color: var(--amber); }
 .cta-pine   { color: var(--pine); }
+.cta-slate  { color: var(--slate); }
 
 /* Hidden body (collapsed) */
 .panel-collapsible .panel-body {
@@ -798,7 +811,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
   <div class="hero-fade"    aria-hidden="true"></div>
   <div class="bound hero-content rv">
     <span class="hero-eyebrow">Servicios</span>
-    <h1 class="hero-title">Cuatro productos.<br>Un sistema.</h1>
+    <h1 class="hero-title">Siete productos.<br>Un sistema.</h1>
     <p class="hero-sub">Cada producto está diseñado para sumarse al siguiente. Empieza donde estás, escala hasta donde quieres llegar.</p>
   </div>
 </div>
@@ -853,7 +866,73 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         </div>
       </div>
 
-      <!-- ── CONNECTOR 1: Audit → Start + Build ─────────── -->
+      <!-- ── CONNECTOR 0: Audit → Lite ────────────────────── -->
+      <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path d="M500,0 L500,88"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
+              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <circle cx="500" cy="4"  r="5" fill="rgba(210,83,47,0.6)"/>
+        <circle cx="500" cy="84" r="5" fill="rgba(122,138,160,0.6)"/>
+      </svg>
+      <div class="tree-connector-mobile" aria-hidden="true">
+        <svg viewBox="0 0 20 32" fill="none">
+          <line x1="10" y1="0" x2="10" y2="32" stroke="rgba(62,155,130,0.35)" stroke-width="1.5"/>
+          <circle cx="10" cy="16" r="3" fill="rgba(122,138,160,0.6)"/>
+        </svg>
+      </div>
+
+      <!-- ── LITE (colapsable) ────────────────────────────── -->
+      <div class="svc-panel panel-slate panel-collapsible" id="panel-lite">
+        <div class="panel-hdr">
+          <div class="panel-hdr-left">
+            <span class="panel-badge pb-slate">Velkin Lite</span>
+            <div>
+              <div class="panel-hdr-title">Presencia mínima viable.</div>
+              <div class="panel-hdr-sub">Para negocios que necesitan estar en línea ya.</div>
+            </div>
+          </div>
+          <div class="panel-hdr-right">
+            <span class="panel-price price-slate">desde MX$14,000</span>
+            <button class="panel-toggle" data-target="panel-lite" aria-expanded="false">
+              <svg class="toggle-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg>
+              <span class="toggle-label">Ver detalles</span>
+            </button>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="body-col">
+            <span class="body-label">Para quién</span>
+            <p class="body-text">Negocios que apenas comienzan y necesitan presencia digital real, pero todavía no requieren un sitio completo con CRM. El paso antes de Start.</p>
+            <div style="margin-top:8px;">
+              <span class="body-label">Timeline</span>
+              <div class="panel-timeline" style="margin-top:6px;">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2" stroke-linecap="round"/></svg>
+                5–7 días hábiles
+              </div>
+            </div>
+            <div style="margin-top:16px;">
+              <span class="body-label">No incluye</span>
+              <p class="body-text" style="margin-top:4px;font-size:13px;">Sistema de logo completo · CRM automatizado · sitio multi-página · SEO avanzado · más de 1 ronda de cambios</p>
+            </div>
+          </div>
+          <div class="body-col">
+            <span class="body-label">Incluye</span>
+            <div class="inc-list">
+              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Símbolo/logo básico</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Landing page de una sola página (hero, servicios, contacto)</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Formulario conectado directo a WhatsApp</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>Meta tags básicos</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--slate)"></span>1 ronda de cambios</div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <span></span>
+            <a href="contacto.html" class="panel-cta cta-slate">Solicitar Velkin Lite →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CONNECTOR 1: Lite → Start + Scale ────────────── -->
       <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
         <path d="M500,0 L500,36 L262,88"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
@@ -861,14 +940,14 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <path d="M500,36 L738,88"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <circle cx="500" cy="4"  r="5" fill="rgba(210,83,47,0.6)"/>
+        <circle cx="500" cy="4"  r="5" fill="rgba(122,138,160,0.6)"/>
         <circle cx="262" cy="84" r="5" fill="rgba(46,158,107,0.6)"/>
         <circle cx="738" cy="84" r="5" fill="rgba(127,209,184,0.6)"/>
       </svg>
       <div class="tree-connector-mobile" aria-hidden="true">
         <svg viewBox="0 0 20 32" fill="none">
           <line x1="10" y1="0" x2="10" y2="32" stroke="rgba(62,155,130,0.35)" stroke-width="1.5"/>
-          <circle cx="10" cy="16" r="3" fill="rgba(62,155,130,0.6)"/>
+          <circle cx="10" cy="16" r="3" fill="rgba(122,138,160,0.6)"/>
         </svg>
       </div>
 
@@ -1226,8 +1305,9 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       <table class="cmp-table">
         <thead>
           <tr>
-            <th style="width:30%">Qué incluye</th>
+            <th style="width:26%">Qué incluye</th>
             <th>Audit</th>
+            <th>Lite</th>
             <th>Start</th>
             <th class="cmp-hl">Scale</th>
             <th>Pulse</th>
@@ -1236,20 +1316,20 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           </tr>
         </thead>
         <tbody>
-          <tr><td>Diagnóstico de marca y digital</td><td class="cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Identidad visual completa</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-hl cmp-part">Opcional</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Sitio web</td><td class="cmp-dash">—</td><td class="cmp-part">3–5 págs.</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>CRM en Google Sheets</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Notificación email + WhatsApp</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Sistema web / app a medida</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Automatizaciones complejas (n8n)</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Panel admin con roles y permisos</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
-          <tr><td>Publicación automática Instagram + Facebook + TikTok</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-part">✓ Tú operas</td><td class="cmp-part">✓ Velkin opera</td><td class="cmp-check">✓</td></tr>
-          <tr><td>Velkin Content Hub + Cloudinary proxy</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td></tr>
-          <tr><td>Estadísticas de alcance y desempeño por publicación</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td></tr>
-          <tr><td>Estrategia de contenido con IA</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td></tr>
-          <tr><td>Campañas Meta Ads + reporte quincenal</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td></tr>
-          <tr><td>Acreditable a paquete</td><td class="cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Diagnóstico de marca y digital</td><td class="cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Identidad visual completa</td><td class="cmp-dash">—</td><td class="cmp-part">Básico</td><td class="cmp-check">✓</td><td class="cmp-hl cmp-part">Opcional</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Sitio web</td><td class="cmp-dash">—</td><td class="cmp-part">1 pág.</td><td class="cmp-part">3–5 págs.</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>CRM en Google Sheets</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Notificación email + WhatsApp</td><td class="cmp-dash">—</td><td class="cmp-part">Solo WhatsApp</td><td class="cmp-check">✓</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Sistema web / app a medida</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Automatizaciones complejas (n8n)</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Panel admin con roles y permisos</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
+          <tr><td>Publicación automática Instagram + Facebook + TikTok</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-part">✓ Tú operas</td><td class="cmp-part">✓ Velkin opera</td><td class="cmp-check">✓</td></tr>
+          <tr><td>Velkin Content Hub + Cloudinary proxy</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td></tr>
+          <tr><td>Estadísticas de alcance y desempeño por publicación</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td><td class="cmp-check">✓</td></tr>
+          <tr><td>Estrategia de contenido con IA</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td></tr>
+          <tr><td>Campañas Meta Ads + reporte quincenal</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-check">✓</td></tr>
+          <tr><td>Acreditable a paquete</td><td class="cmp-check">✓</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-hl cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td><td class="cmp-dash">—</td></tr>
         </tbody>
       </table>
     </div>
@@ -1267,6 +1347,13 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
         </summary>
         <p class="faq-a">Empieza con el Velkin Audit. En 5–7 días hábiles tendrás un diagnóstico completo que te dice exactamente qué mover primero. El costo de MX$3,500 se acredita si luego contratas cualquier paquete.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">¿Cuál es la diferencia entre Velkin Lite y Velkin Start?
+          <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="faq-a">Lite (desde MX$14,000) es una landing de una sola página con logo básico y formulario directo a WhatsApp — pensada para negocios que necesitan estar en línea ya, sin el compromiso completo de un sitio grande. Start (desde MX$28,000) incluye sistema de logo completo, sitio de 3 a 5 páginas y CRM con notificación automática. Si Lite se te queda corto, lo natural es escalar a Start.</p>
       </details>
 
       <details class="faq-item">

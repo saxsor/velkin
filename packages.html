@@ -133,6 +133,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;
 .badge-cyan{background:var(--rust-dim);border:1px solid rgba(210,83,47,.3);color:var(--rust)}
 .badge-pine{background:rgba(62,155,130,.20);border:1px solid var(--primary);color:var(--primary)}
 .badge-ops{background:rgba(232,137,109,.14);border:1px solid rgba(232,137,109,.4);color:#E8896D}
+.badge-slate{background:rgba(122,138,160,.14);border:1px solid rgba(122,138,160,.4);color:#7A8AA0}
 
 /* ADDONS */
 .addon{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--r-lg);
@@ -178,6 +179,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
   </div>
   <ul class="nav-links">
     <li><a href="#audit">Audit</a></li>
+    <li><a href="#lite">Lite</a></li>
     <li><a href="#start">Start</a></li>
     <li><a href="#build">Build</a></li>
     <li><a href="#pulse">Pulse</a></li>
@@ -200,10 +202,11 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
       Lo que<br><span style="color:var(--primary-lt)">construimos</span><br>juntos.
     </h1>
     <p style="font-size:17px;color:var(--text-2);max-width:520px;line-height:1.7;margin-bottom:32px">
-      Seis productos diseñados para distintas etapas de crecimiento. Todos con la misma premisa: dejamos sistemas funcionando, no solo archivos entregados.
+      Siete productos diseñados para distintas etapas de crecimiento. Todos con la misma premisa: dejamos sistemas funcionando, no solo archivos entregados.
     </p>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
       <span class="badge badge-amber">Velkin Audit</span>
+      <span class="badge badge-slate">Velkin Lite</span>
       <span class="badge badge-green">Velkin Start</span>
       <span class="badge badge-primary">Velkin Build</span>
       <span class="badge badge-pine">Velkin Pulse</span>
@@ -280,6 +283,67 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
         <p style="font-size:14px;color:var(--text-2);line-height:1.7">
           La mayoría de negocios invierten en lo que creen que necesitan. El Audit revela lo que realmente necesitan. Eso evita gastar en el paquete equivocado — y hace que el paquete correcto funcione mucho mejor.
         </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ LITE ═══════════════════════════════════════════════════ -->
+<section id="lite">
+<div class="page">
+  <p class="section-label">Velkin Lite — Entrada</p>
+  <h2 class="section-title">Presencia mínima<br>viable.</h2>
+  <p style="font-size:17px;color:var(--text-2);max-width:600px;margin-bottom:40px;line-height:1.7">
+    El paso antes de Start. Para negocios que necesitan estar en línea ya, sin el compromiso completo de un sitio grande.
+  </p>
+  <div class="pkg" style="border-top:3px solid #7A8AA0">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div class="pkg-header">
+          <p class="pkg-label">Velkin Lite</p>
+          <p class="pkg-name" style="color:#7A8AA0">Estar en línea, ya.</p>
+          <p class="pkg-tagline">Landing de una sola página, logo básico y formulario directo a WhatsApp. Rápido, funcional, sin el alcance completo de Start.</p>
+        </div>
+        <div class="pkg-price">
+          <span class="pkg-price-amount">desde MX$14,000</span>
+          <span class="pkg-price-note">proyecto único</span>
+        </div>
+        <div class="pkg-for">
+          <strong style="color:var(--text-1)">Para quién:</strong> Negocios que apenas comienzan y necesitan presencia digital real, pero todavía no requieren un sitio completo con CRM.
+        </div>
+        <div class="pkg-meta">
+          <div class="pkg-meta-item">
+            <span class="pkg-meta-label">Entrega</span>
+            <span class="pkg-meta-val">5–7 días hábiles</span>
+          </div>
+          <div class="pkg-meta-item">
+            <span class="pkg-meta-label">Pago</span>
+            <span class="pkg-meta-val">100% upfront</span>
+          </div>
+        </div>
+        <a href="#" class="pkg-cta primary" style="background:#7A8AA0;color:var(--black)">Solicitar Velkin Lite →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="pkg-includes">
+          <p class="pkg-includes-title">Qué incluye</p>
+          <ul class="pkg-list">
+            <li>Símbolo/logo básico (sin sistema completo de marca)</li>
+            <li>Landing page de una sola página (hero, servicios, contacto)</li>
+            <li>Formulario conectado directo a WhatsApp</li>
+            <li>Meta tags básicos</li>
+            <li>1 ronda de cambios</li>
+          </ul>
+        </div>
+        <div class="pkg-includes">
+          <p class="pkg-includes-title" style="color:var(--text-3)">No incluye</p>
+          <ul class="pkg-list not">
+            <li>Sistema de logo completo</li>
+            <li>CRM automatizado</li>
+            <li>Sitio multi-página</li>
+            <li>SEO avanzado</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -779,6 +843,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
         <tr>
           <th>Qué incluye</th>
           <th style="color:var(--amber)">Audit</th>
+          <th style="color:#7A8AA0">Lite</th>
           <th style="color:var(--green)">Start</th>
           <th style="color:var(--primary-lt)">Build</th>
           <th style="color:var(--primary)">Pulse</th>
@@ -789,55 +854,56 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
       <tbody>
         <tr>
           <td class="pkg-col">Diagnóstico y plan de acción</td>
-          <td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
+          <td class="yes">✓</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
         </tr>
         <tr>
           <td class="pkg-col">Identidad visual / logo</td>
-          <td class="no">—</td><td class="yes">✓ Base</td><td class="yes">✓ Completo</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
+          <td class="no">—</td><td class="yes">✓ Básico</td><td class="yes">✓ Base</td><td class="yes">✓ Completo</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
         </tr>
         <tr>
           <td class="pkg-col">Sitio web o landing</td>
-          <td class="no">—</td><td class="yes">✓ Landing</td><td class="yes">✓ Sitio completo</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
+          <td class="no">—</td><td class="yes">✓ 1 página</td><td class="yes">✓ Landing</td><td class="yes">✓ Sitio completo</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
         </tr>
         <tr>
           <td class="pkg-col">Google Business + SEO base</td>
-          <td class="no">—</td><td class="yes">✓</td><td class="yes">✓ Avanzado</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
+          <td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓ Avanzado</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
         </tr>
         <tr>
           <td class="pkg-col">Meta Ads setup</td>
-          <td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Gestión</td>
+          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Gestión</td>
         </tr>
         <tr>
           <td class="pkg-col">Automatizaciones (Content Hub / n8n)</td>
-          <td class="no">—</td><td class="yes">✓ Básica</td><td class="yes">✓ Avanzada</td><td class="yes">✓ Self-service</td><td class="yes">✓ Gestionada</td><td class="yes">✓ Continua</td>
+          <td class="no">—</td><td class="no">—</td><td class="yes">✓ Básica</td><td class="yes">✓ Avanzada</td><td class="yes">✓ Self-service</td><td class="yes">✓ Gestionada</td><td class="yes">✓ Continua</td>
         </tr>
         <tr>
           <td class="pkg-col">CRM básico</td>
-          <td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
+          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
         </tr>
         <tr>
           <td class="pkg-col">Contenido mensual + publicación</td>
-          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Tú operas</td><td class="yes">✓ Velkin opera</td><td class="yes">✓ Velkin opera</td>
+          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Tú operas</td><td class="yes">✓ Velkin opera</td><td class="yes">✓ Velkin opera</td>
         </tr>
         <tr>
           <td class="pkg-col">Estadísticas de alcance y desempeño por publicación</td>
-          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
+          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td>
         </tr>
         <tr>
           <td class="pkg-col">Estrategia de contenido con IA</td>
-          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td>
+          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td>
         </tr>
         <tr>
           <td class="pkg-col">Reporte quincenal</td>
-          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td>
+          <td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td>
         </tr>
         <tr>
           <td class="pkg-col">Dominio + hosting 1 año</td>
-          <td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
+          <td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td>
         </tr>
         <tr style="border-top:2px solid var(--border)">
           <td class="pkg-col" style="font-size:15px">Precio</td>
           <td style="color:var(--amber);font-weight:700">MX$3,500</td>
+          <td style="color:#7A8AA0;font-weight:700">Desde MX$14,000</td>
           <td style="color:var(--green);font-weight:700">MX$28,000 <span style="font-size:11px;color:var(--text-3)">lanzamiento / $32k regular</span></td>
           <td style="color:var(--primary-lt);font-weight:700">Desde MX$65,000</td>
           <td style="color:var(--primary);font-weight:700">Desde MX$3,500/mes</td>
@@ -846,7 +912,7 @@ ul.styled li::before{content:'→';color:var(--primary-lt);flex-shrink:0;font-si
         </tr>
         <tr>
           <td class="pkg-col">Tiempo de entrega</td>
-          <td>5 días</td><td>10–15 días</td><td>20–30 días</td><td>3–5 días</td><td>3–5 días</td><td>Continuo</td>
+          <td>5 días</td><td>5–7 días</td><td>10–15 días</td><td>20–30 días</td><td>3–5 días</td><td>3–5 días</td><td>Continuo</td>
         </tr>
       </tbody>
     </table>
