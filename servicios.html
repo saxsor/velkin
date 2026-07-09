@@ -546,6 +546,13 @@ body::after {
   border: 1px solid var(--rule); border-radius: 14px; overflow: hidden;
 }
 .tree-split-3 { grid-template-columns: 1fr 1fr 1fr; }
+.tree-split-3 .panel-hdr {
+  flex-direction: column; align-items: flex-start; gap: 16px;
+}
+.tree-split-3 .panel-hdr-right {
+  flex-direction: row; align-items: center; justify-content: space-between;
+  width: 100%;
+}
 .tree-split .svc-panel {
   border-radius: 0; border: none;
   display: flex; flex-direction: column; height: 100%;
