@@ -88,7 +88,15 @@ src="https://www.facebook.com/tr?id=1535038168109647&ev=PageView&noscript=1"
       "name": "¿Puedo contratar Velkin Grow sin haber pasado por Start o Scale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, siempre y cuando ya tengas cuentas activas en Instagram y Facebook. Grow es un proyecto de configuración técnica — no depende de que hayas trabajado antes con Velkin. Si tu presencia en redes está desde cero, conviene arrancar con Start primero."
+        "text": "Sí, siempre y cuando ya tengas cuentas activas en Instagram y Facebook. Grow no depende de que hayas trabajado antes con Velkin. Si tu presencia en redes está desde cero, conviene arrancar con Start primero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre Velkin Pulse, Ops y Grow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los tres corren sobre el mismo motor, Velkin Content Hub. Pulse (desde MX$3,500/mes) es para negocios que quieren programar y aprobar su propio contenido, con métricas reales detrás. Ops (desde MX$5,500/mes) es lo mismo pero operado por Velkin — coordinamos calendario y calidad. Grow (desde MX$12,000/mes) incluye todo lo de Ops más campañas de Meta Ads y reportes mensuales de resultados."
       }
     },
     {
@@ -381,6 +389,7 @@ body::after {
 .panel-green::before  { background: var(--green); }
 .panel-violet::before { background: var(--pine-lt); }
 .panel-amber::before  { background: var(--amber); }
+.panel-pine::before   { background: var(--pine); }
 
 /* Panel header (always visible) */
 .panel-hdr {
@@ -401,6 +410,7 @@ body::after {
 .pb-green  { background:rgba(46,158,107,.10); color:var(--green); }
 .pb-violet { background:rgba(62,155,130,.12);  color:var(--pine-lt); }
 .pb-amber  { background:rgba(245,158,11,.10); color:var(--amber); }
+.pb-pine   { background:rgba(62,155,130,.10);  color:var(--pine); }
 
 .panel-hdr-title {
   font-family: var(--jk); font-size: clamp(16px,1.8vw,20px);
@@ -419,6 +429,7 @@ body::after {
 .price-green  { color: var(--green); }
 .price-violet { color: var(--pine-lt); }
 .price-amber  { color: var(--amber); }
+.price-pine   { color: var(--pine); }
 .panel-price-note { font-size: 11px; color: var(--mist); opacity: .6; font-family: var(--mo); }
 
 /* Toggle button (Start + Build only) */
@@ -492,6 +503,7 @@ body::after {
 .cta-green  { color: var(--green); }
 .cta-violet { color: var(--pine-lt); }
 .cta-amber  { color: var(--amber); }
+.cta-pine   { color: var(--pine); }
 
 /* Hidden body (collapsed) */
 .panel-collapsible .panel-body {
@@ -918,7 +930,113 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
 
       </div><!-- end tree-split -->
 
-      <!-- ── CONNECTOR 2: Start + Build → Grow ──────────── -->
+      <!-- ── CONNECTOR 2: Start + Scale → Pulse + Ops ─────── -->
+      <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
+        <path d="M262,0 L262,88"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
+              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <path d="M738,0 L738,88"
+              stroke="rgba(62,155,130,0.35)" stroke-width="1"
+              stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <circle cx="262" cy="4"  r="5" fill="rgba(46,158,107,0.6)"/>
+        <circle cx="738" cy="4"  r="5" fill="rgba(127,209,184,0.6)"/>
+        <circle cx="262" cy="84" r="5" fill="rgba(62,155,130,0.6)"/>
+        <circle cx="738" cy="84" r="5" fill="rgba(210,83,47,0.6)"/>
+      </svg>
+
+      <!-- ── PULSE + OPS (expandibles) ───────────────────── -->
+      <div class="tree-split">
+
+        <!-- Velkin Pulse -->
+        <div class="svc-panel panel-pine panel-collapsible panel-expanded" id="panel-pulse">
+          <div class="panel-hdr">
+            <div class="panel-hdr-left">
+              <span class="panel-badge pb-pine">Velkin Pulse</span>
+              <div>
+                <div class="panel-hdr-title">Content Hub, tú operas.</div>
+                <div class="panel-hdr-sub">Para negocios que quieren publicar ellos mismos, con datos reales detrás.</div>
+              </div>
+            </div>
+            <div class="panel-hdr-right">
+              <span class="panel-price price-pine">desde MX$3,500/mes</span>
+              <button class="panel-toggle" data-target="panel-pulse" aria-expanded="true">
+                <svg class="toggle-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg>
+                <span class="toggle-label">Ocultar</span>
+              </button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="body-col">
+              <span class="body-label">Para quién</span>
+              <p class="body-text">Negocios con criterio de marca propio que quieren aprobar y programar su contenido ellos mismos — pero con estrategia de IA y métricas reales detrás, no publicación a ciegas.</p>
+              <div style="margin-top:16px;">
+                <span class="body-label">No incluye</span>
+                <p class="body-text" style="margin-top:4px;font-size:13px;">Creación de contenido (fotos, videos, diseño, copy) · gestión de comentarios o comunidad · campañas de Meta Ads · reportes de resultados</p>
+              </div>
+            </div>
+            <div class="body-col">
+              <span class="body-label">Incluye</span>
+              <div class="inc-list">
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine)"></span>Acceso a Velkin Content Hub — tu panel de programación</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine)"></span>Publicación automática en Instagram, Facebook y TikTok</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine)"></span>Captions generados con IA, editables antes de publicar</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine)"></span>Métricas de alcance y desempeño por publicación</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--pine)"></span>Soporte técnico de la herramienta</div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <span></span>
+              <a href="contacto.html" class="panel-cta cta-pine">Activar Velkin Pulse →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Velkin Ops -->
+        <div class="svc-panel panel-cyan panel-collapsible panel-expanded" id="panel-ops">
+          <div class="panel-hdr">
+            <div class="panel-hdr-left">
+              <span class="panel-badge pb-cyan">Velkin Ops</span>
+              <div>
+                <div class="panel-hdr-title">Content Hub, lo operamos nosotros.</div>
+                <div class="panel-hdr-sub">Para negocios que quieren consistencia sin operar nada.</div>
+              </div>
+            </div>
+            <div class="panel-hdr-right">
+              <span class="panel-price price-cyan">desde MX$5,500/mes</span>
+              <button class="panel-toggle" data-target="panel-ops" aria-expanded="true">
+                <svg class="toggle-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v10M2 7h10" stroke-linecap="round"/></svg>
+                <span class="toggle-label">Ocultar</span>
+              </button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="body-col">
+              <span class="body-label">Para quién</span>
+              <p class="body-text">Negocios que no tienen tiempo de operar la herramienta ellos mismos. Velkin coordina qué se publica y cuándo, y da seguimiento activo cuando falta material.</p>
+              <div style="margin-top:16px;">
+                <span class="body-label">No incluye</span>
+                <p class="body-text" style="margin-top:4px;font-size:13px;">Creación de contenido (fotos, videos, diseño, copy) · campañas de Meta Ads · reportes de resultados</p>
+              </div>
+            </div>
+            <div class="body-col">
+              <span class="body-label">Incluye</span>
+              <div class="inc-list">
+                <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Todo lo de Velkin Pulse</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Velkin coordina calendario y programación de publicaciones</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Revisión de calidad antes de publicar</div>
+                <div class="inc-item"><span class="inc-dot" style="background:var(--rust)"></span>Seguimiento activo por material faltante</div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <span></span>
+              <a href="contacto.html" class="panel-cta cta-cyan">Activar Velkin Ops →</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end tree-split -->
+
+      <!-- ── CONNECTOR 3: Pulse + Ops → Grow ──────────────── -->
       <svg class="tree-connector" viewBox="0 0 1000 88" preserveAspectRatio="none" fill="none" aria-hidden="true">
         <path d="M262,0 L262,52 L500,88"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
@@ -926,8 +1044,8 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <path d="M738,0 L738,52 L500,88"
               stroke="rgba(62,155,130,0.35)" stroke-width="1"
               stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-        <circle cx="262" cy="4"  r="5" fill="rgba(46,158,107,0.6)"/>
-        <circle cx="738" cy="4"  r="5" fill="rgba(127,209,184,0.6)"/>
+        <circle cx="262" cy="4"  r="5" fill="rgba(62,155,130,0.6)"/>
+        <circle cx="738" cy="4"  r="5" fill="rgba(210,83,47,0.6)"/>
         <circle cx="500" cy="84" r="5" fill="rgba(245,158,11,0.6)"/>
       </svg>
 
@@ -937,46 +1055,43 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
           <div class="panel-hdr-left">
             <span class="panel-badge pb-amber">Velkin Grow</span>
             <div>
-              <div class="panel-hdr-title">Automatización de redes sociales con Velkin Content Hub.</div>
-              <div class="panel-hdr-sub">Para negocios que quieren publicar sin depender de tener tiempo.</div>
+              <div class="panel-hdr-title">Contenido, campañas Meta y reportes — completo.</div>
+              <div class="panel-hdr-sub">Para negocios que quieren su presencia digital funcionando sola, mes a mes.</div>
             </div>
           </div>
           <div class="panel-hdr-right">
-            <span class="panel-price price-amber">desde MX$12,000</span>
-            <span class="panel-price-note">proyecto único · add-on a Start o Scale</span>
+            <span class="panel-price price-amber">desde MX$12,000/mes</span>
+            <span class="panel-price-note">mensual · add-on a Start o Scale</span>
           </div>
         </div>
         <div class="panel-body panel-body-wide">
           <div class="body-col">
             <span class="body-label">Para quién</span>
-            <p class="body-text">Negocios que ya tienen marca y presencia digital pero no publican con consistencia — porque crear contenido toma tiempo y siempre queda para después. El sistema publica en automático: tú solo subes el material a una carpeta.</p>
+            <p class="body-text">Negocios que ya tienen marca y presencia digital y quieren la operación completa: contenido publicado con consistencia, campañas de Meta Ads corriendo, y reportes que dicen qué está funcionando.</p>
             <div style="margin-top:16px;">
               <span class="body-label">No incluye</span>
-              <p class="body-text" style="margin-top:4px;font-size:13px;">Creación de contenido (fotos, videos, diseño, copy) · gestión de comentarios o comunidad · LinkedIn u otras plataformas</p>
+              <p class="body-text" style="margin-top:4px;font-size:13px;">Creación de contenido (fotos, videos, diseño, copy) · gestión de comentarios o comunidad · costo de pauta de Meta Ads (se paga aparte a la plataforma) · LinkedIn u otras plataformas</p>
             </div>
           </div>
           <div class="body-col">
             <span class="body-label">Incluye</span>
             <div class="inc-list">
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Configuración completa en Velkin Content Hub</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Publicación automática en Instagram, Facebook y TikTok</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Captions generados con IA, editables antes de publicar</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Cloudinary como proxy de imágenes y video (compatible con Meta y TikTok)</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Carpeta de Drive configurada como bandeja de entrada</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Autenticación y conexión de las tres cuentas</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Guía de uso: formatos, nomenclatura, cómo programar posts</div>
-              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Pruebas en vivo con contenido real antes de entregar</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Todo lo de Velkin Ops — Content Hub gestionado por Velkin</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Estrategia y configuración de campañas Meta Ads</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Reporte mensual de resultados</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Optimizaciones de campaña basadas en desempeño real</div>
+              <div class="inc-item"><span class="inc-dot" style="background:var(--amber)"></span>Sesión mensual de revisión de resultados</div>
             </div>
           </div>
           <div class="body-col">
             <span class="body-label">Cómo funciona</span>
-            <p class="body-text">Subes la imagen o video y el caption a una carpeta de Google Drive. Velkin Content Hub lo detecta, genera el caption con IA si hace falta, pasa el archivo por Cloudinary para que Meta y TikTok lo acepten, y publica en las tres plataformas automáticamente. Tú nunca abres Instagram, Facebook ni TikTok.</p>
+            <p class="body-text">Configuramos Content Hub, campañas Meta Ads y el flujo de reportes en 5–7 días hábiles. Después, la operación corre mes a mes: tú subes el material, Velkin publica, corre las campañas y te entrega el reporte con lo que está funcionando.</p>
             <div class="panel-footer" style="border:none;padding-top:16px;">
               <div class="panel-timeline">
                 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2" stroke-linecap="round"/></svg>
-                2 semanas de soporte post-entrega
+                Configuración en 5–7 días hábiles
               </div>
-              <a href="contacto.html" class="panel-cta cta-amber">Activar automatización →</a>
+              <a href="contacto.html" class="panel-cta cta-amber">Activar Velkin Grow →</a>
             </div>
           </div>
         </div>
@@ -1097,7 +1212,14 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <summary class="faq-q">¿Puedo contratar Velkin Grow sin haber pasado por Start o Scale?
           <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
         </summary>
-        <p class="faq-a">Sí, siempre y cuando ya tengas cuentas activas en Instagram y Facebook. Grow es un proyecto de configuración técnica — no depende de que hayas trabajado antes con Velkin. Si tu presencia en redes está desde cero, conviene arrancar con Start primero.</p>
+        <p class="faq-a">Sí, siempre y cuando ya tengas cuentas activas en Instagram y Facebook. Grow no depende de que hayas trabajado antes con Velkin. Si tu presencia en redes está desde cero, conviene arrancar con Start primero.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q">¿Cuál es la diferencia entre Velkin Pulse, Ops y Grow?
+          <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
+        </summary>
+        <p class="faq-a">Los tres corren sobre el mismo motor, Velkin Content Hub. Pulse (desde MX$3,500/mes) es para negocios que quieren programar y aprobar su propio contenido, con métricas reales detrás. Ops (desde MX$5,500/mes) es lo mismo pero operado por Velkin — coordinamos calendario y calidad. Grow (desde MX$12,000/mes) incluye todo lo de Ops más campañas de Meta Ads y reportes mensuales de resultados.</p>
       </details>
 
       <details class="faq-item">
@@ -1118,7 +1240,7 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
         <summary class="faq-q">¿Cuánto tarda la configuración de Velkin Grow?
           <svg class="faq-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 4v12M4 10h12" stroke-linecap="round"/></svg>
         </summary>
-        <p class="faq-a">El flujo queda configurado y probado en 5–7 días hábiles. Antes de entregar hacemos pruebas en vivo con contenido real para confirmar que Instagram y Facebook lo reciben correctamente. Después tienes 2 semanas de soporte para ajustes.</p>
+        <p class="faq-a">El flujo se configura y prueba en 5–7 días hábiles: Content Hub, campañas Meta Ads y el flujo de reportes. Antes de entregar hacemos pruebas en vivo con contenido real. Después, la operación mensual arranca y se factura mes a mes.</p>
       </details>
 
     </div>
