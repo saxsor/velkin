@@ -952,6 +952,14 @@ footer {
 }
 .neural-sect .bound { position: relative; z-index: 1; }
 
+/* BL-60: dark background with brand-color gradients instead of animated dots */
+.glow-sect { position: relative; overflow: hidden; }
+.glow-sect .bound { position: relative; z-index: 1; }
+.glow-orb { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(90px); z-index: 0; }
+.glow-orb-1 { width: 48vw; height: 48vw; top: -15%; left: -12%; background: radial-gradient(circle, rgba(127,209,184,.22) 0%, transparent 65%); }
+.glow-orb-2 { width: 42vw; height: 42vw; bottom: -18%; right: -10%; background: radial-gradient(circle, rgba(210,83,47,.18) 0%, transparent 65%); }
+.glow-orb-3 { width: 30vw; height: 30vw; top: 30%; right: 15%; background: radial-gradient(circle, rgba(245,158,11,.12) 0%, transparent 60%); }
+
 
 .lang-switch {
   display: inline-flex; align-items: center; gap: 2px;
@@ -1074,8 +1082,9 @@ footer {
 </div>
 
 <!-- PROBLEM -->
-<section id="problema" class="sect sect-dark neural-sect" aria-labelledby="prob-title">
-  <canvas class="neural-canvas" id="nc-problema" aria-hidden="true"></canvas>
+<section id="problema" class="sect sect-dark glow-sect" aria-labelledby="prob-title">
+  <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
   <div class="bound">
     <div class="sect-hdr rv">
       <div>
@@ -1178,8 +1187,9 @@ footer {
 </section>
 
 <!-- DIFFERENTIATORS -->
-<section class="sect sect-dark neural-sect" aria-labelledby="diff-title">
-  <canvas class="neural-canvas" id="nc-diff" aria-hidden="true"></canvas>
+<section class="sect sect-dark glow-sect" aria-labelledby="diff-title">
+  <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-3" aria-hidden="true"></div>
   <div class="bound">
     <div class="sect-hdr rv">
       <h2 class="sect-title" id="diff-title">Built different.</h2>
@@ -1255,8 +1265,9 @@ footer {
 </section>
 
 <!-- SISTEMAS PROPIOS -->
-<section id="sistemas" class="sect sect-dark neural-sect" aria-labelledby="sys-title">
-  <canvas class="neural-canvas" id="nc-sistemas" aria-hidden="true"></canvas>
+<section id="sistemas" class="sect sect-dark glow-sect" aria-labelledby="sys-title">
+  <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb-3" aria-hidden="true"></div>
   <div class="bound">
     <div class="sect-hdr rv">
       <h2 class="sect-title" id="sys-title">Our own systems.</h2>
@@ -1664,7 +1675,7 @@ function makeNeural(id, opts) {
 
 /* Fondo de "Construido diferente" aplicado a toda la landing (BL-38 follow-up) */
 const NEURAL_BG = { nc:'rgba(127,209,184,', lc:'rgba(127,209,184,', md:190, n:50, sp:0.16, r:2.2, no:0.55, lo:0.28 };
-['nc-problema', 'nc-metodo', 'nc-diff', 'nc-rutas', 'nc-sistemas', 'nc-portafolio'].forEach(id => makeNeural(id, NEURAL_BG));
+['nc-metodo', 'nc-rutas', 'nc-portafolio'].forEach(id => makeNeural(id, NEURAL_BG));
 
 </script>
 <script src="/whatsapp-widget.js" defer></script>
