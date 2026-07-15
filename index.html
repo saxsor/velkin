@@ -578,57 +578,77 @@ h1.hero-h1 {
 }
 
 /* ═══════════════════════════════════════════════════════
-   METHOD — EDITORIAL NUMBERED LIST
+   METHOD — SIGNAL PATH (BL-38)
 ═══════════════════════════════════════════════════════ */
-.method-item {
-  display: grid; grid-template-columns: clamp(80px,14vw,200px) 1fr;
-  gap: 24px 48px;
-  padding: clamp(28px,3.5vw,48px) 0;
-  border-top: 1px solid var(--rule);
-  position: relative; overflow: hidden;
-  transition: background .18s;
-  cursor: default;
+.sigpath { position: relative; }
+.sigpath-track {
+  position: relative;
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  column-gap: clamp(4px, 1.4vw, 20px);
+  padding-top: 6px;
 }
-.method-item:hover { background: rgba(255,255,255,.013); }
-.method-item:last-child { border-bottom: 1px solid var(--rule); }
+.sigpath-line {
+  position: absolute; left: 0; right: 0; top: 66px; height: 64px;
+  overflow: visible; z-index: 0;
+}
+.sigpath-line path { fill: none; stroke: var(--rule-2); stroke-width: 1.5; }
+.sigpath-line .live {
+  stroke: var(--pine); stroke-width: 1.5;
+  stroke-dasharray: 7 7;
+  animation: sigdash 5.5s linear infinite;
+  filter: drop-shadow(0 0 5px rgba(126,209,184,.55));
+}
+@keyframes sigdash { to { stroke-dashoffset: -280; } }
+@media (prefers-reduced-motion: reduce) {
+  .sigpath-line .live { animation: none; }
+}
 
-/* Ghost step number */
-.method-ghost {
-  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-  font-family: var(--jk);
-  font-size: clamp(90px, 18vw, 240px);
-  font-weight: 800; line-height: 1; letter-spacing: -.06em;
-  color: var(--snow); opacity: .032;
-  pointer-events: none; user-select: none;
-  transition: opacity .3s;
+.sigpath-stop {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; padding: 0 clamp(4px, .8vw, 10px);
 }
-.method-item:hover .method-ghost { opacity: .06; }
+.sigpath-stop:nth-child(odd)  { padding-top: 0; }
+.sigpath-stop:nth-child(even) { padding-top: 132px; }
 
-.method-lft { z-index: 1; }
-.method-step-num {
-  font-family: var(--mo); font-size: 12px; color: var(--mist);
-  letter-spacing: 1px; display: block; transition: color .2s;
+.sigpath-node {
+  width: 13px; height: 13px; border-radius: 50%;
+  background: var(--ink); border: 2px solid var(--pine-lt);
+  box-shadow: 0 0 0 5px var(--ink), 0 0 14px rgba(126,209,184,.5);
+  margin-bottom: 18px;
 }
-.method-item:hover .method-step-num { color: var(--pine-lt); }
-.method-step-sub {
-  display: block; margin-top: 6px;
-  font-family: var(--mo); font-size: 10px;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--mist); opacity: .7;
+.sigpath-stop:nth-child(even) .sigpath-node { margin-top: 18px; margin-bottom: 0; order: 3; }
+.sigpath-stop:nth-child(even) .sigpath-card { order: 1; margin-bottom: 18px; }
+
+.sigpath-card {
+  background: var(--ink-3); border: 1px solid var(--rule);
+  border-radius: 10px; padding: clamp(14px,1.6vw,20px) clamp(12px,1.3vw,16px);
+  width: 100%; max-width: 216px;
+  transition: border-color .3s, transform .3s;
 }
-.method-rgt { z-index: 1; display: flex; flex-direction: column; gap: 8px; }
-.method-name {
-  font-family: var(--jk); font-size: clamp(17px,2vw,22px);
-  font-weight: 700; letter-spacing: -.02em; color: var(--snow);
-  transition: color .2s;
+.sigpath-stop:hover .sigpath-card { border-color: var(--rule-2); transform: translateY(-2px); }
+
+.sigpath-num { display: flex; align-items: baseline; justify-content: center; gap: 7px; margin-bottom: 9px; }
+.sigpath-num .n { font-family: var(--mo); font-size: 13px; color: var(--pine-lt); letter-spacing: .5px; }
+.sigpath-num .sub { font-family: var(--mo); font-size: 9.5px; color: var(--dim); letter-spacing: 1.5px; text-transform: uppercase; }
+.sigpath-name {
+  font-family: var(--jk); font-size: 16px;
+  font-weight: 700; letter-spacing: -.005em; color: var(--snow);
+  margin-bottom: 7px; transition: color .2s;
 }
-.method-item:hover .method-name { color: var(--pine-lt); }
-.method-desc {
-  font-size: 13.5px; font-weight: 300; color: var(--mist);
-  line-height: 1.75; max-width: 520px;
+.sigpath-stop:hover .sigpath-name { color: var(--pine-lt); }
+.sigpath-desc {
+  font-size: 12.5px; font-weight: 300; color: var(--mist);
+  line-height: 1.5;
 }
-@media (max-width: 640px) {
-  .method-item { grid-template-columns: 60px 1fr; gap: 16px 20px; }
+
+@media (max-width: 860px) {
+  .sigpath-track { grid-template-columns: 1fr; row-gap: 40px; }
+  .sigpath-line { display: none; }
+  .sigpath-stop { padding-top: 0 !important; }
+  .sigpath-stop:nth-child(even) .sigpath-node { order: 0; margin-top: 0; margin-bottom: 18px; }
+  .sigpath-stop:nth-child(even) .sigpath-card { order: 0; margin-bottom: 0; }
+  .sigpath-card { max-width: 340px; }
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -1157,60 +1177,56 @@ footer {
       <h2 class="sect-title" id="meth-title">Cómo construimos.</h2>
     </div>
 
-    <div role="list">
-      <div class="method-item rv" role="listitem">
-        <span class="method-ghost" aria-hidden="true">01</span>
-        <div class="method-lft">
-          <span class="method-step-num">01</span>
-          <span class="method-step-sub">Signal Audit</span>
+    <div class="sigpath">
+      <div class="sigpath-track" role="list">
+        <svg class="sigpath-line" viewBox="0 0 1200 64" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,32 L1200,32" />
+          <path class="live" d="M0,32 L1200,32" />
+        </svg>
+
+        <div class="sigpath-stop rv" role="listitem">
+          <div class="sigpath-node"></div>
+          <div class="sigpath-card">
+            <div class="sigpath-num"><span class="n">01</span><span class="sub">Signal Audit</span></div>
+            <h3 class="sigpath-name">Diagnóstico</h3>
+            <p class="sigpath-desc">Radiografía de tu marca, presencia digital, canales, datos y gaps de automatización. Sin diagnóstico claro, no hay estrategia real.</p>
+          </div>
         </div>
-        <div class="method-rgt">
-          <h3 class="method-name">Diagnóstico</h3>
-          <p class="method-desc">Radiografía de tu marca, presencia digital, canales, datos y gaps de automatización. Sin diagnóstico claro, no hay estrategia real.</p>
+
+        <div class="sigpath-stop rv rv1" role="listitem">
+          <div class="sigpath-card">
+            <div class="sigpath-num"><span class="n">02</span><span class="sub">Architecture Map</span></div>
+            <h3 class="sigpath-name">Mapa del sistema</h3>
+            <p class="sigpath-desc">Diseño del sistema completo antes de construir nada: oferta, contenido, captación, CRM y reporting, todos conectados.</p>
+          </div>
+          <div class="sigpath-node"></div>
         </div>
-      </div>
-      <div class="method-item rv rv1" role="listitem">
-        <span class="method-ghost" aria-hidden="true">02</span>
-        <div class="method-lft">
-          <span class="method-step-num">02</span>
-          <span class="method-step-sub">Architecture Map</span>
+
+        <div class="sigpath-stop rv rv2" role="listitem">
+          <div class="sigpath-node"></div>
+          <div class="sigpath-card">
+            <div class="sigpath-num"><span class="n">03</span><span class="sub">Build Sprint</span></div>
+            <h3 class="sigpath-name">Construcción</h3>
+            <p class="sigpath-desc">Implementación de assets, automatizaciones y dashboards. Ejecución con precisión de ingeniería.</p>
+          </div>
         </div>
-        <div class="method-rgt">
-          <h3 class="method-name">Mapa del sistema</h3>
-          <p class="method-desc">Diseño del sistema completo antes de construir nada: oferta, contenido, captación, CRM y reporting, todos conectados.</p>
+
+        <div class="sigpath-stop rv rv3" role="listitem">
+          <div class="sigpath-card">
+            <div class="sigpath-num"><span class="n">04</span><span class="sub">Distribution Engine</span></div>
+            <h3 class="sigpath-name">Motor de distribución</h3>
+            <p class="sigpath-desc">Contenido, campañas y workflows activos. El sistema empieza a generar tracción mientras el negocio sigue operando.</p>
+          </div>
+          <div class="sigpath-node"></div>
         </div>
-      </div>
-      <div class="method-item rv rv2" role="listitem">
-        <span class="method-ghost" aria-hidden="true">03</span>
-        <div class="method-lft">
-          <span class="method-step-num">03</span>
-          <span class="method-step-sub">Build Sprint</span>
-        </div>
-        <div class="method-rgt">
-          <h3 class="method-name">Construcción</h3>
-          <p class="method-desc">Implementación de assets, automatizaciones y dashboards. Ejecución con precisión de ingeniería.</p>
-        </div>
-      </div>
-      <div class="method-item rv rv3" role="listitem">
-        <span class="method-ghost" aria-hidden="true">04</span>
-        <div class="method-lft">
-          <span class="method-step-num">04</span>
-          <span class="method-step-sub">Distribution Engine</span>
-        </div>
-        <div class="method-rgt">
-          <h3 class="method-name">Motor de distribución</h3>
-          <p class="method-desc">Contenido, campañas y workflows activos. El sistema empieza a generar tracción mientras el negocio sigue operando.</p>
-        </div>
-      </div>
-      <div class="method-item rv rv4" role="listitem">
-        <span class="method-ghost" aria-hidden="true">05</span>
-        <div class="method-lft">
-          <span class="method-step-num">05</span>
-          <span class="method-step-sub">Optimization Loop</span>
-        </div>
-        <div class="method-rgt">
-          <h3 class="method-name">Ciclo de optimización</h3>
-          <p class="method-desc">Medición, mejora continua y backlog de crecimiento. El sistema se compone con el tiempo.</p>
+
+        <div class="sigpath-stop rv rv4" role="listitem">
+          <div class="sigpath-node"></div>
+          <div class="sigpath-card">
+            <div class="sigpath-num"><span class="n">05</span><span class="sub">Optimization Loop</span></div>
+            <h3 class="sigpath-name">Ciclo de optimización</h3>
+            <p class="sigpath-desc">Medición, mejora continua y backlog de crecimiento. El sistema se compone con el tiempo.</p>
+          </div>
         </div>
       </div>
     </div>
