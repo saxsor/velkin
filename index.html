@@ -938,7 +938,7 @@ footer {
 
 
 /* ─── NEURAL / AMBIENT SECTIONS ──────────────────────── */
-.neural-sect, .glow-sect {
+.neural-sect {
   position: relative; overflow: hidden;
 }
 .neural-canvas {
@@ -946,24 +946,7 @@ footer {
   width: 100%; height: 100%;
   pointer-events: none; z-index: 0;
 }
-.neural-sect .bound,
-.glow-sect .bound { position: relative; z-index: 1; }
-
-/* Glow for method section */
-.glow-sect::before {
-  content: '';
-  position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(62,155,130,.07) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 60% at 10% 70%, rgba(210,83,47,.04) 0%, transparent 60%);
-}
-
-/* Glow for portfolio section */
-.portfolio-glow::before {
-  content: '';
-  position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(62,155,130,.06) 0%, transparent 65%);
-}
+.neural-sect .bound { position: relative; z-index: 1; }
 
 
 .lang-switch {
@@ -1087,7 +1070,8 @@ footer {
 </div>
 
 <!-- PROBLEM -->
-<section id="problema" class="sect" aria-labelledby="prob-title">
+<section id="problema" class="sect sect-dark neural-sect" aria-labelledby="prob-title">
+  <canvas class="neural-canvas" id="nc-problema" aria-hidden="true"></canvas>
   <div class="bound">
     <div class="sect-hdr rv">
       <div>
@@ -1125,53 +1109,9 @@ footer {
   </div>
 </section>
 
-<!-- DIFFERENTIATORS -->
-<section class="sect sect-dark neural-sect" aria-labelledby="diff-title">
-  <canvas class="neural-canvas" id="nc-diff" aria-hidden="true"></canvas>
-  <div class="bound">
-    <div class="sect-hdr rv">
-      <h2 class="sect-title" id="diff-title">Construido diferente.</h2>
-    </div>
-
-    <!-- 5 claims -->
-    <div class="claims-grid rv">
-      <div class="claim-cell cs-v">
-        <span class="cc-num">01</span>
-        <h3 class="cc-title">Sistemas, no campañas</h3>
-        <p class="cc-desc">Construimos lo que sigue funcionando cuando no estás mirando.</p>
-        <p class="cc-proof">Sube la foto a Drive y Velkin Content Hub arma el calendario, escribe el caption y publica solo.</p>
-      </div>
-      <div class="claim-cell cs-m">
-        <span class="cc-num">02</span>
-        <h3 class="cc-title">Cross-border por diseño</h3>
-        <div class="cc-rule" aria-hidden="true"></div>
-        <p class="cc-desc">Equipo operando desde México, con presencia en Alemania — servimos LATAM y Europa desde un mismo equipo.</p>
-      </div>
-      <div class="claim-cell cs-c">
-        <span class="cc-num">03</span>
-        <h3 class="cc-title">Accesible por diseño</h3>
-        <p class="cc-desc">Automatización que hace posible la calidad premium para negocios de cualquier tamaño.</p>
-        <p class="cc-proof">Serverless, storage compartido, VPS propio — cada capa elegida para bajar costo sin bajar calidad.</p>
-      </div>
-      <div class="claim-cell cs-g">
-        <span class="cc-num">04</span>
-        <h3 class="cc-title">Disciplina de ingeniería</h3>
-        <p class="cc-desc">Rigurosos en sistemas. Intencionales en craft. Sin ejecución, la estrategia no vale nada.</p>
-        <p class="cc-proof">Un mismo sistema, cinco roles, cero visibilidad cruzada entre clientes — no un fork por cliente.</p>
-      </div>
-      <div class="claim-cell cs-a cc-wide" style="grid-column: 1 / -1;">
-        <div class="cc-wide-lft">
-          <span class="cc-num">05</span>
-          <h3 class="cc-title">Shipped beats perfect</h3>
-        </div>
-        <p class="cc-desc cc-wide-desc">Dos entradas claras. Velkin Start para comenzar. Velkin Build para escalar. Sin rodeos.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- METHOD -->
-<section id="metodo" class="sect glow-sect" aria-labelledby="meth-title">
+<section id="metodo" class="sect sect-dark neural-sect" aria-labelledby="meth-title">
+  <canvas class="neural-canvas" id="nc-metodo" aria-hidden="true"></canvas>
   <div class="bound">
     <div class="sect-hdr rv">
       <h2 class="sect-title" id="meth-title">Cómo construimos.</h2>
@@ -1233,8 +1173,54 @@ footer {
   </div>
 </section>
 
+<!-- DIFFERENTIATORS -->
+<section class="sect sect-dark neural-sect" aria-labelledby="diff-title">
+  <canvas class="neural-canvas" id="nc-diff" aria-hidden="true"></canvas>
+  <div class="bound">
+    <div class="sect-hdr rv">
+      <h2 class="sect-title" id="diff-title">Construido diferente.</h2>
+    </div>
+
+    <!-- 5 claims -->
+    <div class="claims-grid rv">
+      <div class="claim-cell cs-v">
+        <span class="cc-num">01</span>
+        <h3 class="cc-title">Sistemas, no campañas</h3>
+        <p class="cc-desc">Construimos lo que sigue funcionando cuando no estás mirando.</p>
+        <p class="cc-proof">Sube la foto a Drive y Velkin Content Hub arma el calendario, escribe el caption y publica solo.</p>
+      </div>
+      <div class="claim-cell cs-m">
+        <span class="cc-num">02</span>
+        <h3 class="cc-title">Cross-border por diseño</h3>
+        <div class="cc-rule" aria-hidden="true"></div>
+        <p class="cc-desc">Equipo operando desde México, con presencia en Alemania — servimos LATAM y Europa desde un mismo equipo.</p>
+      </div>
+      <div class="claim-cell cs-c">
+        <span class="cc-num">03</span>
+        <h3 class="cc-title">Accesible por diseño</h3>
+        <p class="cc-desc">Automatización que hace posible la calidad premium para negocios de cualquier tamaño.</p>
+        <p class="cc-proof">Serverless, storage compartido, VPS propio — cada capa elegida para bajar costo sin bajar calidad.</p>
+      </div>
+      <div class="claim-cell cs-g">
+        <span class="cc-num">04</span>
+        <h3 class="cc-title">Disciplina de ingeniería</h3>
+        <p class="cc-desc">Rigurosos en sistemas. Intencionales en craft. Sin ejecución, la estrategia no vale nada.</p>
+        <p class="cc-proof">Un mismo sistema, cinco roles, cero visibilidad cruzada entre clientes — no un fork por cliente.</p>
+      </div>
+      <div class="claim-cell cs-a cc-wide" style="grid-column: 1 / -1;">
+        <div class="cc-wide-lft">
+          <span class="cc-num">05</span>
+          <h3 class="cc-title">Shipped beats perfect</h3>
+        </div>
+        <p class="cc-desc cc-wide-desc">Dos entradas claras. Velkin Start para comenzar. Velkin Build para escalar. Sin rodeos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ROUTES -->
-<section id="rutas" class="sect sect-dark" aria-labelledby="routes-title">
+<section id="rutas" class="sect sect-dark neural-sect" aria-labelledby="routes-title">
+  <canvas class="neural-canvas" id="nc-rutas" aria-hidden="true"></canvas>
   <div class="bound">
     <div class="sect-hdr rv">
       <h2 class="sect-title" id="routes-title">Desde donde empiezas.</h2>
@@ -1265,7 +1251,8 @@ footer {
 </section>
 
 <!-- SISTEMAS PROPIOS -->
-<section id="sistemas" class="sect" aria-labelledby="sys-title">
+<section id="sistemas" class="sect sect-dark neural-sect" aria-labelledby="sys-title">
+  <canvas class="neural-canvas" id="nc-sistemas" aria-hidden="true"></canvas>
   <div class="bound">
     <div class="sect-hdr rv">
       <h2 class="sect-title" id="sys-title">Sistemas propios.</h2>
@@ -1304,7 +1291,8 @@ footer {
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portafolio" class="sect sect-dark portfolio-glow" aria-labelledby="pf-title">
+<section id="portafolio" class="sect sect-dark neural-sect" aria-labelledby="pf-title">
+  <canvas class="neural-canvas" id="nc-portafolio" aria-hidden="true"></canvas>
   <div class="bound">
     <div class="pf-header rv">
       <h2 class="sect-title" id="pf-title">Portafolio.</h2>
@@ -1670,8 +1658,9 @@ function makeNeural(id, opts) {
   if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) tick();
 }
 
-/* Diferenciadores — más fuerte, sección de "built different" */
-makeNeural('nc-diff', { nc:'rgba(127,209,184,', lc:'rgba(127,209,184,', md:190, n:50, sp:0.16, r:2.2, no:0.55, lo:0.28 });
+/* Fondo de "Construido diferente" aplicado a toda la landing (BL-38 follow-up) */
+const NEURAL_BG = { nc:'rgba(127,209,184,', lc:'rgba(127,209,184,', md:190, n:50, sp:0.16, r:2.2, no:0.55, lo:0.28 };
+['nc-problema', 'nc-metodo', 'nc-diff', 'nc-rutas', 'nc-sistemas', 'nc-portafolio'].forEach(id => makeNeural(id, NEURAL_BG));
 
 </script>
 <script src="whatsapp-widget.js" defer></script>
