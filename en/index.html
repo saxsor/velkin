@@ -714,6 +714,25 @@ h1.hero-h1 {
   .route:first-child { border-right: none; border-bottom: 1px solid var(--rule); }
 }
 
+/* Audit entry CTA — sits above the two family routes */
+.route-entry {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap;
+  padding: clamp(24px,3.5vw,34px) clamp(28px,4vw,44px);
+  border: 1px solid var(--rule); border-radius: 14px;
+  background: rgba(210,83,47,.05); margin-bottom: 16px;
+}
+.route-entry-main { display: flex; flex-direction: column; gap: 10px; max-width: 640px; }
+.route-entry-text { font-size: 14px; line-height: 1.6; color: var(--mist); }
+.route-entry-cta {
+  display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+  font-family: var(--mo); font-size: 12px; letter-spacing: 1.5px;
+  text-transform: uppercase; font-weight: 600; color: var(--rust);
+  transition: gap .18s var(--expo);
+}
+.route-entry-cta:hover { gap: 14px; }
+.rb-audit { color: var(--rust); }
+
 /* ═══════════════════════════════════════════════════════
    PORTFOLIO CAROUSEL
 ═══════════════════════════════════════════════════════ */
@@ -1226,7 +1245,7 @@ footer {
           <span class="cc-num">05</span>
           <h3 class="cc-title">Shipped beats perfect</h3>
         </div>
-        <p class="cc-desc cc-wide-desc">Two clear entry points. Velkin Start to begin. Velkin Build to scale. No detours.</p>
+        <p class="cc-desc cc-wide-desc">One diagnostic to start, two families of work. Velkin Web for your system. Velkin Content Hub for your content.</p>
       </div>
     </div>
   </div>
@@ -1238,27 +1257,35 @@ footer {
   <div class="bound">
     <div class="sect-hdr rv">
       <h2 class="sect-title" id="routes-title">Where you start.</h2>
+      <p class="sect-sub">It all starts with a diagnostic. Then two families, depending on what your business needs to move.</p>
+    </div>
+    <div class="route-entry rv">
+      <div class="route-entry-main">
+        <span class="route-badge rb-audit">Velkin Audit</span>
+        <p class="route-entry-text">Everything starts with a diagnostic. In 5 to 7 days you know exactly what to move first. MX$3,500, credited toward any package you hire afterward.</p>
+      </div>
+      <a href="contacto.html" class="route-entry-cta">Start diagnostic →</a>
     </div>
     <div class="routes-wrap rv">
       <div class="route">
         <div class="route-shimmer rs-green" aria-hidden="true"></div>
         <div class="route-meta">
-          <span class="route-badge rb-g">Velkin Start</span>
+          <span class="route-badge rb-g">Velkin Web</span>
           <span class="route-idx">01</span>
         </div>
-        <h3 class="route-title">For businesses with untapped potential.</h3>
-        <p class="route-desc">Your business already has value. We give it presence, structure, and basic automation so more people find it — and you stop losing customers to poor follow-up.</p>
-        <a href="contacto.html" class="route-link rl-g">Start diagnostic →</a>
+        <h3 class="route-title">Brand, site, and systems, ready to run.</h3>
+        <p class="route-desc">From a direct landing page to a complete system with CRM and connected automation. Lite, Start, and Scale: one project, delivered and running.</p>
+        <a href="servicios.html" class="route-link rl-g">See Velkin Web →</a>
       </div>
       <div class="route">
         <div class="route-shimmer rs-violet" aria-hidden="true"></div>
         <div class="route-meta">
-          <span class="route-badge rb-v">Velkin Build</span>
+          <span class="route-badge rb-v">Velkin Content Hub</span>
           <span class="route-idx">02</span>
         </div>
-        <h3 class="route-title">For businesses ready to systematize.</h3>
-        <p class="route-desc">Brand, lead capture, and automation connected as one system that keeps running while you focus on the business. Custom scope, measurable results.</p>
-        <a href="contacto.html" class="route-link rl-v">Request a strategy session →</a>
+        <h3 class="route-title">Content that runs itself, every month.</h3>
+        <p class="route-desc">Schedule and approve your own content, add AI strategy and images, or let Velkin run everything end to end. Pulse, Spark, and Grow, on our own engine.</p>
+        <a href="servicios.html" class="route-link rl-v">See Velkin Content Hub →</a>
       </div>
     </div>
   </div>

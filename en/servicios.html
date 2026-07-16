@@ -373,6 +373,22 @@ body::after {
   position: relative; z-index: 1;
 }
 
+/* Family label over each product group (does not alter the tree flow) */
+.tree-family {
+  text-align: center;
+  margin: clamp(8px,1.5vw,16px) auto clamp(20px,2.5vw,28px);
+  display: flex; flex-direction: column; gap: 6px; align-items: center;
+}
+.tree-family-name {
+  font-family: var(--jk); font-weight: 700;
+  font-size: clamp(20px,2.4vw,26px); color: var(--snow);
+  letter-spacing: -0.01em;
+}
+.tree-family-desc {
+  font-family: var(--mo); font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--mist); opacity: .8;
+}
+
 /* SVG connectors */
 .tree-connector {
   display: block;
@@ -455,7 +471,7 @@ body::after {
 .price-slate  { color: var(--slate); }
 .panel-price-note { font-size: 11px; color: var(--mist); opacity: .6; font-family: var(--mo); }
 
-/* Toggle button (Start + Build only) */
+/* Toggle button (Start + Scale only) */
 .panel-toggle {
   display: flex; align-items: center; gap: 6px;
   font-size: 12px; font-weight: 500; color: var(--mist);
@@ -622,7 +638,7 @@ body::after {
 .cmp-sect {
   position: relative; overflow: hidden;
 }
-/* Radial glow behind Build column */
+/* Radial glow behind Scale column */
 .cmp-sect::before {
   content: '';
   position: absolute;
@@ -902,6 +918,10 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       </div>
 
       <!-- ── LITE + START + SCALE (expandibles, 3 columns) ── -->
+      <div class="tree-family rv">
+        <span class="tree-family-name">Velkin Web</span>
+        <span class="tree-family-desc">Brand, site and systems · one-time project</span>
+      </div>
       <div class="tree-split tree-split-3">
 
         <!-- Velkin Lite -->
@@ -1096,6 +1116,10 @@ footer { border-top: 1px solid var(--rule); padding: 44px 0; }
       </div>
 
       <!-- ── PULSE + SPARK (expandibles) ───────────────────── -->
+      <div class="tree-family rv">
+        <span class="tree-family-name">Velkin Content Hub</span>
+        <span class="tree-family-desc">Content in operation · monthly</span>
+      </div>
       <div class="tree-split">
 
         <!-- Velkin Pulse -->
@@ -1550,7 +1574,7 @@ function equalizeHeaders() {
 equalizeHeaders();
 window.addEventListener('resize', equalizeHeaders, { passive: true });
 
-/* Panel accordion (Start + Build) */
+/* Panel accordion (Start + Scale) */
 document.querySelectorAll('.panel-toggle').forEach(btn => {
   btn.addEventListener('click', () => {
     const panel = document.getElementById(btn.dataset.target);
