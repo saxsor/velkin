@@ -11,3 +11,21 @@ RedirectMatch 404 /\.git
     Deny from all
   </IfModule>
 </FilesMatch>
+
+# BL-166: el sitio no devolvía headers de seguridad propios; lo único que
+# llegaba era el upgrade-insecure-requests que inyecta el hosting. LiteSpeed
+# (Hostinger) lee estas directivas igual que Apache.
+#
+# Los dominios de la CSP salen de lo que cargan las páginas: fuentes de Google,
+# el pixel de Meta y gtag. Va en Report-Only porque hay scripts inline sin
+# nonce; para pasarla a enforce hay que darles hash o sacarlos a un .js.
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "DENY"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  # Sin `preload`: eso se envía al registro de Chrome y no se revierte a voluntad.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Content-Security-Policy "frame-ancestors 'none'"
+  Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://connect.facebook.net https://www.facebook.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+</IfModule>
