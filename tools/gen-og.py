@@ -196,6 +196,58 @@ def racing_hub(demo=False):
     return img
 
 
+# ───────────────────────── CONTENT HUB ─────────────────────────
+def content_hub():
+    """Acento gold + nodos pine, la paleta con la que la landing (BL-9) se
+    distingue de Sector (pine) y Racing Hub (rust)."""
+    INK, SNOW, GOLD, NODE, MIST, DIM = "#0A0E13", "#E7E6DD", "#F5B342", "#45B08F", "#9A9A8E", "#5C5B50"
+    img = base(INK, [((1000 * S, 180 * S), 620 * S, "#4A3410", 0.46),
+                     ((280 * S, 640 * S), 540 * S, "#15211E", 0.42)])
+    d = ImageDraw.Draw(img, "RGBA")
+
+    # ── marca: hub central que reparte a tres canales (content-hub-icon.svg)
+    MK, MX, MY = 60 * S, 80 * S, 54 * S
+    k = MK / 100
+    mark = Image.new("RGBA", (MK, MK), (0, 0, 0, 0))
+    md = ImageDraw.Draw(mark)
+    lw = max(2, int(5.5 * k))
+    for x2, y2 in [(50, 19), (77, 67), (23, 67)]:
+        md.line([(50 * k, 50 * k), (x2 * k, y2 * k)], fill=NODE, width=lw)
+    for cx, cy in [(50, 18), (78, 67), (22, 67)]:
+        r = 8.5 * k
+        md.ellipse([cx * k - r, cy * k - r, cx * k + r, cy * k + r], fill=NODE)
+    md.rounded_rectangle([37.5 * k, 37.5 * k, 62.5 * k, 62.5 * k],
+                         radius=int(7.5 * k), fill=GOLD)
+    img.paste(mark, (MX, MY), mark)
+
+    tx = MX + MK + 18 * S
+    d.text((tx, MY + 2 * S), "Content Hub", font=archivo(30 * S, 700), fill=SNOW)
+    tracked(d, (tx + 2 * S, MY + 44 * S), "POWERED BY VELKIN DATA STUDIOS",
+            jbmono(10 * S, 600), DIM, track=1.9 * S)
+
+    # ── cola de contenido: tres barras, el motivo del hero de la landing
+    qy = 170 * S
+    for i, (wq, col) in enumerate([(150, GOLD), (110, NODE), (70, DIM)]):
+        bx = 80 * S + i * 168 * S
+        d.rounded_rectangle([bx, qy - 7 * S, bx + wq * S, qy + 7 * S],
+                            radius=7 * S, fill=col if i == 0 else None,
+                            outline=col, width=max(1, int(1.6 * S)))
+
+    # ── titular
+    # Dos líneas cortas y parejas: con una primera línea larga el fit encogía el
+    # tipo y dejaba un hueco muerto sobre el footer.
+    lines = ["Todos tus clientes.", "En piloto automático."]
+    f, size = fit(lines, 1010 * S, 86 * S, archivo)
+    y = 232 * S
+    for i, l in enumerate(lines):
+        d.text((80 * S, y), l, font=f, fill=SNOW if i == 0 else GOLD)
+        y += int(size * 1.10)
+
+    footer(d, "contenthub.velkindatastudios.com",
+           "INSTAGRAM · FACEBOOK · TIKTOK", MIST, DIM)
+    return img
+
+
 # ─────────── KARTING CLUB MÉXICO (instancia de producción) ───────────
 def kcm():
     """Marca del cliente: el logo maestro se pega tal cual (raster cromado),
@@ -230,7 +282,8 @@ for name, fn, out in [("kcm", kcm, "/home/jal/racing-hub/frontend/public/og.png"
                       ("racing-hub-demo", lambda: racing_hub(demo=True),
                        "/home/jal/racing-hub/frontend/public/og-racinghub.png"),
                       ("sector", sector, "/home/jal/sector/public/og.png"),
-                      ("racing-hub", racing_hub, "/home/jal/racing-hub/landing/og.png")]:
+                      ("racing-hub", racing_hub, "/home/jal/racing-hub/landing/og.png"),
+                      ("content-hub", content_hub, "/home/jal/content-hub/public/og.png")]:
     im = fn().resize((1200, 630), Image.LANCZOS)
     im.save(out, "PNG", optimize=True)
     print(name, "→", out)
