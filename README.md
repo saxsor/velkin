@@ -66,6 +66,12 @@ La etiqueta `og:image` **debe apuntar a una URL absoluta** o WhatsApp no muestra
 
 ## Despliegue
 
-Hosting compartido con LiteSpeed. Se suben los archivos tal cual, incluido el `.htaccess`, que es el que aplica los headers de seguridad y la CSP.
+Hosting compartido con LiteSpeed, conectado a este repo: **con hacer `git push` a `main` el sitio
+se autopublica**. No hay que subir archivos a mano ni correr ningún build — el sitio es HTML
+estático y se sirve tal cual, incluido el `.htaccess`, que es el que aplica los headers de
+seguridad y la CSP.
+
+Por eso mismo, un push con un `<script>` inline editado y sin regenerar la CSP sale a producción
+igual de rápido: correr `python3 tools/gen-csp.py` **antes** del push (ver la sección de CSP).
 
 > El repo `velora-site` es la versión anterior de este sitio, de cuando la agencia se llamaba Velora Labs. Quedó como archivo histórico; **este es el vigente**.
