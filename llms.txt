@@ -13,7 +13,7 @@ Velkin Data Studios es una agencia — no un freelancer ni una plantilla — que
 
 ## Productos propios (SaaS / white-label)
 
-- **Velkin Content Hub** — Sistema propio de gestión de contenido: arma el calendario, genera captions con IA y publica en Instagram, Facebook y TikTok sin intervención manual. Usado internamente en los casos de portafolio.
+- **Content Hub** — Sistema propio de gestión de contenido: arma el calendario, genera estrategia, textos e imágenes con IA, se aprueba por Telegram y publica en Instagram, Facebook y TikTok sin intervención manual. Autoservicio con precio por marca: MX$1,200/mes por marca (MX$800 de la cuarta en adelante), prueba de 7 días sin tarjeta. Usado internamente en los casos de portafolio.
 - **Sector** — Plataforma propia de análisis de telemetría y rendimiento, rentada como SaaS a equipos de karting/racing.
 - **Velkin Racing Hub** — Sistema de gestión de carreras de karting, entregado white-label (marca 100% del cliente).
 
